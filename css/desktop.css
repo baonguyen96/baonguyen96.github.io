@@ -27,10 +27,6 @@
         text-align: center;
     }
 
-    .skillContent {
-        padding-right: 50px;
-    }
-
     #followMeSection > div div {
         padding: 0;
     }
@@ -72,6 +68,10 @@
 
     .projectContent {
         min-height: 13em;
+    }
+
+    .skillContent {
+        padding-right: 50px;
     }
 
 }
