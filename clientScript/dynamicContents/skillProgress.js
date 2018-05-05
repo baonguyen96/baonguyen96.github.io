@@ -1,5 +1,4 @@
-// to be added: ReactJS
-skills = [
+let skills = [
     {
         "name": "Java",
         "value": "100%"
@@ -53,15 +52,7 @@ skills = [
         "value": "70%"
     },
     {
-        "name": "RDF",
-        "value": "90%"
-    },
-    {
         "name": "MySQL",
-        "value": "80%"
-    },
-    {
-        "name": "SPARQL",
         "value": "80%"
     },
     {
@@ -71,6 +62,14 @@ skills = [
     {
         "name": "JPA",
         "value": "60%"
+    },
+    {
+        "name": "RDF",
+        "value": "90%"
+    },
+    {
+        "name": "SPARQL",
+        "value": "80%"
     },
     {
         "name": "JUnit",
@@ -107,19 +106,19 @@ skills = [
 ];
 
 $(document).ready(function () {
-    var skillsSection = $("#skillsSection");
-    var twoProjectsRow = $("#skillRowTemplate").find(".twoProjectsRow");
-    var skill = twoProjectsRow.find(".skill").clone();
+    let skillsSection = $("#skillsSection");
+    let twoProjectsRow = $("#skillRowTemplate").find(".twoProjectsRow");
+    let skill = twoProjectsRow.find(".skill").clone();
 
     // loop through each row (2 projects)
-    for(var rowIndex = 0; rowIndex < skills.length; rowIndex += 2) {
-        var newRow = twoProjectsRow.clone();
+    for(let rowIndex = 0; rowIndex < skills.length; rowIndex += 2) {
+        let newRow = twoProjectsRow.clone();
         newRow.find(".skill").eq(0).remove();
 
         // add 2 projects per row
-        for(var skillIndex = 0; skillIndex < 2; skillIndex++) {
-            var skillData = skills[rowIndex + skillIndex];
-            var currentSkill = skill.clone();
+        for(let skillIndex = 0; skillIndex < 2; skillIndex++) {
+            let skillData = skills[rowIndex + skillIndex];
+            let currentSkill = skill.clone();
 
             currentSkill.find(".language").text(skillData.name);
             currentSkill.find(".progressValue").width(skillData.value);

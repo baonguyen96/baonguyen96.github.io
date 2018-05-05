@@ -1,4 +1,4 @@
-var courses = [
+let courses = [
     "Data Structures and Introduction to Algorithmic Analysis",
     "Operating System Concepts",
     "Database Systems",
@@ -15,13 +15,13 @@ var courses = [
 ];
 
 $(function () {
-    var coursesSection = $("#coursesSection");
-    var customList = $("#customListTemplate").clone().find(".customList");
-    var item = customList.find(".customListItem");
+    let coursesSection = $("#coursesSection");
+    let customList = $("#customListTemplate").clone().find(".customList");
+    let item = customList.find(".customListItem");
     item.find(".customListIcon").attr("src", "./assets/images/misc/course.png");
 
-    for(var i = 0; i < courses.length; i++) {
-        var newItem = item.clone();
+    for(let i = 0; i < courses.length; i++) {
+        let newItem = item.clone();
         newItem.find(".customListText").text(courses[i]);
         customList.append(newItem);
     }

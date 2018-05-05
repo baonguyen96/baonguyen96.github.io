@@ -1,4 +1,4 @@
-var workExperienceList = [
+let workExperienceList = [
     {
         "jobTitle": "Quality Assurance",
         "company": "Loopback Analytics",
@@ -33,13 +33,13 @@ var workExperienceList = [
 
 
 $(function () {
-    var experienceToggle = $("#experienceToggle");
-    var experienceTemplate = $("#experienceTemplate").clone().find(".experience");
+    let experienceToggle = $("#experienceToggle");
+    let experienceTemplate = $("#experienceTemplate").clone().find(".experience");
 
     // loop through all work experience
-    for(var i = 0; i < workExperienceList.length; i++) {
-        var experienceData = workExperienceList[i];
-        var currentExperience = experienceTemplate.clone();
+    for(let i = 0; i < workExperienceList.length; i++) {
+        let experienceData = workExperienceList[i];
+        let currentExperience = experienceTemplate.clone();
 
         // only show the first experience by default
         if(i > 0) {
@@ -51,14 +51,14 @@ $(function () {
         currentExperience.find(".company").text(experienceData.company);
         currentExperience.find(".period").text(experienceData.period);
 
-        var customList = $("#customListTemplate").clone().find(".customList");
-        var item = customList.find(".customListItem");
-        var currentDuties = experienceData.duties;
+        let customList = $("#customListTemplate").clone().find(".customList");
+        let item = customList.find(".customListItem");
+        let currentDuties = experienceData.duties;
         item.find(".customListIcon").attr("src", "./assets/images/misc/work.png");
 
         // add all duties of current work experience
-        for(var duty = 0; duty < currentDuties.length; duty++) {
-            var newItem = item.clone();
+        for(let duty = 0; duty < currentDuties.length; duty++) {
+            let newItem = item.clone();
             newItem.find(".customListText").text(currentDuties[duty]);
             customList.append(newItem);
         }

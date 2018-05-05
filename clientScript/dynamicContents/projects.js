@@ -1,6 +1,5 @@
 // NOTE: demos are recorded at resolutions: 1024×576 (aspect ratio:  16:9) on 27in 1920x1080 screen
-
-projectsList = [
+let projectsList = [
     {
         "title": "Dark Chroma",
         "intro": createIntro("A Chrome extension that reverts the color of the page " +
@@ -214,7 +213,7 @@ function createLinkText(link, welcome, name) {
 
 
 function createIntro(intro, types) {
-    for(var i = 0; i < types.length; i++) {
+    for(let i = 0; i < types.length; i++) {
         intro = intro.replace(types[i], "<span class=\"projectType\">" + types[i] + "</span>")
     }
     return intro;
@@ -222,41 +221,41 @@ function createIntro(intro, types) {
 
 
 function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
-    var row = $("#projectTemplate").find(".row");
-    var isRowContainsOnlySingleProject = false;
+    let row = $("#projectTemplate").find(".row");
+    let isRowContainsOnlySingleProject = false;
 
     // loop through each row (2 projects each)
-    for(var rowIndex = fromProjectIndex; rowIndex < toProjectIndex; rowIndex += 2) {
-        var newRow = row.clone();
+    for(let rowIndex = fromProjectIndex; rowIndex < toProjectIndex; rowIndex += 2) {
+        let newRow = row.clone();
         newRow.find(".project").eq(0).remove();
 
         // on each row, add 2 projects
-        for(var projectIndex = 0; projectIndex < 2; projectIndex++) {
+        for(let projectIndex = 0; projectIndex < 2; projectIndex++) {
             if(projectsList[rowIndex + projectIndex] === undefined) {
                 isRowContainsOnlySingleProject = true;
                 break;
             }
 
-            var projectData = projectsList[rowIndex + projectIndex];
-            var currentProject = row.find(".project").clone();
-            var id = projectData.title.replace(/\s/g, "");
+            let projectData = projectsList[rowIndex + projectIndex];
+            let currentProject = row.find(".project").clone();
+            let id = projectData.title.replace(/\s/g, "");
 
             currentProject.attr("id", id);
             currentProject.find(".projectTitle").text(projectData.title);
             currentProject.find(".projectIntro").html(projectData.intro);
 
             // for each project, add all links
-            var links = projectData.links;
-            for(var linkIndex = 0; linkIndex < links.length; linkIndex++) {
-                var link = projectData.links[linkIndex];
-                var projectLink = currentProject.find(".projectLink").eq(0);
+            let links = projectData.links;
+            for(let linkIndex = 0; linkIndex < links.length; linkIndex++) {
+                let link = projectData.links[linkIndex];
+                let projectLink = currentProject.find(".projectLink").eq(0);
 
                 // update text if only 1 link, or append new links
                 if(linkIndex === 0) {
                     projectLink.html(link);
                 }
                 else {
-                    var newLink = projectLink.clone().html(link);
+                    let newLink = projectLink.clone().html(link);
                     currentProject.find(".projectDescription").append(newLink);
                 }
             }
@@ -274,9 +273,9 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
 
 
 function showDemo() {
-    var myModal = $("#hiddenModal");
-    var demoProjectId = "";
-    var demoProjectTitle = "";
+    let myModal = $("#hiddenModal");
+    let demoProjectId = "";
+    let demoProjectTitle = "";
 
     $(".demoLink").click(function () {
         demoProjectTitle = $(this).closest(".project").find(".projectTitle").text();
@@ -288,7 +287,7 @@ function showDemo() {
     myModal.on('show.bs.modal', function() {
         $(this).find(".modal-title").text(demoProjectTitle);
 
-        var img = $(this).find(".demoImage");
+        let img = $(this).find(".demoImage");
         img.attr("src", "./assets/images/demos/" + demoProjectId + ".gif");
         img.attr("alt", demoProjectTitle + " Demo");
     });
@@ -297,9 +296,9 @@ function showDemo() {
 
 
 $(function () {
-    var projectSection = $("#projectsSection");
-    var projects = projectSection.find(".projects");
-    var projectsHidden = projectSection.find(".projectsHidden");
+    let projectSection = $("#projectsSection");
+    let projects = projectSection.find(".projects");
+    let projectsHidden = projectSection.find(".projectsHidden");
 
     addProjectsToGroup(projects, 0, 4);
     addProjectsToGroup(projectsHidden, 4, projectsList.length);

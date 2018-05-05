@@ -139,7 +139,6 @@ a:visited {
 }
 
 .greeting {
-    text-align: center;
     margin-bottom: 1em;
 }
 
@@ -374,7 +373,7 @@ hr {
     transition-duration: 0.3s;
 }
 
-#followMeSection {
+#followMeSection > div {
     text-align: center;
 }
 
