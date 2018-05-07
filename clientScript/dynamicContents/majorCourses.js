@@ -1,5 +1,5 @@
 let courses = [
-    "Data Structures and Introduction to Algorithmic Analysis",
+    "Data Structures and Algorithmic Analysis",
     "Operating System Concepts",
     "Database Systems",
     "Computer Architecture",

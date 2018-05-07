@@ -27,6 +27,10 @@
         text-align: center;
     }
 
+    .demoLinkContainer {
+        display: block;
+    }
+
     #followMeSection > div div {
         padding: 0;
     }
@@ -54,6 +58,7 @@
 
     .copyright {
         font-size: 1em;
+        margin-bottom: 1em;
     }
 
 }
@@ -85,7 +90,7 @@
 
     .progressBackground {
         position: relative;
-        left: 1.5em;
+        left: 2em;
     }
 
 }

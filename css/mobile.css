@@ -382,3 +382,12 @@ hr {
     text-align: center;
     color: grey;
 }
+
+/* do not show modal on mobile */
+@media screen and (max-width: 767px) {
+
+    .demoLinkContainer {
+        display: none;
+    }
+
+}

@@ -1,3 +1,7 @@
+// to be added:     ASP.NET, iOS/Swift
+// to be updated:   C#
+// NOTE: maybe divide skills into groups of related skills and have a subsection for each group?
+
 let skills = [
     {
         "name": "Java",
@@ -5,7 +9,7 @@ let skills = [
     },
     {
         "name": "C",
-        "value": "50%"
+        "value": "65%"
     },
     {
         "name": "C++",
@@ -17,7 +21,7 @@ let skills = [
     },
     {
         "name": "Python",
-        "value": "65%"
+        "value": "70%"
     },
     {
         "name": "PHP",
@@ -32,11 +36,11 @@ let skills = [
         "value": "100%"
     },
     {
-        "name": "JavaScript",
-        "value": "90%"
+        "name": "Bootstrap",
+        "value": "100%"
     },
     {
-        "name": "jQuery",
+        "name": "JavaScript",
         "value": "90%"
     },
     {
@@ -57,7 +61,7 @@ let skills = [
     },
     {
         "name": "JDBC",
-        "value": "90%"
+        "value": "100%"
     },
     {
         "name": "JPA",
@@ -105,7 +109,7 @@ let skills = [
     }
 ];
 
-$(document).ready(function () {
+$(function () {
     let skillsSection = $("#skillsSection");
     let twoProjectsRow = $("#skillRowTemplate").find(".twoProjectsRow");
     let skill = twoProjectsRow.find(".skill").clone();
