@@ -111,12 +111,12 @@ let skills = [
 
 $(function () {
     let skillsSection = $("#skillsSection");
-    let twoProjectsRow = $("#skillRowTemplate").find(".twoProjectsRow");
-    let skill = twoProjectsRow.find(".skill").clone();
+    let twoSkillsRow = $("#skillRowTemplate").find(".twoSkillsRow");
+    let skill = twoSkillsRow.find(".skill").clone();
 
     // loop through each row (2 projects)
     for(let rowIndex = 0; rowIndex < skills.length; rowIndex += 2) {
-        let newRow = twoProjectsRow.clone();
+        let newRow = twoSkillsRow.clone();
         newRow.find(".skill").eq(0).remove();
 
         // add 2 projects per row
