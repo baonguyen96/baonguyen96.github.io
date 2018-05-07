@@ -172,7 +172,7 @@ let projectsList = [
             " Written in HTML, CSS, Bootstrap, JavaScript, WordPress.",
             ["HTML", "CSS", "Bootstrap", "JavaScript", "WordPress"]),
         "links": [
-            createLinkTextWithPointer("http://techrush.site/", "See the ", "official site"),
+            createLinkTextWithPointer("http://techrush.site/", "See the", "official site"),
             createLinkTextWithPointer("https://github.com/baonguyen96/TechRush")
         ]
     },
@@ -253,11 +253,26 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
                 // update text if only 1 link, or append new links
                 if(linkIndex === 0) {
                     projectLink.html(link);
+
+                    if(projectLink.text().endsWith(" See Demo")) {
+                        projectLink.addClass("demoLinkContainer");
+                    }
+
+                    console.log(projectLink.text());
                 }
                 else {
                     let newLink = projectLink.clone().html(link);
+
+                    if(newLink.text().endsWith(" See Demo")) {
+                        newLink.addClass("demoLinkContainer");
+                    }
+                    else {
+                        newLink.removeClass("demoLinkContainer");
+                    }
+
                     currentProject.find(".projectDescription").append(newLink);
                 }
+
             }
 
             newRow.append(currentProject);
