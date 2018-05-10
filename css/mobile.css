@@ -80,7 +80,7 @@ p {
     margin-bottom: 1em;
 }
 
-.skillGroupName {
+.specialText {
     font-style: italic;
     font-weight: bold;
 }
@@ -211,11 +211,6 @@ button:focus {
     transform: translateY(-50%);
 }
 
-.projectType {
-    font-style: italic;
-    font-weight: bold;
-}
-
 #projectsToggle {
     margin-top: 1.2em;
 }
@@ -226,16 +221,10 @@ button:focus {
     height: fit-content;
 }
 
-.experienceTitle {
-    font-weight: bold;
-    font-style: italic;
-}
-
 .experienceTitle div {
     text-align: center;
     margin: 0 auto;
 }
-
 
 hr {
     margin: 2em auto;

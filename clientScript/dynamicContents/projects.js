@@ -130,7 +130,8 @@ let projectsList = [
     },
     {
         "title": "Cyberminer",
-        "intro": createIntro(createLinkText("#KWICSystem", "A search engine built in HTML, CSS, SpringBoot, MySQL, and Selenium that allows users to add a URL-Description tuple to the database, and carries " +
+        "intro": createIntro(createLinkText("#KWICSystem", "A search engine built in HTML, CSS, SpringBoot, MySQL, " +
+            "and Selenium that allows users to add a URL-Description tuple to the database, and carries " +
             "out a search on the descriptions. Built upon the", "KWIC") + " project.",
             ["HTML", "CSS", "SpringBoot", "MySQL", "Selenium"]),
         "links": [
@@ -159,7 +160,9 @@ let projectsList = [
     },
     {
         "title": "Joana Pdg Pruner",
-        "intro": createIntro(createLinkText("https://github.com/joana-team/joana", "An extension to the current state-of-the-art Java analysis tool - ", "JOANA") + " - that produces a maintainable and relevant " + createLinkText("https://en.wikipedia.org/wiki/Program_Dependence_Graph", "", "PDG.") ,
+        "intro": createIntro(createLinkText("https://github.com/joana-team/joana", "An extension to the current " +
+            "state-of-the-art Java analysis tool - ", "JOANA") + " - that produces a maintainable and relevant " +
+            createLinkText("https://en.wikipedia.org/wiki/Program_Dependence_Graph", "", "PDG.") ,
             ["Java"]),
         "links": [
             createDemoText(),
@@ -214,7 +217,7 @@ function createLinkText(link, welcome, name) {
 
 function createIntro(intro, types) {
     for(let i = 0; i < types.length; i++) {
-        intro = intro.replace(types[i], "<span class=\"projectType\">" + types[i] + "</span>")
+        intro = intro.replace(types[i], "<span class=\"specialText\">" + types[i] + "</span>")
     }
     return intro;
 }

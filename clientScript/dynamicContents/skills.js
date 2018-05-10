@@ -4,15 +4,15 @@ let skills = [
         "value": "Java, C, C++, C#, Python, PHP, UML, ERD"
     },
     {
-        "name": "Web",
+        "name": "Web Languages",
         "value": "HTML, CSS, JavaScript, jQuery, Bootstrap, WordPress, NodeJS, AJAX"
     },
     {
-        "name": "Database",
+        "name": "Databases",
         "value": "MySQL, Microsoft SQL Server, SPARQL, RDF, JDBC, JPA"
     },
     {
-        "name": "Testing",
+        "name": "Automation Testing",
         "value": "JUnit, TestNG, Selenium"
     },
     {
@@ -38,6 +38,7 @@ $(function () {
     let skillsContainer = $("#skillsContainer");
     let customList = $("#customListTemplate").clone().find(".customList");
     let itemTemplate = customList.find(".customListItem");
+    itemTemplate.addClass("specialText");
     itemTemplate.find(".customListIcon").attr("src", "./assets/images/misc/skill.png");
     let skillGroup = $("#skillTemplate").find(".skillGroup").clone();
 
