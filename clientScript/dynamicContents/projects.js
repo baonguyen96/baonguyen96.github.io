@@ -258,7 +258,6 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
                         projectLink.addClass("demoLinkContainer");
                     }
 
-                    console.log(projectLink.text());
                 }
                 else {
                     let newLink = projectLink.clone().html(link);

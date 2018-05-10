@@ -75,22 +75,14 @@
         min-height: 13em;
     }
 
-    .skillContent {
-        padding-right: 50px;
-    }
-
 }
 
 
 @media screen and (min-width: 1024px) {
 
-    .skill {
-        padding-right: 2em;
-    }
-
-    .progressBackground {
-        position: relative;
-        left: 2em;
+    #skillsContainer {
+        padding-left: 15%;
+        padding-right: 10%;
     }
 
 }
@@ -111,18 +103,18 @@
         padding-right: 17%;
     }
 
-    .progressBackground {
-        position: relative;
-        left: 1em;
-    }
+    /*.progressBackground {*/
+        /*position: relative;*/
+        /*left: 1em;*/
+    /*}*/
 
 }
 
 
 @media screen and (min-width: 1700px) {
 
-    .language {
-        left: 5%;
-    }
+    /*.language {*/
+        /*left: 5%;*/
+    /*}*/
 
 }
