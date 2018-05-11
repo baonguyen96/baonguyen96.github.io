@@ -4,8 +4,8 @@ let skills = [
         "value": "Java, C, C++, C#, Python, PHP, UML, ERD"
     },
     {
-        "name": "Web Languages",
-        "value": "HTML, CSS, JavaScript, jQuery, Bootstrap, WordPress, NodeJS, AJAX"
+        "name": "Web Technologies",
+        "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, WordPress, NodeJS, AJAX"
     },
     {
         "name": "Databases",
@@ -20,17 +20,21 @@ let skills = [
         "value": "GitHub, BitBucket"
     },
     {
-        "name": "Operation Systems",
+        "name": "Operating Systems",
         "value": "Windows, Linux, Mac, Android"
     },
     {
         "name": "Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
-                 "Adobe Photoshop/Lightroom, Microsoft SSMS, Microsoft Office"
+                 "Adobe Photoshop/Lightroom, Microsoft SSMS, Microsoft Office, SharePoint"
     },
     {
         "name": "Project Management",
-        "value": "Trello, JIRA, Agile/SCRUM"
+        "value": "Trello, JIRA"
+    },
+    {
+        "name": "Methodologies",
+        "value": "Test Driven Development, Agile/SCRUM"
     }
 ];
 
@@ -53,6 +57,10 @@ $(function () {
         currentSkillGroup.find(".skillGroupName").html(item);
         currentSkillGroup.find(".skillGroupValue").text(skillData.value);
         skillsContainer.append(currentSkillGroup);
+
+        if(skillIndex < skills.length - 1) {
+            skillsContainer.append($('<hr/>'));
+        }
     }
 
 });

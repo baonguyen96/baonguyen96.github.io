@@ -8,15 +8,16 @@ body {
     background-color: #efefef;
     padding: 5% 1%;
     margin: 0;
-    /*font-family: 'Open Sans', sans-serif;*/
     font-family: 'Ubuntu', sans-serif;
 }
 
-#name {
+h1 {
     font-size: 2.3em;
     text-align: center;
-    font-weight: bolder;
+    margin-bottom: 1em;
+    /*font-weight: bolder;*/
     margin-top: 1em;
+    text-decoration: underline;
     color: white;
     text-shadow:
             3px 3px 0 #000,
@@ -24,6 +25,7 @@ body {
             1px -1px 0 #000,
             -1px 1px 0 #000,
             1px 1px 0 #000;
+    font-family: 'Permanent Marker', cursive;
 }
 
 h2 {
@@ -75,8 +77,12 @@ p {
     border-radius: 50%;
 }
 
+#skillsSection hr, #skillsSection .greeting {
+    margin-bottom: 1.5em;
+}
+
 .skillGroup {
-    margin-top: 0.5em;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 

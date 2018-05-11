@@ -4,8 +4,9 @@ let workExperienceList = [
         "company": "Loopback Analytics",
         "period": "May 2017 - Present",
         "duties": [
-            "Architect and build a system that integrates different tools to support end-to-end automation testing",
-            "Implement additional features such as self-healing and report logging for the automated tool",
+            "Architect and develop multiple tools for automation testing, including the system that integrates " +
+            "all those tools together to support end-to-end testing",
+            "Implement additional features such as self-healing and report logging for the automated tools",
             "Develop test cases from the requirements",
             "Experience with Java, SQL, Selenium"
         ]
