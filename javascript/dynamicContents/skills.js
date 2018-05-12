@@ -1,6 +1,6 @@
 let skills = [
     {
-        "name": "General Languages",
+        "name": "Programming",
         "value": "Java, C, C++, C#, Python, PHP, UML, ERD"
     },
     {
@@ -26,7 +26,8 @@ let skills = [
     {
         "name": "Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
-                 "Adobe Photoshop/Lightroom, Microsoft SSMS, Microsoft Office, SharePoint"
+                 "Microsoft SSMS, Microsoft Office, SharePoint, " +
+                 "Adobe Creative Cloud suite, Google products"
     },
     {
         "name": "Project Management",
@@ -34,7 +35,11 @@ let skills = [
     },
     {
         "name": "Methodologies",
-        "value": "Test Driven Development, Agile/SCRUM"
+        "value": "Agile/SCRUM, Test Driven Development, Mobile-First Development"
+    },
+    {
+        "name": "Miscellaneous",
+        "value": "Photography, Design, Analytics"
     }
 ];
 

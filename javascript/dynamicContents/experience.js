@@ -2,12 +2,13 @@ let workExperienceList = [
     {
         "jobTitle": "Quality Assurance",
         "company": "Loopback Analytics",
-        "period": "May 2017 - Present",
+        "period": "May 2017 - August 2017,<br/>January 2018 - Present",
         "duties": [
             "Architect and develop multiple tools for automation testing, including the system that integrates " +
             "all those tools together to support end-to-end testing",
             "Implement additional features such as self-healing and report logging for the automated tools",
             "Develop test cases from the requirements",
+            "Perform various testing techniques for software releases",
             "Experience with Java, SQL, Selenium"
         ]
     },
@@ -23,7 +24,7 @@ let workExperienceList = [
     {
         "jobTitle": "Librarian Helper",
         "company": "Melbourne Public Library",
-        "period": "November 2012 - March 2013",
+        "period": "December 2012 - April 2013",
         "duties": [
             "Volunteerism",
             "Organize and track books flow",
@@ -48,9 +49,9 @@ $(function () {
             currentExperience.prepend("<hr/>");
         }
 
-        currentExperience.find(".jobTitle").text(experienceData.jobTitle);
-        currentExperience.find(".company").text(experienceData.company);
-        currentExperience.find(".period").text(experienceData.period);
+        currentExperience.find(".jobTitle").html(experienceData.jobTitle);
+        currentExperience.find(".company").html(experienceData.company);
+        currentExperience.find(".period").html(experienceData.period);
 
         let customList = $("#customListTemplate").clone().find(".customList");
         let item = customList.find(".customListItem");

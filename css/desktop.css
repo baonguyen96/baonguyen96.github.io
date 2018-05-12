@@ -35,6 +35,14 @@
         display: block;
     }
 
+    .jobTitle {
+        text-align: left;
+    }
+
+    .period {
+        text-align: right;
+    }
+
     #followMeSection > div div {
         padding: 0;
     }
@@ -48,6 +56,8 @@
     }
 
     #followMeSection .contactIcon {
+        width: 2.5em;
+        height: 2.5em;
         margin: 0 0.5em;
     }
 

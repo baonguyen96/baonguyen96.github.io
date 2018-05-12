@@ -15,7 +15,6 @@ h1 {
     font-size: 2.3em;
     text-align: center;
     margin-bottom: 1em;
-    /*font-weight: bolder;*/
     margin-top: 1em;
     text-decoration: underline;
     color: white;
@@ -234,7 +233,7 @@ button:focus {
 
 hr {
     margin: 2em auto;
-    width: 40%;
+    width: 50%;
     background-color: #efefef;
 }
 
@@ -308,8 +307,8 @@ hr {
 }
 
 #followMeSection .contactIcon {
-    height: 2.5em;
-    width: 2.5em;
+    height: 2em;
+    width: 2em;
     margin: 0.3em;
 }
 
@@ -338,6 +337,21 @@ hr {
 
 #followMeSection > div {
     text-align: center;
+}
+
+#followMeSection blockquote {
+    margin: 0 auto;
+}
+
+.formula {
+    font-style: italic;
+    color: red;
+}
+
+.denominator {
+    position: relative;
+    top: 1em;
+    left: -2em;
 }
 
 .copyright {
