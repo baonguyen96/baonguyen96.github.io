@@ -21,11 +21,6 @@
     #skillsSection hr {
         display: none;
     }
-    
-    .customList {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
 
     .greeting {
         text-align: center;
@@ -80,23 +75,13 @@
 
 @media screen and (min-width: 769px) {
 
-    .customList {
+    .customList, #skillsContainer {
         padding-left: 15%;
         padding-right: 10%;
     }
 
     .projectContent {
         min-height: 13em;
-    }
-
-}
-
-
-@media screen and (min-width: 1024px) {
-
-    #skillsContainer {
-        padding-left: 15%;
-        padding-right: 10%;
     }
 
 }
