@@ -339,25 +339,24 @@ hr {
     text-align: center;
 }
 
-#followMeSection blockquote {
-    margin: 0 auto;
-}
-
-.formula {
-    font-style: italic;
-    color: red;
-}
-
-.denominator {
-    position: relative;
-    top: 1em;
-    left: -2em;
-}
-
 .copyright {
     font-size: 0.8em;
     text-align: center;
     color: grey;
+}
+
+#upArrowNavigator img {
+    width: 1em;
+    height: 1em;
+    opacity: 0.3;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+}
+
+#upArrowNavigator img:hover {
+    opacity: 0.6;
+    transition-duration: 0.3s;
 }
 
 /* do not show modal on mobile */

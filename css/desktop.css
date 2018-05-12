@@ -18,14 +18,6 @@
         padding: 3em 7% !important;
     }
 
-    #skillsSection hr {
-        display: none;
-    }
-
-    .greeting {
-        text-align: center;
-    }
-
     .demoLinkContainer {
         display: block;
     }
@@ -74,6 +66,14 @@
 
 
 @media screen and (min-width: 769px) {
+
+    .greeting {
+        text-align: center;
+    }
+
+    #skillsSection hr {
+        display: none;
+    }
 
     .customList, #skillsContainer {
         padding-left: 15%;
