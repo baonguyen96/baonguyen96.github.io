@@ -34,7 +34,7 @@ let skills = [
         "value": "Trello, JIRA"
     },
     {
-        "name": "Methodologies",
+        "name": "Development Methodologies",
         "value": "Agile/SCRUM, Test Driven Development, Mobile-First Development"
     },
     {

@@ -31,12 +31,12 @@
         display: block;
     }
 
-    .jobTitle {
-        text-align: left;
+    div.jobTitle {
+        text-align: left !important;
     }
 
-    .period {
-        text-align: right;
+    div.period {
+        text-align: right !important;
     }
 
     #followMeSection > div div {
