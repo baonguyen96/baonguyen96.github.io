@@ -1,3 +1,12 @@
+/* do not show modal on mobile */
+@media screen and (max-width: 767px) {
+
+    .demoLinkContainer {
+        display: none;
+    }
+
+}
+
 @media screen and (min-width: 768px) {
 
     body {
@@ -68,11 +77,6 @@
         transition: transform;
         -webkit-transition-duration: 0.3s;
         transition-duration: 0.3s;
-    }
-
-    .copyright {
-        font-size: 1em;
-        margin-bottom: 1em;
     }
 
     #upArrowNavigator img {

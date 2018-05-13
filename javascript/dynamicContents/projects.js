@@ -36,9 +36,8 @@ let projectsList = [
     },
     {
         "title": "MIPS Converter",
-        "intro": createIntro("This Java Swing project provides conversion between Java, MIPS, and Machine codes. " +
-            "It recognizes different instruction types (I-, R-, or J-) from MIPS or Binary codes " +
-            "and provides the other two equivalences on a GUI.", ["Java Swing"]),
+        "intro": createIntro("This Java Swing project bidirectionally converts between MIPS and Machine codes." +
+            "It also recognizes different instruction types (I-, R-, or J-) in MIPS and displays the components on the GUI.", ["Java Swing"]),
         "links": [
             createDemoText(),
             createLinkTextWithPointer("https://github.com/baonguyen96/MipsConverter")

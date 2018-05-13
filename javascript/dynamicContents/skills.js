@@ -1,7 +1,7 @@
 let skills = [
     {
         "name": "Programming",
-        "value": "Java, C, C++, C#, Python, PHP, UML, ERD"
+        "value": "Java, C, C++, C#, Python, PHP, UML"
     },
     {
         "name": "Web Technologies",
@@ -9,7 +9,7 @@ let skills = [
     },
     {
         "name": "Databases",
-        "value": "MySQL, Microsoft SQL Server, SPARQL, RDF, JDBC, JPA"
+        "value": "MySQL, Microsoft SQL Server, SPARQL, RDF, JDBC, JPA, ERD"
     },
     {
         "name": "Automation Testing",
@@ -39,7 +39,7 @@ let skills = [
     },
     {
         "name": "Miscellaneous",
-        "value": "Photography, Design, Analytics"
+        "value": "Photography, Design, Animation, Analytics"
     }
 ];
 

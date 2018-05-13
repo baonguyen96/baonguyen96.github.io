@@ -340,7 +340,7 @@ hr {
 }
 
 .copyright {
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: center;
     color: grey;
 }
@@ -357,13 +357,4 @@ hr {
 #upArrowNavigator img:hover {
     opacity: 0.6;
     transition-duration: 0.3s;
-}
-
-/* do not show modal on mobile */
-@media screen and (max-width: 767px) {
-
-    .demoLinkContainer {
-        display: none;
-    }
-
 }
