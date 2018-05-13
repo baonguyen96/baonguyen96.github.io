@@ -18,7 +18,7 @@ let workExperienceList = [
         "period": "July 2014 - December 2016",
         "duties": [
             "Receive and check in/out merchandises",
-            "Provide outstanding customer services"
+            "Provide outstanding customer service"
         ]
     },
     {

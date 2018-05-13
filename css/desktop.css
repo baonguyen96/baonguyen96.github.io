@@ -98,6 +98,16 @@
 
 }
 
+@media screen and (width: 1024px) {
+
+    #skillsContainer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+
 @media screen and (min-width: 1025px) {
 
     body {
