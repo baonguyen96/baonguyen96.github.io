@@ -1,7 +1,7 @@
-$(document).ready(function () {
+$(function () {
     $(".toggle").click(function () {
-        var state = $(this).text();
-        var id = $(this).attr("id");
+        let state = $(this).text();
+        let id = $(this).attr("id");
 
         if(state === "More") {
             if(id === "projectsToggle") {

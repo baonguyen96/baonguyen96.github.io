@@ -111,8 +111,8 @@ let projectsList = [
     {
         "title": "Health Score",
         "intro": createIntro("This C project is a statistical analysis program based on the concept " +
-            "of multi-sensors data fusion - combining observations from a number of different " +
-            "sensors to provide a robust, complete description of an environment or process.", ["C"]),
+            "of multi-sensors data fusion - combining observations from different " +
+            "sensors to provide a robust, complete description of a configuration.", ["C"]),
         "links": [
             createDemoText(),
             createLinkTextWithPointer("https://github.com/baonguyen96/HealthScore")
