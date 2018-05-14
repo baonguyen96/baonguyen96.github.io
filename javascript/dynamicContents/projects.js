@@ -27,7 +27,7 @@ let projectsList = [
         "intro":
             "<p id='seniorDesignTitle'><i>(Senior Design Project for " + createLinkText("http://argodata.com/", "", "ARGO Data") + ")</i></p>" +
             createIntro("An application that automatically generates desired test data for QA testers to use. " +
-                "It use SPARQL and Java to retrieve and store RDF graphs from/to Fuseki server. " +
+                "It uses SPARQL and Java to retrieve and store RDF graphs from/to Fuseki server. " +
                 "Can be used as CLI application or Web application (SpringBoot).",
             ["SPARQL", "Java", "Fuseki", "SpringBoot"]),
         "links": [
