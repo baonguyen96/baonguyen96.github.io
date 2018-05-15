@@ -17,9 +17,10 @@ let projectsList = [
         "intro": createIntro("This Java project implements a unique File Transfer Protocol " +
             "utilizing Socket, Connection Management, Reliable Communication, " +
             "and Security (Public Key Crypto and Symmetric Key Crypto). ", ["Java"]),
-        // "intro": createIntro(createLink("#ChatRoom", "This Java project implements a unique File Transfer Protocol " +
+        // "intro": createIntro("This Java project implements a unique File Transfer Protocol " +
         //     "utilizing Socket, Connection Management, Reliable Communication, " +
-        //     "and Security (Public Key Crypto and Symmetric Key Crypto). Built upon the", "Chat Room") + " project", ["Java"]),
+        //     "and Security (Public Key Crypto and Symmetric Key Crypto). Built upon the " +
+        //     createLink("#ChatRoom", "Chat Room") + " project.", ["Java"]),
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/FileTransferApplication")
@@ -27,12 +28,12 @@ let projectsList = [
     },
     {
         "title": "Self Service Agent For Test Data",
-        "intro":
-        "<p id='seniorDesignTitle'><i>(Senior Design Project for " + createLink("http://argodata.com/", "ARGO Data") + ")</i></p>" +
-        createIntro("An application that automatically generates desired test data for QA testers to use. " +
-            "It uses SPARQL and Java to retrieve and store RDF graphs from/to Fuseki server. " +
-            "Can be used as CLI application or Web application (SpringBoot).",
-            ["SPARQL", "Java", "Fuseki", "SpringBoot"]),
+        "intro": "<p id='seniorDesignTitle'><i>(Senior Design Project for " +
+            createLink("http://argodata.com/", "ARGO Data") + ")</i></p>" +
+            createIntro("An application that automatically generates desired test data for QA testers to use. " +
+                "It uses SPARQL and Java to retrieve and store RDF graphs from/to Fuseki server. " +
+                "Can be used as CLI application or Web application (SpringBoot).",
+                ["SPARQL", "Java", "Fuseki", "SpringBoot"]),
         "links": [
             createDemoLink()
         ]
@@ -303,7 +304,6 @@ function showDemo() {
 
     });
 
-    // Show loader & then get content when modal is shown
     myModal.on('show.bs.modal', function () {
         $(this).find(".modal-title").text(demoProjectTitle);
 
