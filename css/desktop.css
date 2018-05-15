@@ -11,6 +11,7 @@
 
     body {
         padding: 2.5em 5%;
+        font-size: 15pt;
     }
 
     #header img {
@@ -34,6 +35,10 @@
 
     .greeting {
         text-align: center;
+    }
+
+    .toggle {
+        margin-top: 2em;
     }
 
     .demoLinkContainer {
@@ -66,13 +71,21 @@
         margin: 0 0.5em;
     }
 
-    .contactIcon:hover {
-        -webkit-transform: scale(1.5);
-        transform: scale(1.5);
-        -webkit-transition: transform;
-        transition: transform;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
+    @media (hover: hover) {
+
+        .contactIcon:hover {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+            -webkit-transition: transform;
+            transition: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+    }
+
+    #copyright {
+        font-size: 1em;
     }
 
     #upArrowNavigator img {

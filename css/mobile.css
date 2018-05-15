@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-size: 15pt;
+    font-size: 12pt;
     background-color: #efefef;
     padding: 1em 1%;
     margin: 0;
@@ -325,14 +325,18 @@ hr {
     transition-duration: 0.3s;
 }
 
-.contactIcon:hover {
-    opacity: 0.9;
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-    -webkit-transition: transform;
-    transition: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+@media (hover: hover) {
+
+    .contactIcon:hover {
+        opacity: 0.9;
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        -webkit-transition: transform;
+        transition: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+
 }
 
 #followMeSection > div {
@@ -340,7 +344,7 @@ hr {
 }
 
 #copyright {
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: center;
     color: grey;
 }
