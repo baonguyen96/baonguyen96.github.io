@@ -51,8 +51,6 @@ $(function () {
     itemTemplate.find(".customListIcon").attr("src", "./assets/images/misc/skill.png");
     let skillGroup = $("#skillTemplate").find(".skillGroup").clone();
 
-    console.log(skillGroup.html());
-
     for(let skillIndex = 0; skillIndex < skills.length; skillIndex++) {
         let skillData = skills[skillIndex];
         let currentSkillGroup = skillGroup.clone();

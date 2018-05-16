@@ -36,4 +36,5 @@ $(function () {
             $(this).find(".projectTitle").show();
         }
     );
+
 });
