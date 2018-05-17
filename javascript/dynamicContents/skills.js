@@ -5,7 +5,7 @@ let skills = [
     },
     {
         "name": "Web Technologies",
-        "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, WordPress, NodeJS, AJAX"
+        "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, NodeJS, AJAX"
     },
     {
         "name": "Databases",

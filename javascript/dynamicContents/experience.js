@@ -9,7 +9,7 @@ let workExperienceList = [
             "Implement additional features such as self-healing and report logging for the automated tools",
             "Develop test cases from the requirements",
             "Perform various testing techniques for software releases",
-            "Experience with Java, SQL, Selenium"
+            "Experience with Java, SQL, Selenium, XML"
         ]
     },
     {

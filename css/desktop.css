@@ -84,12 +84,16 @@
 
     }
 
-    #copyright {
-        font-size: 1em;
-    }
-
     #upArrowNavigator img {
         right: 2%;
+    }
+
+    #copyright > p {
+        display: block;
+    }
+
+    #copyright div.row {
+        display: none;
     }
 
 }
