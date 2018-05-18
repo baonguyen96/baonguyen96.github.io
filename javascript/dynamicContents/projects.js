@@ -17,10 +17,6 @@ let projectsList = [
         "intro": createIntro("This Java project implements a unique File Transfer Protocol " +
             "utilizing Socket, Connection Management, Reliable Communication, " +
             "and Security (Public Key Crypto and Symmetric Key Crypto). ", ["Java"]),
-        // "intro": createIntro("This Java project implements a unique File Transfer Protocol " +
-        //     "utilizing Socket, Connection Management, Reliable Communication, " +
-        //     "and Security (Public Key Crypto and Symmetric Key Crypto). Built upon the " +
-        //     createLink("#ChatRoom", "Chat Room") + " project.", ["Java"]),
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/FileTransferApplication")
@@ -96,7 +92,8 @@ let projectsList = [
     },
     {
         "title": "Ticket To Knowhere",
-        "intro": createIntro("A docking software system that tracks parking lot's activities and generates violation tickets, written in C++.", ["C++"]),
+        "intro": createIntro("A docking software system that tracks parking lot's activities " +
+            "and generates violation tickets, written in C++.", ["C++"]),
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/TicketToKnowhere")
@@ -249,6 +246,7 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
 
             currentProject.attr("id", id);
             currentProject.find(".projectTitle").text(projectData.title);
+            currentProject.find(".projectDescription").hide();
             currentProject.find(".projectIntro").html(projectData.intro);
 
             // for each project, add all links
