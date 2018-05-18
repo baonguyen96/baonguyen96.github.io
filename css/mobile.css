@@ -129,6 +129,7 @@ a:visited {
 
 .customListIcon {
     height: 1.5em;
+    width: 1.5em;
     margin-right: 0.75em;
     display: table-cell;
     position: relative;
@@ -297,11 +298,12 @@ hr {
 
 #followMeSection > div div {
     margin: 0 auto;
+    padding: 0.15em;
 }
 
 #followMeSection .contactIcon {
-    height: 2.2em;
-    width: 2.2em;
+    height: 2.3em;
+    width: 2.3em;
     margin: 0.3em;
 }
 
