@@ -329,6 +329,7 @@ hr {
     font-size: 0.9em;
     text-align: center;
     color: grey;
+    opacity: 0;
 }
 
 #copyright > p {
