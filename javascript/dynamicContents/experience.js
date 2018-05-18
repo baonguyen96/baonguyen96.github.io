@@ -22,7 +22,7 @@ let workExperienceList = [
         ]
     },
     {
-        "jobTitle": "Librarian Helper",
+        "jobTitle": "Librarian Assistant",
         "company": "Melbourne Public Library",
         "period": "December 2012 - April 2013",
         "duties": [
