@@ -191,6 +191,7 @@ button:focus {
     font-size: 1.25em;
     position: relative;
     top: 50%;
+    -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -203,7 +204,8 @@ button:focus {
     display: none;
     position: relative;
     top: 50%;
-    height: fit-content;
+    /*height: fit-content;*/
+    -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
