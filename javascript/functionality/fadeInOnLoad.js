@@ -1,11 +1,13 @@
 $(function () {
+    let fadeTime = 1000;
+
     // show anything that is in the viewport on load by default
     $('.section, #copyright').each(function () {
         let top_of_object = $(this).position().top;
         let bottom_of_window = $(window).scrollTop() + $(window).height();
 
         if (bottom_of_window > top_of_object) {
-            $(this).animate({'opacity': '1'}, 800);
+            $(this).animate({'opacity': '1'}, fadeTime);
         }
     });
 
@@ -16,7 +18,7 @@ $(function () {
             let bottom_of_window = $(window).scrollTop() + $(window).height();
 
             if (bottom_of_window > top_of_object) {
-                $(this).animate({'opacity': '1'}, 500);
+                $(this).animate({'opacity': '1'}, fadeTime);
             }
         });
 
