@@ -5,7 +5,7 @@ let awards = [
     "2017 Wells Fargo Endowed Scholarship",
     "2018 Selden Leavell Endowed Scholarship",
     "2018 Mason Brown Family Foundation Endowed Scholarship",
-    "Software Testing Contest Certification from " + createLink("http://rs.ieee.org/", "IEEE Reliability Society")
+    "Software Testing Contest Certificate from " + createLink("http://rs.ieee.org/", "IEEE Reliability Society")
 ];
 
 

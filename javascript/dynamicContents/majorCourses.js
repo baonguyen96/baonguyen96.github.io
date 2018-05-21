@@ -11,7 +11,8 @@ let courses = [
     "Software Project Planning and Management",
     "Program Analysis and Its Application",
     "Introduction to Machine Learning",
-    "Object-Oriented Analysis and Design"
+    "Object-Oriented Analysis and Design",
+    "Web Development for Business Application"
 ];
 
 $(function () {
