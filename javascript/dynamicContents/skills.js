@@ -17,6 +17,10 @@ let skills = [
         "value": "JUnit, TestNG, Selenium"
     },
     {
+        "name": "Machine Learning",
+        "value": "R, TensorFlow, OpenCV"
+    },
+    {
         "name": "Version Control",
         "value": "GitHub, BitBucket"
     },
@@ -28,7 +32,7 @@ let skills = [
         "name": "Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
                  "Microsoft SSMS, Microsoft Office, SharePoint, " +
-                 "Adobe Creative Cloud suite, Google products"
+                 "Adobe Creative Cloud suite, Google products, RStudio"
     },
     {
         "name": "Project Management",

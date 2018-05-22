@@ -16,6 +16,7 @@ let projectsList = [
         "title": "File Transfer Application",
         "intro": createIntro("This Java project implements a unique File Transfer Protocol " +
             "utilizing Socket, Connection Management, Reliable Communication, " +
+            "utilizing Socket, Connection Management, Reliable Communication, " +
             "and Security (Public Key Crypto and Symmetric Key Crypto). ", ["Java"]),
         "links": [
             createDemoLink(),
@@ -82,12 +83,12 @@ let projectsList = [
         ]
     },
     {
-        "title": "Calendar",
-        "intro": createIntro("A simple JavaFX program that calculates the difference between 2 dates, " +
-            "or the second date given the first one and the duration.", ["JavaFX"]),
+        "title": "Schedulers",
+        "intro": createIntro("This Java project simulates different types of modern OS schedulers, such as: " +
+            "FCFS, RR, SPN, SRT, HRRN, and Feedback.", ["Java"]),
         "links": [
             createDemoLink(),
-            createSourceLink("https://github.com/baonguyen96/Calendar")
+            createSourceLink("https://github.com/baonguyen96/Schedulers")
         ]
     },
     {
