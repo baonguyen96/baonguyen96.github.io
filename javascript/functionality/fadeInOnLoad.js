@@ -1,5 +1,5 @@
 $(function () {
-    let fadeTime = 1000;
+    let fadeTime = 500;
 
     // show anything that is in the viewport on load by default
     $('.section, #copyright').each(function () {

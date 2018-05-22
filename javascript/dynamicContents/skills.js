@@ -10,7 +10,7 @@ let skills = [
     },
     {
         "name": "Databases",
-        "value": "MySQL, Microsoft SQL Server, SPARQL, RDF, JDBC, JPA, ERD"
+        "value": "MySQL, Microsoft SQL Server, SPARQL, RDF, JDBC, JPA, ERD, MongoDB"
     },
     {
         "name": "Automation Testing",
