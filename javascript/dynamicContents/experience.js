@@ -17,7 +17,7 @@ let workExperienceList = [
         "company": "7-Eleven",
         "period": "July 2014 - December 2016",
         "duties": [
-            "Receive and check in/out merchandises",
+            "Keep track of merchandise flows",
             "Provide outstanding customer service"
         ]
     },
@@ -26,7 +26,7 @@ let workExperienceList = [
         "company": "Melbourne Public Library",
         "period": "December 2012 - April 2013",
         "duties": [
-            "Volunteerism",
+            "Volunteer",
             "Organize and track books flow",
             "Organize and run public events for children"
         ]
