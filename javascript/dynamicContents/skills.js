@@ -1,4 +1,5 @@
-let skills = [{
+let skills = [
+    {
         "name": "Programming",
         "value": "Java, C, C++, C#, Python, PHP, UML"
     },
@@ -14,6 +15,10 @@ let skills = [{
     {
         "name": "Automation Testing",
         "value": "JUnit, TestNG, Selenium"
+    },
+    {
+        "name": "Data Integration",
+        "value": "SSIS, SSDT"
     },
     {
         "name": "Machine Learning",

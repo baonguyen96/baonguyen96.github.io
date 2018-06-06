@@ -1,4 +1,14 @@
 let workExperienceList = [
+    // {
+    //     "jobTitle": "Data Integration",
+    //     "company": "Loopback Analytics",
+    //     "period": "May 2017 - August 2017,<br/>January 2018 - Present",
+    //     "duties": [
+    //         "Integrate various data sources using SSIS/SSDT packages",
+    //         "Maintain SQL Store Procedures",
+    //         "Build Windows Services using C# and .NET framework"
+    //     ]
+    // },
     {
         "jobTitle": "Quality Assurance",
         "company": "Loopback Analytics",
