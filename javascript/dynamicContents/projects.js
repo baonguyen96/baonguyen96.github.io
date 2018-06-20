@@ -45,6 +45,16 @@ let projectsList = [
         ]
     },
     {
+        "title": "Git Data",
+        "intro": createIntro("A Windows Application that summary any GitHub account. " +
+            "Utilizing GitHub API, C#, and .NET Framework. Currently still under development process.",
+            ["GitHub API", "C#", ".NET"]),
+        "links": [
+            createDemoLink(),
+            createSourceLink("https://github.com/baonguyen96/MorseMastering")
+        ]
+    },
+    {
         "title": "Morse Mastering",
         "intro": createIntro("An Android application that teaches users the Morse code and translates between " +
             "Morse and normal text. It also provides some Android services, such as Notification and " +
@@ -62,14 +72,6 @@ let projectsList = [
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/AirplaneTicketsReservingSystem")
-        ]
-    },
-    {
-        "title": "E-Commerce",
-        "intro": createIntro("A small E-Commerce application using Java embedded with MySQL " +
-            "(JDBC and JPA.)", ["MySQL", "JDBC", "JPA"]),
-        "links": [
-            createSourceLink("https://github.com/baonguyen96/ECommerce")
         ]
     },
     {
@@ -92,25 +94,6 @@ let projectsList = [
         ]
     },
     {
-        "title": "Ticket To Knowhere",
-        "intro": createIntro("A docking software system that tracks parking lot's activities " +
-            "and generates violation tickets, written in C++.", ["C++"]),
-        "links": [
-            createDemoLink(),
-            createSourceLink("https://github.com/baonguyen96/TicketToKnowhere")
-        ]
-    },
-    {
-        "title": "Health Score",
-        "intro": createIntro("This C project is a statistical analysis program based on the concept " +
-            "of multi-sensors data fusion - combining observations from different " +
-            "sensors to provide a robust, complete description of a configuration.", ["C"]),
-        "links": [
-            createDemoLink(),
-            createSourceLink("https://github.com/baonguyen96/HealthScore")
-        ]
-    },
-    {
         "title": "Cyberminer",
         "intro": createIntro("A search engine built in HTML, CSS, SpringBoot, MySQL, " +
             "and Selenium that allows users to add a URL-Description tuple to the database, and carries " +
@@ -128,18 +111,6 @@ let projectsList = [
             " on them.", ["Python"]),
         "links": [
             createSourceLink("https://github.com/baonguyen96/ImageColor")
-        ]
-    },
-    {
-        "title": "Joana Pdg Pruner",
-        "intro": createIntro("An extension to the current state-of-the-art Java analysis tool - " +
-            createLink("https://github.com/joana-team/joana", "JOANA") +
-            " - that produces a maintainable and relevant " +
-            createLink("https://en.wikipedia.org/wiki/Program_Dependence_Graph", "PDG") + ".",
-            ["Java"]),
-        "links": [
-            createDemoLink(),
-            createSourceLink("https://github.com/baonguyen96/JoanaPdgPruner")
         ]
     },
     {
