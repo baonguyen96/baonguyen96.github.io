@@ -10,7 +10,7 @@ let skills = [
     },
     {
         "name": "Databases",
-        "value": "MySQL, Microsoft SQL Server, SPARQL, RDF, JDBC, JPA, ERD, MongoDB"
+        "value": "MySQL, Microsoft SQL Server, SPARQL, RDF, JDBC, JPA, MongoDB"
     },
     {
         "name": "Automation Testing",
@@ -20,13 +20,13 @@ let skills = [
         "name": "Data Integration",
         "value": "SSIS, SSDT"
     },
-    {
-        "name": "Machine Learning",
-        "value": "R, TensorFlow, OpenCV"
-    },
+    // {
+    //     "name": "Machine Learning",
+    //     "value": "R, TensorFlow, OpenCV"
+    // },
     {
         "name": "Build/Deployment",
-        "value": "Maven, Gradle, Ant, Git/GitHub, BitBucket"
+        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket"
     },
     {
         "name": "Operating Systems",
@@ -47,9 +47,13 @@ let skills = [
         "value": "Agile/SCRUM, Test Driven Development, Mobile-First Development"
     },
     {
-        "name": "Miscellaneous",
-        "value": "Photography, Design, Animation, Analytics"
+        "name": "Architecture/Design Patterns",
+        "value": "Client-Server, MVC"
     }
+    // {
+    //     "name": "Miscellaneous",
+    //     "value": "Photography, Design, Animation, Analytics"
+    // }
 ];
 
 $(function() {

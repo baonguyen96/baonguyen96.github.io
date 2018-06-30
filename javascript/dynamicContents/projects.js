@@ -9,7 +9,7 @@ let projectsList = [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/DarkChroma"),
             createSourceLink("https://chrome.google.com/webstore/detail/dark-chroma/jjknnbjoocbcgemnnjoaiifopndlcnbe",
-                "Also available on", "Chrome Web Store")
+                "Available on", "Chrome Web Store")
         ]
     },
     {
@@ -50,7 +50,7 @@ let projectsList = [
             "Utilizing GitHub API, C#, and .NET Framework. Currently still under development process.",
             ["GitHub API", "C#", ".NET"]),
         "links": [
-            createDemoLink(),
+            // createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/MorseMastering")
         ]
     },
@@ -61,7 +61,7 @@ let projectsList = [
             "Network Communication.", ["Android application"]),
         "links": [
             createDemoLink(),
-            createSourceLink("https://github.com/baonguyen96/MorseMastering")
+            // createSourceLink("#actuaLink", "Available on", "Google Play Store")
         ]
     },
     {
@@ -86,23 +86,23 @@ let projectsList = [
     },
     {
         "title": "Schedulers",
-        "intro": createIntro("This Java project simulates different types of modern OS schedulers, such as: " +
+        "intro": createIntro("This Java project simulates different types of modern OS job schedulers, such as: " +
             "FCFS, RR, SPN, SRT, HRRN, and Feedback.", ["Java"]),
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/Schedulers")
         ]
     },
-    {
-        "title": "Cyberminer",
-        "intro": createIntro("A search engine built in HTML, CSS, SpringBoot, MySQL, " +
-            "and Selenium that allows users to add a URL-Description tuple to the database, and carries " +
-            "out a search on the descriptions.",
-            ["HTML", "CSS", "SpringBoot", "MySQL", "Selenium"]),
-        "links": [
-            createSourceLink("https://github.com/baonguyen96/Cyberminer")
-        ]
-    },
+    // {
+    //     "title": "Cyberminer",
+    //     "intro": createIntro("A search engine built in HTML, CSS, SpringBoot, MySQL, " +
+    //         "and Selenium that allows users to add a URL-Description tuple to the database, and carries " +
+    //         "out a search on the descriptions.",
+    //         ["HTML", "CSS", "SpringBoot", "MySQL", "Selenium"]),
+    //     "links": [
+    //         createSourceLink("https://github.com/baonguyen96/Cyberminer")
+    //     ]
+    // },
     {
         "title": "Color Conversion",
         "intro": createIntro("A simple Python program that enhances images by performing " +
@@ -110,19 +110,19 @@ let projectsList = [
             createLink("https://en.wikipedia.org/wiki/Histogram_equalization", "Histogram Equalization") +
             " on them.", ["Python"]),
         "links": [
+            // add demo link
             createSourceLink("https://github.com/baonguyen96/ImageColor")
         ]
     },
-    {
-        "title": "Tech Rush",
-        "intro": createIntro("A website that summarizes basic yet essential knowledge about Web Development for Business." +
-            " Written in HTML, CSS, Bootstrap, JavaScript, WordPress.",
-            ["HTML", "CSS", "Bootstrap", "JavaScript", "WordPress"]),
-        "links": [
-            createSourceLink("http://techrush.site/", "See the", "official site"),
-            createSourceLink("https://github.com/baonguyen96/TechRush")
-        ]
-    }
+    // {
+    //     "title": "Tech Rush",
+    //     "intro": createIntro("A website that summarizes basic yet essential knowledge about Web Development for Business." +
+    //         " Written in HTML, CSS, Bootstrap, JavaScript, WordPress.",
+    //         ["HTML", "CSS", "Bootstrap", "JavaScript", "WordPress"]),
+    //     "links": [
+    //         createSourceLink("https://github.com/baonguyen96/TechRush")
+    //     ]
+    // }
 ];
 
 
