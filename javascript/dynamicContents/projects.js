@@ -93,16 +93,6 @@ let projectsList = [
             createSourceLink("https://github.com/baonguyen96/Schedulers")
         ]
     },
-    // {
-    //     "title": "Cyberminer",
-    //     "intro": createIntro("A search engine built in HTML, CSS, SpringBoot, MySQL, " +
-    //         "and Selenium that allows users to add a URL-Description tuple to the database, and carries " +
-    //         "out a search on the descriptions.",
-    //         ["HTML", "CSS", "SpringBoot", "MySQL", "Selenium"]),
-    //     "links": [
-    //         createSourceLink("https://github.com/baonguyen96/Cyberminer")
-    //     ]
-    // },
     {
         "title": "Color Conversion",
         "intro": createIntro("A simple Python program that enhances images by performing " +
@@ -113,16 +103,7 @@ let projectsList = [
             // add demo link
             createSourceLink("https://github.com/baonguyen96/ImageColor")
         ]
-    },
-    // {
-    //     "title": "Tech Rush",
-    //     "intro": createIntro("A website that summarizes basic yet essential knowledge about Web Development for Business." +
-    //         " Written in HTML, CSS, Bootstrap, JavaScript, WordPress.",
-    //         ["HTML", "CSS", "Bootstrap", "JavaScript", "WordPress"]),
-    //     "links": [
-    //         createSourceLink("https://github.com/baonguyen96/TechRush")
-    //     ]
-    // }
+    }
 ];
 
 
