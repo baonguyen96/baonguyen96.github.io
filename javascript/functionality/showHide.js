@@ -15,11 +15,9 @@ $(function () {
         else if(state === "Less") {
             if(id === "projectsToggle") {
                 $(".projectsHidden").slideUp();
-                // window.location.hash = "#projectsToggle";
             }
             else {
                 $(".experienceHidden").slideUp();
-                // window.location.hash = "#experienceToggle";
             }
             state = "More";
         }

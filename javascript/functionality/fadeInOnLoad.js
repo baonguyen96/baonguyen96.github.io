@@ -1,8 +1,9 @@
 $(function () {
+
     let fadeTime = 500;
 
     // show anything that is in the viewport on load by default
-    $('.section, #copyright').each(function () {
+    $('#header, .section, #copyright').each(function () {
         let top_of_object = $(this).position().top;
         let bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -13,7 +14,7 @@ $(function () {
 
     // when scrolling, fade in the rest one by one
     $(window).scroll(function () {
-        $('.section, #copyright').each(function () {
+        $('#header, .section, #copyright').each(function () {
             let top_of_object = $(this).position().top;
             let bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -21,6 +22,5 @@ $(function () {
                 $(this).animate({'opacity': '1'}, fadeTime);
             }
         });
-
     });
 });

@@ -6,7 +6,7 @@ let skills = [
     {
         "name": "Web Technologies",
         "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, " +
-            "WordPress, NodeJS, AJAX, REST, Spring"
+            "WordPress, NodeJS, AJAX, REST, Spring, RabbitMQ"
     },
     {
         "name": "Databases",
@@ -20,10 +20,6 @@ let skills = [
         "name": "Data Integration",
         "value": "SSIS, SSDT"
     },
-    // {
-    //     "name": "Machine Learning",
-    //     "value": "R, TensorFlow, OpenCV"
-    // },
     {
         "name": "Build/Deployment",
         "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket"
@@ -46,14 +42,14 @@ let skills = [
         "name": "Development Methodologies",
         "value": "Agile/SCRUM, Test Driven Development, Mobile-First Development"
     },
-    {
-        "name": "Architecture/Design Patterns",
-        "value": "Client-Server, MVC"
-    }
     // {
-    //     "name": "Miscellaneous",
-    //     "value": "Photography, Design, Animation, Analytics"
-    // }
+    //     "name": "Architecture/Design Patterns",
+    //     "value": "Client-Server, MVC"
+    // },
+    {
+        "name": "Miscellaneous",
+        "value": "Photography, Design, Animation, Analytics"
+    }
 ];
 
 $(function() {

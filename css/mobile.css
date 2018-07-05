@@ -55,10 +55,10 @@ p {
     border-radius: 10px;
     margin: 0 auto 1.25em;
     padding: 1em;
-    /*opacity: 0;*/
+    opacity: 0;
 }
 
-.section:not(#header) {
+.section {
     background-color: #fff;
     padding: 3em 1em 2em 1em;
 }
@@ -152,7 +152,7 @@ a:visited {
 
 .toggle {
     padding: 5px 20px;
-    margin: 1em auto 0;
+    margin: 1.5em auto 0;
     color: #f35d45;
     border: none;
     background-color: transparent;
@@ -213,9 +213,9 @@ button:focus {
     transform: translateY(-50%);
 }
 
-#projectsToggle {
-    margin-top: 1.2em;
-}
+/*#projectsToggle {*/
+    /*margin-top: 1.5em;*/
+/*}*/
 
 .experienceHidden {
     display: none;
