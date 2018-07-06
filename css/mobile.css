@@ -10,7 +10,8 @@ body {
     padding: 1em 1%;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: url("../assets/images/backgrounds/custom-background-darker.jpg") no-repeat fixed center;
+    background: url("../assets/images/backgrounds/custom-background-darker.jpg") no-repeat fixed center center;
+    background-size: cover;
 }
 
 h1 {
@@ -20,12 +21,11 @@ h1 {
     margin-top: 1em;
     text-decoration: underline;
     color: white;
-    text-shadow:
-            3px 3px 0 #000,
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
+    text-shadow: 3px 3px 0 #000,
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -62,7 +62,6 @@ p {
     background-color: #fff;
     padding: 3em 1em 2em 1em;
 }
-
 
 #header {
     background-image: url("../assets/images/backgrounds/header-background-crop.jpg");
@@ -214,7 +213,7 @@ button:focus {
 }
 
 /*#projectsToggle {*/
-    /*margin-top: 1.5em;*/
+/*margin-top: 1.5em;*/
 /*}*/
 
 .experienceHidden {
@@ -235,7 +234,7 @@ hr {
 }
 
 .vertical-alignment-helper {
-    display:table;
+    display: table;
     height: 100%;
     width: 70%;
     margin: 0 auto;
@@ -285,9 +284,9 @@ hr {
 }
 
 .shadow {
-    -webkit-box-shadow: 2px 2px 4px 4px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    2px 2px 4px 4px #ccc;  /* Firefox 3.5 - 3.6 */
-    box-shadow:         2px 2px 4px 4px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    -webkit-box-shadow: 2px 2px 4px 4px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 2px 2px 4px 4px #ccc; /* Firefox 3.5 - 3.6 */
+    box-shadow: 2px 2px 4px 4px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 #followMeSection {
@@ -346,7 +345,6 @@ hr {
     right: 2%;
     bottom: 1em;
 }
-
 
 @media (hover: hover) {
 
