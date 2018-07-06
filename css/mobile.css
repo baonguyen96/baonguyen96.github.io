@@ -10,7 +10,7 @@ body {
     padding: 1em 1%;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: url("../assets/images/backgrounds/custom-background.jpg") no-repeat fixed center;
+    background: url("../assets/images/backgrounds/custom-background-darker.jpg") no-repeat fixed center;
 }
 
 h1 {
@@ -328,7 +328,7 @@ hr {
 }
 
 #copyright {
-    font-size: 0.9em;
+    font-size: 0.95em;
     text-align: center;
     color: gray;
     opacity: 0;
