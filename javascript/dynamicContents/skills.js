@@ -42,10 +42,6 @@ let skills = [
         "name": "Development Methodologies",
         "value": "Agile/SCRUM, Test Driven Development, Mobile-First Development"
     },
-    // {
-    //     "name": "Architecture/Design Patterns",
-    //     "value": "Client-Server, MVC"
-    // },
     {
         "name": "Miscellaneous",
         "value": "Photography, Design, Animation, Analytics"

@@ -337,29 +337,32 @@ hr {
     bottom: 1em;
 }
 
-
-#error-page-container {
-    background-color: rgba(141, 141, 141, 0.35);
-    border-radius: 3em;
-    width: 80%;
-    height: fit-content;
-    position: absolute;
-    top:0;
-    bottom: 0;
+#error-page > div {
+    position: fixed;
     left: 0;
-    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#error-area {
+    background-color: rgba(141, 141, 141, 0.35);
+    /*background-color: white;*/
+    border-radius: 10px;
+    width: 70%;
     margin: auto;
     text-align: center;
     opacity: 0;
 }
 
-#error-page-container > p:first-child {
+#error-area > p:first-child {
     font-weight: bold;
-    font-size: 5em;
+    font-size: 3em;
     color: #f35d45;
 }
 
-#error-page-container p {
+#error-area p {
     font-size: 1.25em;
 }
 
