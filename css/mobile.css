@@ -212,10 +212,6 @@ button:focus {
     transform: translateY(-50%);
 }
 
-/*#projectsToggle {*/
-/*margin-top: 1.5em;*/
-/*}*/
-
 .experienceHidden {
     display: none;
     width: 100%;
@@ -346,6 +342,33 @@ hr {
     bottom: 1em;
 }
 
+
+#error-page-container {
+    background-color: rgba(141, 141, 141, 0.35);
+    border-radius: 3em;
+    width: 80%;
+    height: fit-content;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    opacity: 0;
+}
+
+#error-page-container > p:first-child {
+    font-weight: bold;
+    font-size: 5em;
+    color: #f35d45;
+}
+
+#error-page-container p {
+    font-size: 1.25em;
+}
+
+
 @media (hover: hover) {
 
     button.toggle:hover {
@@ -371,3 +394,4 @@ hr {
     }
 
 }
+
