@@ -10,7 +10,7 @@ body {
     padding: 1em 1%;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: url("../assets/images/backgrounds/custom-background-darker.jpg") no-repeat fixed center center;
+    background: url("../assets/images/backgrounds/custom-background.jpg") no-repeat fixed center center;
     background-size: cover;
 }
 
@@ -283,11 +283,6 @@ hr {
     -webkit-box-shadow: 2px 2px 4px 4px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow: 2px 2px 4px 4px #ccc; /* Firefox 3.5 - 3.6 */
     box-shadow: 2px 2px 4px 4px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-}
-
-#followMeSection {
-    padding-left: 0;
-    padding-right: 0;
 }
 
 #followMeSection > div.row {
