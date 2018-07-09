@@ -6,7 +6,6 @@ html {
 
 body {
     font-size: 12pt;
-    /*background-color: #efefef;*/
     padding: 1em 1%;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -348,7 +347,6 @@ hr {
 
 #error-area {
     background-color: rgba(141, 141, 141, 0.35);
-    /*background-color: white;*/
     border-radius: 10px;
     width: 70%;
     margin: auto;
