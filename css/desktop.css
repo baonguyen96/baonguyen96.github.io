@@ -96,6 +96,10 @@
         display: none;
     }
 
+    #error-area img {
+        margin-right: 1em;
+    }
+
 }
 
 @media screen and (width: 768px) {

@@ -354,14 +354,27 @@ hr {
     opacity: 0;
 }
 
-#error-area > p:first-child {
+#error-area > div:first-child > p {
     font-weight: bold;
     font-size: 3em;
     color: #f35d45;
+    display: inline-block;
 }
 
 #error-area p {
     font-size: 1.25em;
+}
+
+#error-area img {
+    height: 3em;
+    width: auto;
+    display: inline-block;
+    position: relative;
+    top: -0.75em;
+}
+
+#error-area > div:not(first-child) {
+    clear: both;
 }
 
 
