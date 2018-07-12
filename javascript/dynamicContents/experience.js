@@ -1,15 +1,15 @@
 let workExperienceList = [
-    // {
-    //     "jobTitle": "Data Integration",
-    //     "company": "Loopback Analytics",
-    //     "period": "August 2018 - Present",
-    //     "duties": [
-    //         "Integrate various data sources using SSIS/SSDT packages",
-    //         "Maintain SQL Store Procedures",
-    //         "Build and maintain multiple Windows Applications and Services",
-    //         "Experience with C#, .NET, Azure, SOAP, RabbitMQ"
-    //     ]
-    // },
+    {
+        "jobTitle": "Data Integration",
+        "company": "Loopback Analytics",
+        "period": "August 2018 - Present",
+        "duties": [
+            "Maintain SQL Store Procedures",
+            "Build and maintain multiple Windows Form Applications",
+            "Design, build, and maintain multithreaded Windows Service applications (FTP)",
+            "Experience with C#, .NET, SSIS, Azure, SOAP, RabbitMQ"
+        ]
+    },
     {
         "jobTitle": "Quality Assurance",
         "company": "Loopback Analytics",

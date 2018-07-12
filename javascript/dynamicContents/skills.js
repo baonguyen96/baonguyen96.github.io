@@ -1,16 +1,16 @@
 let skills = [
     {
         "name": "Programming",
-        "value": "Java, C, C++, C#, Python, PHP, UML"
+        "value": "Java, C#, C, C++, Kotlin, Python, PHP"
     },
     {
         "name": "Web Technologies",
         "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, " +
-            "WordPress, NodeJS, AJAX, REST, Spring, RabbitMQ"
+            "WordPress, NodeJS, AJAX, REST, Spring, RabbitMQ, RDF"
     },
     {
         "name": "Databases",
-        "value": "MySQL, Microsoft SQL Server, SPARQL, RDF, JDBC, JPA, MongoDB"
+        "value": "MySQL, Microsoft SQL Server, SPARQL, JDBC, JPA, MongoDB"
     },
     {
         "name": "Automation Testing",

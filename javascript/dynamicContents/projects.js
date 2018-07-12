@@ -94,13 +94,13 @@ let projectsList = [
         ]
     },
     {
-        "title": "Color Conversion",
+        "title": "Color Manipulation",
         "intro": createIntro("A simple Python program that enhances images by performing " +
             createLink("https://en.wikipedia.org/wiki/Linear_scale", "Linear Scaling") + " and " +
             createLink("https://en.wikipedia.org/wiki/Histogram_equalization", "Histogram Equalization") +
-            " on them.", ["Python"]),
+            " on them. It samples a given window of the original image, and applies the change on the entire image.", ["Python"]),
         "links": [
-            // add demo link
+            createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/ImageColor")
         ]
     }
