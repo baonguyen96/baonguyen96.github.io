@@ -22,7 +22,7 @@ let skills = [
     },
     {
         "name": "Build/Deployment",
-        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket"
+        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket, Octopus"
     },
     {
         "name": "Operating Systems",

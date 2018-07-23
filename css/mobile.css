@@ -354,18 +354,11 @@ hr {
     opacity: 0;
 }
 
-/*#error-area > div:first-child > p {*/
-    /*font-weight: bold;*/
-    /*font-size: 3em;*/
-    /*color: #f35d45;*/
-    /*display: inline-block;*/
-/*}*/
-
 #error-area p {
     font-size: 1.25em;
 }
 
-#error-area img {
+#error-area > img {
     height: 6em;
     width: auto;
     margin-bottom: 2em;

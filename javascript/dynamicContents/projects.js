@@ -223,8 +223,8 @@ function showDemo() {
 
         let img = $(this).find(".demoImage");
         img.attr("src", "./assets/images/demos/" + demoProjectId + ".gif");
-        // img.attr("alt", demoProjectTitle + " Demo");
-        img.attr("alt", "./assets/images/demos/" + demoProjectId + ".gif");
+        img.attr("alt", demoProjectTitle + " Demo");
+        // img.attr("alt", "./assets/images/demos/" + demoProjectId + ".gif");
     });
 
 }
