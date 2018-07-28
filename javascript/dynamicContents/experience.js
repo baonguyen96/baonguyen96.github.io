@@ -4,10 +4,10 @@ let workExperienceList = [
     //     "company": "Loopback Analytics",
     //     "period": "August 2018 - Present",
     //     "duties": [
-    //         "Maintain SQL Store Procedures",
-    //         "Build and maintain multiple Windows Form Applications",
-    //         "Design, build, and maintain multithreaded Windows Service applications (FTP)",
-    //         "Experience with C#, .NET, SSIS, Azure, SOAP, RabbitMQ"
+    //         "Build and maintain multiple Windows Form Applications which automate manual data cleaning tasks " +
+    //         "that save hours of operation per process for other people",
+    //         "Design, build, and maintain multithreaded Windows Service applications that automatically download files " +
+    //         "on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company"
     //     ]
     // },
     {
@@ -15,12 +15,11 @@ let workExperienceList = [
         "company": "Loopback Analytics",
         "period": "May 2017 - August 2017,<br/>January 2018 - Present",
         "duties": [
-            "Architect and develop multiple tools for automation testing, including the system that integrates " +
-            "all those tools together to support end-to-end testing",
-            "Implement additional features such as self-healing and report logging for the automated tools",
-            "Develop test cases from the requirements",
-            "Perform various testing techniques for software releases",
-            "Experience with Java, SQL, Selenium, XML"
+            "Architect and build a system that integrates different tools to support end-to-end automation testing " +
+            "that reduces tons of long and error-prone manual process for QA team, thus increase efficiency",
+            "Implement additional features such as self-healing and report logging for the automated Selenium tool " +
+            "that give better reports with clearer error tracing",
+            "Perform various testing techniques for software releases"
         ]
     },
     {

@@ -4,6 +4,10 @@ let skills = [
         "value": "Java, C#, C, C++, Kotlin, Python, PHP"
     },
     {
+        "name": "Platform/Framework",
+        "value": ".NET, J2EE"
+    },
+    {
         "name": "Web Technologies",
         "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, " +
             "WordPress, NodeJS, AJAX, REST, Spring, RabbitMQ, RDF"
@@ -22,7 +26,7 @@ let skills = [
     },
     {
         "name": "Build/Deployment",
-        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket, Octopus"
+        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket"
     },
     {
         "name": "Operating Systems",
@@ -32,7 +36,7 @@ let skills = [
         "name": "Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
             "Microsoft SSMS, MySQL Workbench, Microsoft Office, SharePoint, " +
-            "Adobe Creative Cloud suite, Google products, RStudio"
+            "Adobe Creative Cloud suite, RStudio"
     },
     {
         "name": "Project Management",

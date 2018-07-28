@@ -5,7 +5,8 @@ let awards = [
     "2017 Wells Fargo Endowed Scholarship",
     "2018 Selden Leavell Endowed Scholarship",
     "2018 Mason Brown Family Foundation Endowed Scholarship",
-    "Software Testing Contest Certificate from " + createLink("http://rs.ieee.org/", "IEEE Reliability Society")
+    "Software Testing Contest Certificate from " + createLink("http://rs.ieee.org/", "IEEE Reliability Society"),
+    createLink("https://www.utdallas.edu/news/2018/7/30-33059_More-than-1400-Students-Earn-Spots-on-Spring-Deans_story-wide.html", "Spring 2018 Dean's List") + " with the Excellence in Education Scholarship for this semester",
 ];
 
 
