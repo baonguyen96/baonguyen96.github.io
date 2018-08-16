@@ -1,17 +1,19 @@
 let workExperienceList = [
-    // {
-    //     "jobTitle": "Data Integration",
-    //     "company": "Loopback Analytics",
-    //     "period": "August 2018 - Present",
-    //     "duties": [
-    //         "Build and maintain multiple Windows Form Applications which automate manual data cleaning tasks " +
-    //         "that save hours of operation per process for other people",
-    //         "Design, build, and maintain multithreaded Windows Service applications that automatically download files " +
-    //         "on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company"
-    //     ]
-    // },
     {
-        "jobTitle": "Quality Assurance",
+        "jobTitle": "Data Integration Analyst",
+        "company": "Loopback Analytics",
+        "period": "August 2018 - Present",
+        "duties": [
+            "Build and maintain multiple Windows Form Applications which automate manual data cleaning tasks " +
+            "that save hours of operation per process for other people",
+            "Design, build, and maintain multithreaded Windows Service applications that automatically download files " +
+            "on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
+            "Monitor and troubleshoot SQL jobs for SSMS",
+            "Maintain multiple SQL Store Procedures that integrates multiple data sources into company's standard schema"
+        ]
+    },
+    {
+        "jobTitle": "Quality Assurance Intern",
         "company": "Loopback Analytics",
         "period": "May 2017 - August 2017,<br/>January 2018 - Present",
         "duties": [
