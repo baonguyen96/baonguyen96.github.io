@@ -15,7 +15,7 @@ let workExperienceList = [
     {
         "jobTitle": "Quality Assurance Intern",
         "company": "Loopback Analytics",
-        "period": "May 2017 - August 2017,<br/>January 2018 - Present",
+        "period": "May 2017 - August 2017,<br/>January 2018 - August 2018",
         "duties": [
             "Architect and build a system that integrates different tools to support end-to-end automation testing " +
             "that reduces tons of long and error-prone manual process for QA team, thus increase efficiency",
