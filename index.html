@@ -13,8 +13,8 @@
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" type="text/css" href="css/mobile.css">
-        <link rel="stylesheet" type="text/css" href="css/desktop.css">
+        <link rel="stylesheet" type="text/css" href="styles/mobile.css">
+        <link rel="stylesheet" type="text/css" href="styles/desktop.css">
 
         <script src="https://code.jquery.com/jquery-3.3.1.js"
                 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -29,14 +29,14 @@
                 integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i"
                 crossorigin="anonymous"></script>
 
-        <script src="javascript/dynamicContents/experience.js"></script>
-        <script src="javascript/dynamicContents/skills.js"></script>
-        <script src="javascript/dynamicContents/projects.js"></script>
-        <script src="javascript/dynamicContents/awards.js"></script>
-        <script src="javascript/dynamicContents/majorCourses.js"></script>
-        <script src="javascript/functionality/showHide.js"></script>
-        <script src="javascript/functionality/smoothScroll.js"></script>
-        <script src="javascript/functionality/fadeInOnLoad.js"></script>
+        <script src="scripts/contents/experience.js"></script>
+        <script src="scripts/contents/skills.js"></script>
+        <script src="scripts/contents/projects.js"></script>
+        <script src="scripts/contents/awards.js"></script>
+        <script src="scripts/contents/majorCourses.js"></script>
+        <script src="scripts/functionalities/showHide.js"></script>
+        <script src="scripts/functionalities/smoothScroll.js"></script>
+        <script src="scripts/functionalities/fadeInOnLoad.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119562368-1"></script>
@@ -65,12 +65,11 @@
             <section class="section" id="aboutSection">
                 <h2><span>About Me</span></h2>
                 <p>
-                    Hello! My name is <strong>Bao Nguyen</strong>. I graduated with Bachelor of Science degree in Software Engineering
-                    at <a href="http://www.utdallas.edu/" target="_blank">The University of Texas at Dallas</a>
-                    with a focus on Computer Networking and Security. Currently I am a Master student at UTD, majoring
-                    in the <a
+                    Hello! My name is <strong>Bao Nguyen</strong>. At <a href="http://www.utdallas.edu/" target="_blank">The University of Texas at Dallas</a>,
+                    I am honor to graduate with <i>Cum Laude</i> for my Bachelor of Science degree in Software Engineering, focusing in Computer Networking and Security.
+                    Currently I am a Computer Science Master student at UTD, majoring in the <a
                         href="https://catalog.utdallas.edu/2016/graduate/programs/ecs/computer-science" target="_blank">
-                    Information Assurance</a> track. I am a member of <a
+                    Information Assurance</a>. I am a member of <a
                         href="http://cs.utdallas.edu/ai1ec-event/codeburners-kickoff-spring-2017/"
                         target="_blank">CodeBurners</a> - a weekly programming contests at UTD -
                     since 2015, <a href="http://www.vincefutd.org/" target="_blank">UTD Vincef</a> and <a
@@ -183,12 +182,12 @@
         </div>
 
 
-        <!--------------------------------------------------------------------------------
+        <!--
             hidden div that contains all the templates to be reused
             should separate to a separated templates.html file,
             OR
             just use ReactJS
-        ---------------------------------------------------------------------------------->
+        -->
         <div id="templatesContainer" hidden>
 
             <!-- template for each row of the skill section -->
@@ -237,29 +236,30 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- end templates container section -->
 
-        <!-- template for modal -->
-        <div class="modal fade" id="hiddenModal" role="dialog">
-            <div class="vertical-alignment-helper">
-                <div class="modal-dialog vertical-align-center">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <p class="modal-title">Modal Header</p>
-                        </div>
-                        <div class="modal-body">
-                            <img class="demoImage shadow" src="assets/images/backgrounds/header-background-crop.jpg"
-                                 alt="Default Image" align="middle">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn closeModalButton" data-dismiss="modal">Close</button>
+            <!-- template for modal -->
+            <div class="modal fade" id="hiddenModal" role="dialog">
+                <div class="vertical-alignment-helper">
+                    <div class="modal-dialog vertical-align-center">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title">Modal Header</p>
+                            </div>
+                            <div class="modal-body">
+                                <img class="demoImage shadow" src="assets/images/backgrounds/header-background-crop.jpg"
+                                     alt="Default Image" align="middle">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn closeModalButton" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- end modal template -->
+
         </div>
-        <!-- end modal template -->
+        <!-- end templates container section -->
 
     </body>
 

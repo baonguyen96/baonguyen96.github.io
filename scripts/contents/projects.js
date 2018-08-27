@@ -26,11 +26,11 @@ let projectsList = [
     {
         "title": "Self Service Agent For Test Data",
         "intro": "<p id='seniorDesignTitle'><i>(Senior Design Project for " +
-            createLink("http://argodata.com/", "ARGO Data") + ")</i></p>" +
-            createIntro("An application that automatically generates desired test data for QA testers to use. " +
-                "It uses SPARQL and Java to retrieve and store RDF graphs from/to Fuseki server. " +
-                "Can be used as CLI application or Web application (SpringBoot).",
-                ["SPARQL", "Java", "Fuseki", "SpringBoot"]),
+        createLink("http://argodata.com/", "ARGO Data") + ")</i></p>" +
+        createIntro("An application that automatically generates desired test data for QA testers to use. " +
+            "It uses SPARQL and Java to retrieve and store RDF graphs from/to Fuseki server. " +
+            "Can be used as CLI application or Web application (SpringBoot).",
+            ["SPARQL", "Java", "Fuseki", "SpringBoot"]),
         "links": [
             createDemoLink()
         ]
@@ -178,7 +178,6 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
                     if (projectLink.text().endsWith(" See Demo")) {
                         projectLink.addClass("demoLinkContainer");
                     }
-
                 }
                 else {
                     let newLink = projectLink.clone().html(link);
@@ -192,7 +191,6 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
 
                     currentProject.find(".projectDescription").append(newLink);
                 }
-
             }
 
             newRow.append(currentProject);
@@ -201,9 +199,7 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
         if (!isRowContainsOnlySingleProject) {
             groupElement.append(newRow);
         }
-
     }
-
 }
 
 
@@ -224,9 +220,7 @@ function showDemo() {
         let img = $(this).find(".demoImage");
         img.attr("src", "./assets/images/demos/" + demoProjectId + ".gif");
         img.attr("alt", demoProjectTitle + " Demo");
-        // img.attr("alt", "./assets/images/demos/" + demoProjectId + ".gif");
     });
-
 }
 
 
@@ -238,5 +232,4 @@ $(function () {
     addProjectsToGroup(projects, 0, 4);
     addProjectsToGroup(projectsHidden, 4, projectsList.length);
     showDemo();
-
 });

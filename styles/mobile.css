@@ -158,6 +158,13 @@ a:visited {
     justify-content: center;
 }
 
+button.toggle:hover {
+    cursor: pointer;
+    padding: 4px 20px;
+    border-radius: 10px;
+    border: 1px solid #f35d45;
+}
+
 button:focus {
     outline: none;
 }
@@ -366,13 +373,6 @@ hr {
 
 
 @media (hover: hover) {
-
-    button.toggle:hover {
-        cursor: pointer;
-        padding: 4px 20px;
-        border-radius: 10px;
-        border: 1px solid #f35d45;
-    }
 
     img.contactIcon:hover {
         opacity: 0.9;
