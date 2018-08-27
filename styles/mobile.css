@@ -319,6 +319,18 @@ hr {
     transition-duration: 0.3s;
 }
 
+
+.contactIcon:hover {
+    opacity: 0.9;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: transform;
+    transition: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+
 #followMeSection > div {
     text-align: center;
 }
@@ -341,6 +353,12 @@ hr {
     position: fixed;
     right: 2%;
     bottom: 1em;
+}
+
+
+#upArrowNavigator img:hover {
+    opacity: 0.6;
+    transition-duration: 0.3s;
 }
 
 #error-page > div {
@@ -370,24 +388,3 @@ hr {
     width: auto;
     margin-bottom: 2em;
 }
-
-
-@media (hover: hover) {
-
-    img.contactIcon:hover {
-        opacity: 0.9;
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3);
-        -webkit-transition: transform;
-        transition: transform;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-    }
-
-    a#upArrowNavigator img:hover {
-        opacity: 0.6;
-        transition-duration: 0.3s;
-    }
-
-}
-
