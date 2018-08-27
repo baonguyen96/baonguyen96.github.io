@@ -3,10 +3,10 @@ let workExperienceList = [
         "jobTitle": "Data Integration Analyst",
         "company": "Loopback Analytics",
         "period": "August 2018 - Present",
-        "duties": [
+        "contributions": [
             "Build and maintain multiple Windows Form Applications which automate manual data cleaning tasks " +
             "that save hours of operation per process for other people",
-            "Design, build, and maintain multithreaded Windows Service applications that automatically download files " +
+            "Design, build, and maintain multi-threaded Windows Service applications that automatically download files " +
             "on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
             "Monitor and troubleshoot SQL jobs for SSMS",
             "Maintain multiple SQL Store Procedures that integrates multiple data sources into company's standard schema"
@@ -16,7 +16,7 @@ let workExperienceList = [
         "jobTitle": "Quality Assurance Intern",
         "company": "Loopback Analytics",
         "period": "May 2017 - August 2017,<br/>January 2018 - August 2018",
-        "duties": [
+        "contributions": [
             "Architect and build a system that integrates different tools to support end-to-end automation testing " +
             "that reduces tons of long and error-prone manual process for QA team, thus increase efficiency",
             "Implement additional features such as self-healing and report logging for the automated Selenium tool " +
@@ -28,7 +28,7 @@ let workExperienceList = [
         "jobTitle": "Store Associate",
         "company": "7-Eleven",
         "period": "July 2014 - December 2016",
-        "duties": [
+        "contributions": [
             "Keep track of merchandise flows",
             "Provide outstanding customer service"
         ]
@@ -37,7 +37,7 @@ let workExperienceList = [
         "jobTitle": "Librarian Assistant",
         "company": "Melbourne Public Library",
         "period": "December 2012 - April 2013",
-        "duties": [
+        "contributions": [
             "Volunteer",
             "Organize and track books flow",
             "Organize and run public events for children"
@@ -51,12 +51,12 @@ $(function () {
     let experienceTemplate = $("#experienceTemplate").clone().find(".experience");
 
     // loop through all work experience
-    for(let i = 0; i < workExperienceList.length; i++) {
-        let experienceData = workExperienceList[i];
+    for(let experienceIndex = 0; experienceIndex < workExperienceList.length; experienceIndex++) {
+        let experienceData = workExperienceList[experienceIndex];
         let currentExperience = experienceTemplate.clone();
 
         // only show the first experience by default
-        if(i > 0) {
+        if(experienceIndex > 0) {
             currentExperience.addClass("experienceHidden");
             currentExperience.prepend("<hr/>");
         }
@@ -67,13 +67,13 @@ $(function () {
 
         let customList = $("#customListTemplate").clone().find(".customList");
         let item = customList.find(".customListItem");
-        let currentDuties = experienceData.duties;
+        let contributions = experienceData.contributions;
         item.find(".customListIcon").attr("src", "./assets/images/misc/work.png");
 
-        // add all duties of current work experience
-        for(let duty = 0; duty < currentDuties.length; duty++) {
+        // add all contributions of current work experience
+        for(let contribution = 0; contribution < contributions.length; contribution++) {
             let newItem = item.clone();
-            newItem.find(".customListText").text(currentDuties[duty]);
+            newItem.find(".customListText").text(contributions[contribution]);
             customList.append(newItem);
         }
 
