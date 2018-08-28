@@ -54,7 +54,10 @@ let skills = [
 
 $(function() {
     let skillsContainer = $("#skillsContainer");
-    let customList = $("#customListTemplate").clone().find(".customList");
+    // let customList = $("#customListTemplate").clone().find(".customList");
+    let customListTemplate = document.querySelector('link[rel=import][href="./templates/customListTemplate.html"]').import;
+    alert(customListTemplate.html);
+    let customList = customListTemplate.querySelector("#customListTemplate").cloneNode(true).find(".customList");
     let itemTemplate = customList.find(".customListItem");
     itemTemplate.addClass("specialText");
     itemTemplate.find(".customListIcon").attr("src", "./assets/images/misc/skill.png");
