@@ -1,0 +1,28 @@
+$(function () {
+    let START_YEAR = 2017;
+    let currentYear = (new Date()).getFullYear();
+    let copyrightText = ['Copyright &copy; {copyrightPeriod} by <i>Bao Nguyen</i>.', 'All rights reserved.'];
+    let period = '';
+
+    if (currentYear > START_YEAR) {
+        period = START_YEAR + ' - ' + currentYear;
+    }
+    else {
+        period = START_YEAR;
+    }
+
+    copyrightText[0] = copyrightText[0].replace('{copyrightPeriod}', period);
+    setSingleLineCopyright(copyrightText);
+    setDoubleLinesCopyright(copyrightText);
+});
+
+
+function setSingleLineCopyright(copyrightText) {
+    $("#copyright").find('p').html(copyrightText[0] + ' ' + copyrightText[1]);
+}
+
+function setDoubleLinesCopyright(copyrightText) {
+    let $container = $("#copyright").find('.row');
+    $container.find('div:first-child').html(copyrightText[0]);
+    $container.find('div:last-child').html(copyrightText[1]);
+}
