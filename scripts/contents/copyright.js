@@ -1,5 +1,5 @@
 $(function () {
-    let START_YEAR = 2017;
+    let START_YEAR = 2018;
     let currentYear = (new Date()).getFullYear();
     let copyrightText = ['Copyright &copy; {copyrightPeriod} by <i>Bao Nguyen</i>.', 'All rights reserved.'];
     let period = '';
