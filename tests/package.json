@@ -1,14 +1,16 @@
 {
-  "name": "tests",
-  "version": "1.0.0",
-  "description": "regression test of baonguyen96.github.io",
-  "main": "index.js",
-  "scripts": {
-    "test": "node index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "selenium-webdriver": "^4.0.0-alpha.1"
-  }
+    "name": "tests",
+    "version": "1.0.0",
+    "description": "regression test of baonguyen96.github.io",
+    "main": "index.js",
+    "scripts": {
+        "test": "node index.js"
+    },
+    "author": "Bao Nguyen",
+    "license": "ISC",
+    "dependencies": {
+        "chromedriver": "^2.42.0",
+        "geckodriver": "^1.12.2",
+        "selenium-webdriver": "^4.0.0-alpha.1"
+    }
 }
