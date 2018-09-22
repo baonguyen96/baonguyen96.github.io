@@ -68,7 +68,9 @@ $(function() {
         item.find(".customListText").text(skillData.name);
         currentSkillGroup.find(".skillGroupName").html(item);
         currentSkillGroup.find(".skillGroupValue").text(skillData.value);
-        skillsContainer.append(currentSkillGroup);
+		currentSkillGroup.find(".skillGroupName").attr('id', 'skillName' + skillIndex);
+		currentSkillGroup.find(".skillGroupValue").attr('id', 'skillValue' + skillIndex);
+		skillsContainer.append(currentSkillGroup);
 
         if (skillIndex < skills.length - 1) {
             skillsContainer.append($('<hr/>'));

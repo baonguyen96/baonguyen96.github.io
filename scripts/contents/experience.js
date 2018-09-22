@@ -54,6 +54,7 @@ $(function () {
     for(let experienceIndex = 0; experienceIndex < workExperienceList.length; experienceIndex++) {
         let experienceData = workExperienceList[experienceIndex];
         let currentExperience = experienceTemplate.clone();
+        currentExperience.attr("id", "experience" + experienceIndex);
 
         // only show the first experience by default
         if(experienceIndex > 0) {
