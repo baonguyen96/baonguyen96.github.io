@@ -20,6 +20,7 @@ $(function () {
     for(let i = 0; i < awards.length; i++) {
         let newItem = item.clone();
         newItem.find(".customListText").html(awards[i]);
+        newItem.attr('id', 'award' + i);
         customList.append(newItem);
     }
 

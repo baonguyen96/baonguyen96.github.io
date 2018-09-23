@@ -21,9 +21,6 @@ let driver = new webDriver.Builder()
 (async function runRegressionTest() {
 	let failTests = [];
 
-	// await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
-	// await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
-
 	try {
 		await loadPage();
 	}
@@ -131,6 +128,7 @@ let driver = new webDriver.Builder()
 
 
 function showResult(errorList) {
+	console.log('\n------------\n');
 	if (errorList.length === 0) {
 		console.log("Test result: PASS");
 	}
@@ -230,7 +228,6 @@ async function verifySkillsSection() {
 			assert.notStrictEqual(text, '');
 		});
 	}
-
 }
 
 
@@ -240,19 +237,76 @@ async function verifyProjectsSection() {
 
 
 async function verifyAwardsSection() {
+	console.log('Verify Awards Section...');
 
+	await driver.findElement(By.xpath("//section[@id='awardsSection']/h2/span")).click();
+
+	await driver.findElement(By.xpath("//section[@id='awardsSection']/h2/span")).getText().then(function (text) {
+		assert.strictEqual(text, 'Awards');
+	});
+
+	await driver.findElement(By.xpath("//section[@id='awardsSection']/p")).getText().then(function (text) {
+		assert.notStrictEqual(text, '');
+	});
+
+	for(let i = 0; i < 8; i++) {
+		await driver.findElement(By.xpath("//div[@id='award" + i + "']/img"));
+
+		await driver.findElement(By.xpath("//div[@id='award" + i + "']/div/p")).getText().then(function (text) {
+			assert.notStrictEqual(text, '');
+		});
+	}
 }
 
 
 async function verifyCoursesSection() {
+	console.log('Verify Courses Section...');
 
+	await driver.findElement(By.xpath("//section[@id='coursesSection']/h2/span")).click();
+
+	await driver.findElement(By.xpath("//section[@id='coursesSection']/h2/span")).getText().then(function (text) {
+		assert.strictEqual(text, 'Major Courses');
+	});
+
+	await driver.findElement(By.xpath("//section[@id='coursesSection']/p")).getText().then(function (text) {
+		assert.notStrictEqual(text, '');
+	});
+
+	for(let i = 0; i < 15; i++) {
+		await driver.findElement(By.xpath("//div[@id='course" + i + "']/img"));
+
+		await driver.findElement(By.xpath("//div[@id='course" + i + "']/div/p")).getText().then(function (text) {
+			assert.notStrictEqual(text, '');
+		});
+	}
 }
 
 
 async function verifyContactsSection() {
+	console.log('Verify Contacts Section...');
 
+	await driver.findElement(By.xpath("//section[@id='followMeSection']/h2/span")).click();
+
+	await driver.findElement(By.xpath("//section[@id='followMeSection']/h2/span")).getText().then(function (text) {
+		assert.strictEqual(text, 'Contact Me');
+	});
+
+	await driver.findElement(By.xpath("//section[@id='followMeSection']/p")).getText().then(function (text) {
+		assert.notStrictEqual(text, '');
+	});
+
+	for(let div = 1; div <= 2; div++) {
+		for(let icon = 1; icon <= 3; icon++) {
+			await driver.findElement(By.xpath("//div[@id='iconsContainer']/div[" + div + "]/a[" + icon + "]/img"));
+		}
+	}
 }
 
 async function verifyCopyrightSection() {
-
+	console.log('Verify Copyrights Section...');
+	
+	await driver.findElement(By.xpath("//footer/p")).click();
+	await driver.findElement(By.xpath("//footer/p")).getText().then(function (text) {
+		assert.strictEqual(text, '© 2018 by Bao Nguyen. All rights reserved.');
+	});
 }
