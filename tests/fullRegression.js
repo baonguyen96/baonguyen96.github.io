@@ -1,14 +1,13 @@
-const {Builder, By, Key, until} = require('selenium-webdriver');
+const {By, until} = require('selenium-webdriver');
 const Env = require('./utils/environments');
 const Browser = require('./utils/browsers');
 const util = require('./utils/utilities');
 const driverFactory = require('./utils/driverFactory');
 const assert = require('assert');
+let Configuration = require('./utils/configuration');
 
-let environment = Env.regression;
-let browser = Browser.edge;
-let driver = driverFactory.getDriverForBrowser(browser);
-
+let configuration = new Configuration(Env.regression, Browser.chrome, 30 * 1000);
+let driver = driverFactory.getDriverForBrowser(configuration);
 
 (async function runRegressionTest() {
 	let failTests = [];
@@ -19,7 +18,7 @@ let driver = driverFactory.getDriverForBrowser(browser);
 		verifyAboutSection,
 		verifyExperienceSection,
 		verifySkillsSection,
-		// verifyProjectsSection,
+		verifyProjectsSection,
 		verifyAwardsSection,
 		verifyCoursesSection,
 		verifyContactsSection,
@@ -62,7 +61,7 @@ function showResult(errorList) {
 async function loadPage() {
 	console.log('Load Page...');
 
-	await driver.get(environment);
+	await driver.get(configuration.environment);
 	await driver.manage().window().maximize();
 	await driver.sleep(1000);
 }
@@ -184,6 +183,7 @@ async function verifyProjectsSection() {
 	];
 
 	for (const projectName of projects) {
+
 		let id = projectName.replace(/\s/g, '');
 
 		await driver.findElement(By.xpath("//div[@id='" + id + "']/div/p")).getText().then(function (text) {
@@ -218,14 +218,19 @@ async function verifyProjectsSection() {
 				assert.strictEqual(text, 'Close');
 			});
 
+			await driver.sleep(1000);
+
 			await driver.findElement(By.css("button.btn.closeModalButton")).click();
 
 			await driver.switchTo().activeElement();
+
+			await driver.findElement(By.css("button.btn.closeModalButton"))
+						.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
+
+			await driver.sleep(500);
 		}
-
-		// await driver.switchTo().activeElement();
-
-		console.log('     Done with ' + projectName);
+		
+		await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span"));
 	}
 
 	await driver.switchTo().activeElement();

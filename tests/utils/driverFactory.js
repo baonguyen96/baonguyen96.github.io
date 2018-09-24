@@ -2,13 +2,13 @@
 
 module.exports = {
 
-	getDriverForBrowser: function(browser) {
+	getDriverForBrowser: function (configuration) {
 
 		let driver = null;
 		const webDriver = require('selenium-webdriver');
 		const Browser = require('./browsers');
 
-		if (browser === Browser.chrome) {
+		if (configuration.browser === Browser.chrome) {
 			let chrome = require('selenium-webdriver/chrome');
 			let path = require('chromedriver').path;
 			let service = new chrome.ServiceBuilder(path).build();
@@ -17,7 +17,7 @@ module.exports = {
 				.withCapabilities(webDriver.Capabilities.chrome())
 				.build();
 		}
-		else if (browser === Browser.firefox) {
+		else if (configuration.browser === Browser.firefox) {
 			let firefox = require('selenium-webdriver/firefox');
 			let path = require('geckodriver').path;
 			let service = new firefox.ServiceBuilder(path).build();
@@ -25,7 +25,7 @@ module.exports = {
 				.withCapabilities(webDriver.Capabilities.firefox())
 				.build();
 		}
-		else if(browser === Browser.edge) {
+		else if (configuration.browser === Browser.edge) {
 			let edge = require('selenium-webdriver/edge');
 			let path = require('edgedriver').path;
 			let service = new edge.ServiceBuilder(path).build();
@@ -34,7 +34,7 @@ module.exports = {
 				.withCapabilities(webDriver.Capabilities.edge())
 				.build();
 		}
-		else if(browser === Browser.ie) {
+		else if (configuration.browser === Browser.ie) {
 			let ie = require('selenium-webdriver/ie');
 			let path = require('iedriver').path;
 			// let service = new ie.ServiceBuilder(path).build();
