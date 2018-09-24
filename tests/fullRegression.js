@@ -21,104 +21,29 @@ let driver = new webDriver.Builder()
 (async function runRegressionTest() {
 	let failTests = [];
 
-	try {
-		await loadPage();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Load Page',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
+	let tests = [
+		loadPage,
+		verifyHeader,
+		verifyAboutSection,
+		verifyExperienceSection,
+		verifySkillsSection,
+		verifyProjectsSection,
+		verifyAwardsSection,
+		verifyCoursesSection,
+		verifyContactsSection,
+		verifyCopyrightSection
+	];
 
-	try {
-		await verifyHeader();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify Header',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
-
-	try {
-		await verifyAboutSection();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify About Section',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
-
-	try {
-		await verifyExperienceSection();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify Experience Section',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
-
-	try {
-		await verifySkillsSection();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify Skills Section',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
-
-	try {
-		await verifyProjectsSection();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify Projects Section',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
-
-	try {
-		await verifyAwardsSection();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify Awards Section',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
-
-	try {
-		await verifyCoursesSection();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify Courses Section',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
-
-	try {
-		await verifyContactsSection();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify Contacts Section',
-			'detail': util.getErrorMessageFromException(e)
-		});
-	}
-
-	try {
-		await verifyCopyrightSection();
-	}
-	catch (e) {
-		failTests.push({
-			'name': 'Verify Copyrights Section',
-			'detail': util.getErrorMessageFromException(e)
-		});
+	for(const test of tests) {
+		try {
+			await test();
+		}
+		catch (e) {
+			failTests.push({
+				'name': test.name,
+				'detail': util.getErrorMessageFromException(e)
+			});
+		}
 	}
 
 	await driver.quit();
@@ -142,15 +67,12 @@ function showResult(errorList) {
 }
 
 
-function sleep(sec) {
-	return new Promise(resolve => setTimeout(resolve, sec * 1000));
-}
-
 async function loadPage() {
 	console.log('Load Page...');
 
 	await driver.get(environment);
-	sleep(1);
+	await driver.manage().window().maximize();
+	await driver.sleep(1000);
 }
 
 async function verifyHeader() {
@@ -165,6 +87,8 @@ async function verifyHeader() {
 
 async function verifyAboutSection() {
 	console.log('Verify About Section...');
+
+	await driver.findElement(By.xpath("//section[@id='aboutSection']/h2/span")).click();
 
 	await driver.findElement(By.xpath("//section[@id='aboutSection']/h2/span")).getText().then(function (text) {
 		assert.strictEqual(text, 'About Me');
@@ -194,8 +118,8 @@ async function verifyExperienceSection() {
 		assert.strictEqual(text, 'Less');
 	});
 
-	for(let experienceIndex = 0; experienceIndex <= 3; experienceIndex++) {
-		for(let titleIndex = 1; titleIndex <= 3; titleIndex++) {
+	for (let experienceIndex = 0; experienceIndex <= 3; experienceIndex++) {
+		for (let titleIndex = 1; titleIndex <= 3; titleIndex++) {
 			await driver.findElement(By.xpath("//div[@id='experience" + experienceIndex + "']/div/div[" + titleIndex + "]"));
 		}
 
@@ -217,7 +141,7 @@ async function verifySkillsSection() {
 		assert.notStrictEqual(text, '');
 	});
 
-	for(let i = 0; i < 4; i++) {
+	for (let i = 0; i < 4; i++) {
 		await driver.findElement(By.xpath("//div[@id='skillName" + i + "']/div/img"));
 
 		await driver.findElement(By.xpath("//div[@id='skillName" + i + "']/div/div/p")).getText().then(function (text) {
@@ -232,7 +156,87 @@ async function verifySkillsSection() {
 
 
 async function verifyProjectsSection() {
+	console.log('Verify Projects Section...');
 
+	await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span")).click();
+
+	await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span")).getText().then(function (text) {
+		assert.strictEqual(text, 'Some Cool Stuff');
+	});
+
+	await driver.findElement(By.xpath("//section[@id='projectsSection']/p")).getText().then(function (text) {
+		assert.notStrictEqual(text, '');
+	});
+
+	await driver.findElement(By.id('projectsToggle')).getText().then(function (text) {
+		assert.strictEqual(text, 'More');
+	});
+
+	await driver.findElement(By.id('projectsToggle')).click();
+
+	await driver.findElement(By.id('projectsToggle')).getText().then(function (text) {
+		assert.strictEqual(text, 'Less');
+	});
+
+	let projects = [
+		'Dark Chroma',
+		'File Transfer Application',
+		'Self Service Agent For Test Data',
+		'MIPS Converter',
+		'Git Data',
+		'Morse Mastering',
+		'Tickets Reservation System',
+		'Flights Map',
+		'Schedulers',
+		'Color Manipulation'
+	];
+
+
+	for (const projectName of projects) {
+		let id = projectName.replace(/\s/g, '');
+
+		await driver.findElement(By.xpath("//div[@id='" + id + "']/div/p")).getText().then(function (text) {
+			assert.strictEqual(text, projectName);
+		});
+
+		await driver.findElement(By.xpath("//div[@id='" + id + "']/div/p")).click();
+		await driver.findElement(By.xpath("//div[@id='" + id + "']/div/p")).getText().then(function (text) {
+			assert.strictEqual(text, '');
+		});
+
+		if (projectName !== 'Git Data') {
+			await driver.findElement(By.xpath("//div[@id='" + id + "']/div/div/p[2]")).getText().then(function (text) {
+				assert.strictEqual(text, '➤ See Demo');
+			});
+
+			await driver.findElement(By.linkText('Demo')).click();
+
+			await driver.wait(until.elementLocated(By.css("p.modal-title")))
+						.then(e => driver.wait(until.elementIsVisible(e)));
+
+			await driver.switchTo().activeElement();
+
+			await driver.findElement(By.css("p.modal-title")).getText().then(function (text) {
+				assert.strictEqual(text, projectName);
+			});
+
+			await driver.wait(until.elementLocated(By.css("img.demoImage.shadow")))
+						.then(e => driver.wait(until.elementIsVisible(e)));
+
+			await driver.findElement(By.css("button.btn.closeModalButton")).getText().then(function (text) {
+				assert.strictEqual(text, 'Close');
+			});
+
+			await driver.findElement(By.css("button.btn.closeModalButton")).click();
+		}
+
+		// await driver.wait(until.elementLocated(By.id("//section[@id='projectsSection']")))
+		// 			.then(e => driver.wait(until.elementIsVisible(e)));
+
+		await driver.switchTo().activeElement();
+
+		console.log('     Done with ' + projectName);
+	}
 }
 
 
@@ -249,7 +253,7 @@ async function verifyAwardsSection() {
 		assert.notStrictEqual(text, '');
 	});
 
-	for(let i = 0; i < 8; i++) {
+	for (let i = 0; i < 8; i++) {
 		await driver.findElement(By.xpath("//div[@id='award" + i + "']/img"));
 
 		await driver.findElement(By.xpath("//div[@id='award" + i + "']/div/p")).getText().then(function (text) {
@@ -272,7 +276,7 @@ async function verifyCoursesSection() {
 		assert.notStrictEqual(text, '');
 	});
 
-	for(let i = 0; i < 15; i++) {
+	for (let i = 0; i < 15; i++) {
 		await driver.findElement(By.xpath("//div[@id='course" + i + "']/img"));
 
 		await driver.findElement(By.xpath("//div[@id='course" + i + "']/div/p")).getText().then(function (text) {
@@ -295,8 +299,8 @@ async function verifyContactsSection() {
 		assert.notStrictEqual(text, '');
 	});
 
-	for(let div = 1; div <= 2; div++) {
-		for(let icon = 1; icon <= 3; icon++) {
+	for (let div = 1; div <= 2; div++) {
+		for (let icon = 1; icon <= 3; icon++) {
 			await driver.findElement(By.xpath("//div[@id='iconsContainer']/div[" + div + "]/a[" + icon + "]/img"));
 		}
 	}
@@ -304,7 +308,7 @@ async function verifyContactsSection() {
 
 async function verifyCopyrightSection() {
 	console.log('Verify Copyrights Section...');
-	
+
 	await driver.findElement(By.xpath("//footer/p")).click();
 	await driver.findElement(By.xpath("//footer/p")).getText().then(function (text) {
 		assert.strictEqual(text, '© 2018 by Bao Nguyen. All rights reserved.');

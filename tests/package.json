@@ -2,9 +2,9 @@
     "name": "tests",
     "version": "1.0.0",
     "description": "regression test of baonguyen96.github.io",
-    "main": "index.js",
+    "main": "fullRegression.js",
     "scripts": {
-        "test": "node index.js"
+        "test": "node fullRegression.js"
     },
     "author": "Bao Nguyen",
     "license": "ISC",

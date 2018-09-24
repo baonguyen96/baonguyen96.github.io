@@ -211,23 +211,17 @@ function showDemo() {
     $(".demoLink").click(function () {
         demoProjectTitle = $(this).closest(".project").find(".projectTitle").text();
         demoProjectId = $(this).closest(".project").attr("id");
-
-        console.log('click demo link');
-
     });
 
     myModal.on('show.bs.modal', function () {
         $(this).find(".modal-title").text(demoProjectTitle);
 
         let img = $(this).find(".demoImage");
-        img.attr("src", "./assets/images/demos/" + demoProjectId + ".gif");
-        img.attr("alt", demoProjectTitle + " Demo");
-
-        console.log('show modal');
-        console.log(img.innerHTML);
+        img.attr({
+			"src": "./assets/images/demos/" + demoProjectId + ".gif",
+        	"alt": demoProjectTitle + " Demo"
+        });
     });
-
-    console.log('show demo function')
 }
 
 
