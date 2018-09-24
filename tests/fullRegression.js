@@ -1,21 +1,13 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
-const Env = {
-	'production': 'https://baonguyen96.github.io/',
-	'regression': 'http://localhost:63343/baonguyen96.github.io/index.html?_ijt=bn5780ebg03rdrt6kjum0ot5oh'
-};
+const Env = require('./utils/environments');
+const Browser = require('./utils/browsers');
+const util = require('./utils/utilities');
+const assert = require('assert');
+const driverFactory = require('./utils/driverFactory');
 
-const environment = Env.regression;
-
-let util = require('./utilities');
-let assert = require('assert');
-let webDriver = require('selenium-webdriver');
-let chrome = require('selenium-webdriver/chrome');
-let path = require('chromedriver').path;
-let service = new chrome.ServiceBuilder(path).build();
-chrome.setDefaultService(service);
-let driver = new webDriver.Builder()
-	.withCapabilities(webDriver.Capabilities.chrome())
-	.build();
+let environment = Env.regression;
+let browser = Browser.firefox;
+let driver = driverFactory.getDriverForBrowser(browser);
 
 
 (async function runRegressionTest() {
@@ -34,7 +26,7 @@ let driver = new webDriver.Builder()
 		verifyCopyrightSection
 	];
 
-	for(const test of tests) {
+	for (const test of tests) {
 		try {
 			await test();
 		}
@@ -191,7 +183,6 @@ async function verifyProjectsSection() {
 		'Color Manipulation'
 	];
 
-
 	for (const projectName of projects) {
 		let id = projectName.replace(/\s/g, '');
 
@@ -228,15 +219,16 @@ async function verifyProjectsSection() {
 			});
 
 			await driver.findElement(By.css("button.btn.closeModalButton")).click();
+
+			await driver.switchTo().activeElement();
 		}
 
-		// await driver.wait(until.elementLocated(By.id("//section[@id='projectsSection']")))
-		// 			.then(e => driver.wait(until.elementIsVisible(e)));
-
-		await driver.switchTo().activeElement();
+		// await driver.switchTo().activeElement();
 
 		console.log('     Done with ' + projectName);
 	}
+
+	await driver.switchTo().activeElement();
 }
 
 
