@@ -3,3 +3,4 @@
 .idea/workspace.xml
 TAGMESSAGE
 backup/
+/tests/node_modules/

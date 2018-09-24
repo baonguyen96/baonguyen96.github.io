@@ -26,12 +26,15 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 	];
 
 	for (const test of tests) {
+		let testName = util.parseMethodName(test.name);
+
 		try {
+			console.log(testName + '...');
 			await test();
 		}
 		catch (e) {
 			failTests.push({
-				'name': test.name,
+				'name': testName,
 				'detail': util.getErrorMessageFromException(e)
 			});
 		}
@@ -59,16 +62,12 @@ function showResult(errorList) {
 
 
 async function loadPage() {
-	console.log('Load Page...');
-
 	await driver.get(configuration.environment);
 	await driver.manage().window().maximize();
 	await driver.sleep(1000);
 }
 
 async function verifyHeader() {
-	console.log('Verify Header...');
-
 	await driver.findElement(By.xpath("//header[@id='header']/img"));
 
 	await driver.findElement(By.xpath("//h1")).getText().then(function (text) {
@@ -77,8 +76,6 @@ async function verifyHeader() {
 }
 
 async function verifyAboutSection() {
-	console.log('Verify About Section...');
-
 	await driver.findElement(By.xpath("//section[@id='aboutSection']/h2/span")).click();
 
 	await driver.findElement(By.xpath("//section[@id='aboutSection']/h2/span")).getText().then(function (text) {
@@ -91,8 +88,6 @@ async function verifyAboutSection() {
 }
 
 async function verifyExperienceSection() {
-	console.log('Verify Experience Section...');
-
 	await driver.findElement(By.xpath("//section[@id='experienceSection']/h2/span")).click();
 
 	await driver.findElement(By.id('experienceToggle')).getText().then(function (text) {
@@ -120,8 +115,6 @@ async function verifyExperienceSection() {
 
 
 async function verifySkillsSection() {
-	console.log('Verify Skills Section...');
-
 	await driver.findElement(By.xpath("//section[@id='skillsSection']/h2/span")).click();
 
 	await driver.findElement(By.xpath("//section[@id='skillsSection']/h2/span")).getText().then(function (text) {
@@ -147,8 +140,6 @@ async function verifySkillsSection() {
 
 
 async function verifyProjectsSection() {
-	console.log('Verify Projects Section...');
-
 	await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span")).click();
 
 	await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span")).getText().then(function (text) {
@@ -238,8 +229,6 @@ async function verifyProjectsSection() {
 
 
 async function verifyAwardsSection() {
-	console.log('Verify Awards Section...');
-
 	await driver.findElement(By.xpath("//section[@id='awardsSection']/h2/span")).click();
 
 	await driver.findElement(By.xpath("//section[@id='awardsSection']/h2/span")).getText().then(function (text) {
@@ -261,8 +250,6 @@ async function verifyAwardsSection() {
 
 
 async function verifyCoursesSection() {
-	console.log('Verify Courses Section...');
-
 	await driver.findElement(By.xpath("//section[@id='coursesSection']/h2/span")).click();
 
 	await driver.findElement(By.xpath("//section[@id='coursesSection']/h2/span")).getText().then(function (text) {
@@ -284,8 +271,6 @@ async function verifyCoursesSection() {
 
 
 async function verifyContactsSection() {
-	console.log('Verify Contacts Section...');
-
 	await driver.findElement(By.xpath("//section[@id='followMeSection']/h2/span")).click();
 
 	await driver.findElement(By.xpath("//section[@id='followMeSection']/h2/span")).getText().then(function (text) {
@@ -304,8 +289,6 @@ async function verifyContactsSection() {
 }
 
 async function verifyCopyrightSection() {
-	console.log('Verify Copyrights Section...');
-
 	await driver.findElement(By.xpath("//footer/p")).click();
 	await driver.findElement(By.xpath("//footer/p")).getText().then(function (text) {
 		assert.strictEqual(text, '© 2018 by Bao Nguyen. All rights reserved.');
