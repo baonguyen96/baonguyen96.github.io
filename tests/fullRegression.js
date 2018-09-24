@@ -2,11 +2,11 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 const Env = require('./utils/environments');
 const Browser = require('./utils/browsers');
 const util = require('./utils/utilities');
-const assert = require('assert');
 const driverFactory = require('./utils/driverFactory');
+const assert = require('assert');
 
 let environment = Env.regression;
-let browser = Browser.firefox;
+let browser = Browser.edge;
 let driver = driverFactory.getDriverForBrowser(browser);
 
 
@@ -19,7 +19,7 @@ let driver = driverFactory.getDriverForBrowser(browser);
 		verifyAboutSection,
 		verifyExperienceSection,
 		verifySkillsSection,
-		verifyProjectsSection,
+		// verifyProjectsSection,
 		verifyAwardsSection,
 		verifyCoursesSection,
 		verifyContactsSection,
