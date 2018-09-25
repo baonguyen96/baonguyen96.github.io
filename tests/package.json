@@ -4,16 +4,18 @@
     "description": "regression test of baonguyen96.github.io",
     "main": "fullRegression.js",
     "scripts": {
-        "test": "node fullRegression.js"
+        "test": "node fullRegression.js production"
     },
     "author": "Bao Nguyen",
     "license": "ISC",
     "dependencies": {
+        "blc": "0.0.5",
         "chromedriver": "^2.42.0",
         "edgedriver": "^4.17134.0",
         "geckodriver": "^1.12.2",
         "iedriver": "^3.9.2",
         "selenium-webdriver": "^4.0.0-alpha.1",
-        "semver": "^5.5.1"
+        "semver": "^5.5.1",
+        "shelljs": "^0.8.2"
     }
 }

@@ -6,14 +6,29 @@ const driverFactory = require('./utils/driverFactory');
 const assert = require('assert');
 let Configuration = require('./utils/configuration');
 
-let configuration = new Configuration(Env.regression, Browser.chrome, 30 * 1000);
+let environment = Env.production;
+let browser = Browser.firefox;
+
+
+if (process.argv.length === 3) {
+	if (process.argv[2].toString().toLowerCase() === 'regression') {
+		environment = Env.regression;
+	}
+	else {
+		environment = Env.production;
+	}
+
+	browser = Browser.chrome;
+}
+
+let configuration = new Configuration(environment, browser, 30 * 1000);
 let driver = driverFactory.getDriverForBrowser(configuration);
 
 (async function runRegressionTest() {
-	let failTests = [];
+	let isUiOk = true;
 
 	let tests = [
-		loadPage,
+		verifyPageLoad,
 		verifyHeader,
 		verifyAboutSection,
 		verifyExperienceSection,
@@ -25,6 +40,7 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 		verifyCopyrightSection
 	];
 
+	console.log('>> VERIFY UI');
 	for (const test of tests) {
 		let testName = util.parseMethodName(test.name);
 
@@ -33,35 +49,24 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 			await test();
 		}
 		catch (e) {
-			failTests.push({
-				'name': testName,
-				'detail': util.getErrorMessageFromException(e)
-			});
+			isUiOk = false;
+			console.log(`   - ${util.getErrorMessageFromException(e)}`);
 		}
 	}
 
 	await driver.quit();
-	showResult(failTests);
+
+	console.log('\n>> VERIFY LINKS');
+	let areLinksOk = util.checkBrokenLinks(configuration.environment, ['linkedin.com']);
+
+	console.log('\n-----------------');
+	console.log(`Test result: ${(isUiOk && areLinksOk) ? 'PASS' : 'FAIL'}`);
+	console.log('-----------------\n');
 
 })();
 
 
-function showResult(errorList) {
-	console.log('\n------------\n');
-	if (errorList.length === 0) {
-		console.log("Test result: PASS");
-	}
-	else {
-		console.log("Test result: FAIL");
-
-		errorList.forEach(function (error) {
-			console.log('   + ' + error.name + ': ' + error.detail);
-		});
-	}
-}
-
-
-async function loadPage() {
+async function verifyPageLoad() {
 	await driver.get(configuration.environment);
 	await driver.manage().window().maximize();
 	await driver.sleep(1000);
@@ -218,7 +223,7 @@ async function verifyProjectsSection() {
 			await driver.findElement(By.css("button.btn.closeModalButton"))
 						.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
 
-			await driver.sleep(500);
+			await driver.sleep(1000);
 		}
 		
 		await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span"));

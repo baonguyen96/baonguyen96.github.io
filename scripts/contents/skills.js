@@ -14,11 +14,11 @@ let skills = [
     },
     {
         "name": "Databases",
-        "value": "MySQL, Microsoft SQL Server, SPARQL, JDBC, JPA, MongoDB"
+        "value": "MySQL, T-SQL, SPARQL, JDBC, JPA, MongoDB"
     },
     {
         "name": "Automation Testing",
-        "value": "JUnit, TestNG, Selenium"
+        "value": "JUnit, TestNG, Selenium  WebDriver API (in several languages)"
     },
     {
         "name": "Data Integration",
