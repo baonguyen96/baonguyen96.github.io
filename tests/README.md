@@ -10,4 +10,6 @@ To run the test, do the following:
 
 - Run `npm install`
 
-- Run `npm test` or execute [fullRegression.js](./fullRegression.js) in the IDE
+- Run `node fullRegression.js [production|regression]` or execute [fullRegression.js](./fullRegression.js) in the IDE
+
+**NOTE**: Should not use `npm test` since it cannot execute `blc` for some reasons (!?)

@@ -17,7 +17,6 @@ if (process.argv.length === 3) {
 	else {
 		environment = Env.production;
 	}
-
 	browser = Browser.chrome;
 }
 
@@ -25,6 +24,7 @@ let configuration = new Configuration(environment, browser, 30 * 1000);
 let driver = driverFactory.getDriverForBrowser(configuration);
 
 (async function runRegressionTest() {
+	let startDate = new Date();
 	let isUiOk = true;
 
 	let tests = [
@@ -57,11 +57,10 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 	await driver.quit();
 
 	console.log('\n>> VERIFY LINKS');
-	let areLinksOk = await util.checkBrokenLinks(configuration.environment, ['linkedin.com']);
+	let areLinksOk = util.checkBrokenLinks(configuration.environment, ['linkedin.com']);
 
-	console.log('\n-----------------');
-	console.log(`Test result: ${(isUiOk && areLinksOk) ? 'PASS' : 'FAIL'}`);
-	console.log('-----------------\n');
+	console.log(`\n>> Elapsed time: ${(new Date() - startDate) / 1000} seconds`);
+	console.log(`>> Result: ${(isUiOk && areLinksOk) ? 'PASS' : 'FAIL'}`);
 
 })();
 
@@ -137,7 +136,7 @@ async function verifySkillsSection() {
 			assert.notStrictEqual(text, '');
 		});
 
-		await driver.findElement(By.xpath(`//div[@id='skillValue${i}']`)).getText().then(function (text) {
+		await driver.findElement(By.id(`skillValue${i}`)).getText().then(function (text) {
 			assert.notStrictEqual(text, '');
 		});
 	}

@@ -10,22 +10,25 @@ module.exports = {
 			.replace(/^./, (match) => match.toUpperCase());
 	},
 
-	checkBrokenLinks: function(url, skips) {
-		const shell = require('shelljs');
+	checkBrokenLinks: function (url, skips) {
 		let command = `blc ${url} -ro`;
+		let result = true;
 
 		skips.forEach((skip) => {
 			command += ` --exclude ${skip}`;
 		});
 		command += ' -v';
+		console.log(command);
 
-		shell.exec(command);
+		const {stdout, stderr} = require('shelljs').exec(command);
 
-		let result = true;
-
-		require('child_process').exec(command, function(err, stdout, stderr) {
-			result = stdout.toString().includes(' links found. 0 broken.');
-		});
+		if (stderr) {
+			console.log('error');
+			result = false;
+		}
+		else {
+			result = stdout.toString().match('[\\S\\s]+\\D0 broken*');
+		}
 
 		return result;
 	}

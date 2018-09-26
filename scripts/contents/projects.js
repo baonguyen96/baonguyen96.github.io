@@ -113,7 +113,7 @@ function createPointer() {
 
 
 function createDemoLink() {
-    return createPointer() + "See <a href='#' class='demoLink' data-toggle='modal' data-target='#hiddenModal'>Demo</a>";
+    return `${createPointer()}See <a href='#' class='demoLink' data-toggle='modal' data-target='#hiddenModal'>Demo</a>`;
 }
 
 
@@ -123,18 +123,18 @@ function createSourceLink(link, welcome, name) {
         name = "GitHub";
     }
 
-    return createPointer() + welcome + " " + createLink(link, name);
+    return `${createPointer()}${welcome} ${createLink(link, name)}`;
 }
 
 
 function createLink(hyperlink, name) {
-    return "<a href=\"" + hyperlink + "\" target=\"_blank\">" + name + "</a>";
+    return `<a href='${hyperlink}' target='_blank'>${name}</a>`;
 }
 
 
 function createIntro(intro, types) {
     for (let i = 0; i < types.length; i++) {
-        intro = intro.replace(types[i], "<span class=\"specialText\">" + types[i] + "</span>")
+        intro = intro.replace(types[i], `<span class='specialText'>${types[i]}</span>`)
     }
     return intro;
 }
@@ -214,12 +214,16 @@ function showDemo() {
     });
 
     myModal.on('show.bs.modal', function () {
+		// $(this).attr({
+		// 	'maxHeight': $(window).height() * 0.6
+		// });
+
         $(this).find(".modal-title").text(demoProjectTitle);
 
         let img = $(this).find(".demoImage");
         img.attr({
-			"src": "./assets/images/demos/" + demoProjectId + ".gif",
-        	"alt": demoProjectTitle + " Demo"
+			"src": `./assets/images/demos/${demoProjectId}.gif`,
+        	"alt": `${demoProjectTitle} Demo`
         });
     });
 }
