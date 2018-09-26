@@ -3,20 +3,21 @@
     "version": "1.0.0",
     "description": "regression test of baonguyen96.github.io",
     "main": "fullRegression.js",
+    "repository": "https://github.com/baonguyen96/baonguyen96.github.io",
     "scripts": {
         "test": "node fullRegression.js production"
     },
     "author": "Bao Nguyen",
     "license": "ISC",
     "dependencies": {
-        "adm-zip": "^0.4.9",
+        "adm-zip": "^0.4.11",
         "blc": "0.0.5",
         "chromedriver": "^2.42.0",
         "edgedriver": "^4.17134.0",
         "geckodriver": "^1.12.2",
         "iedriver": "^3.9.2",
         "selenium-webdriver": "^4.0.0-alpha.1",
-        "semver": "^4.3.2",
+        "semver": "^5.5.1",
         "shelljs": "^0.8.2"
     }
 }
