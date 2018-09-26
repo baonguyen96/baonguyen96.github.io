@@ -7,7 +7,7 @@ const assert = require('assert');
 let Configuration = require('./utils/configuration');
 
 let environment = Env.production;
-let browser = Browser.firefox;
+let browser = Browser.chrome;
 
 
 if (process.argv.length === 3) {
@@ -57,7 +57,7 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 	await driver.quit();
 
 	console.log('\n>> VERIFY LINKS');
-	let areLinksOk = util.checkBrokenLinks(configuration.environment, ['linkedin.com']);
+	let areLinksOk = await util.checkBrokenLinks(configuration.environment, ['linkedin.com']);
 
 	console.log('\n-----------------');
 	console.log(`Test result: ${(isUiOk && areLinksOk) ? 'PASS' : 'FAIL'}`);
@@ -68,7 +68,7 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 
 async function verifyPageLoad() {
 	await driver.get(configuration.environment);
-	await driver.manage().window().maximize();
+	// await driver.manage().window().maximize();
 	await driver.sleep(1000);
 }
 
@@ -88,7 +88,7 @@ async function verifyAboutSection() {
 	});
 
 	for (let i = 1; i <= 3; i++) {
-		await driver.findElement(By.xpath("//section[@id='aboutSection']/p[" + i + "]"));
+		await driver.findElement(By.xpath(`//section[@id='aboutSection']/p[${i}]`));
 	}
 }
 
@@ -111,10 +111,10 @@ async function verifyExperienceSection() {
 
 	for (let experienceIndex = 0; experienceIndex <= 3; experienceIndex++) {
 		for (let titleIndex = 1; titleIndex <= 3; titleIndex++) {
-			await driver.findElement(By.xpath("//div[@id='experience" + experienceIndex + "']/div/div[" + titleIndex + "]"));
+			await driver.findElement(By.xpath(`//div[@id='experience${experienceIndex}']/div/div[${titleIndex}]`));
 		}
 
-		await driver.findElement(By.xpath("//div[@id='experience" + experienceIndex + "']/div[2]/div/div/p"));
+		await driver.findElement(By.xpath(`//div[@id='experience${experienceIndex}']/div[2]/div/div/p`));
 	}
 }
 
@@ -131,13 +131,13 @@ async function verifySkillsSection() {
 	});
 
 	for (let i = 0; i < 4; i++) {
-		await driver.findElement(By.xpath("//div[@id='skillName" + i + "']/div/img"));
+		await driver.findElement(By.xpath(`//div[@id='skillName${i}']/div/img`));
 
-		await driver.findElement(By.xpath("//div[@id='skillName" + i + "']/div/div/p")).getText().then(function (text) {
+		await driver.findElement(By.xpath(`//div[@id='skillName${i}']/div/div/p`)).getText().then(function (text) {
 			assert.notStrictEqual(text, '');
 		});
 
-		await driver.findElement(By.xpath("//div[@id='skillValue" + i + "']")).getText().then(function (text) {
+		await driver.findElement(By.xpath(`//div[@id='skillValue${i}']`)).getText().then(function (text) {
 			assert.notStrictEqual(text, '');
 		});
 	}
@@ -182,17 +182,17 @@ async function verifyProjectsSection() {
 
 		let id = projectName.replace(/\s/g, '');
 
-		await driver.findElement(By.xpath("//div[@id='" + id + "']/div/p")).getText().then(function (text) {
+		await driver.findElement(By.xpath(`//div[@id='${id}']/div/p`)).getText().then(function (text) {
 			assert.strictEqual(text, projectName);
 		});
 
-		await driver.findElement(By.xpath("//div[@id='" + id + "']/div/p")).click();
-		await driver.findElement(By.xpath("//div[@id='" + id + "']/div/p")).getText().then(function (text) {
+		await driver.findElement(By.xpath(`//div[@id='${id}']/div/p`)).click();
+		await driver.findElement(By.xpath(`//div[@id='${id}']/div/p`)).getText().then(function (text) {
 			assert.strictEqual(text, '');
 		});
 
 		if (projectName !== 'Git Data') {
-			await driver.findElement(By.xpath("//div[@id='" + id + "']/div/div/p[2]")).getText().then(function (text) {
+			await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`)).getText().then(function (text) {
 				assert.strictEqual(text, '➤ See Demo');
 			});
 
@@ -245,9 +245,9 @@ async function verifyAwardsSection() {
 	});
 
 	for (let i = 0; i < 8; i++) {
-		await driver.findElement(By.xpath("//div[@id='award" + i + "']/img"));
+		await driver.findElement(By.xpath(`//div[@id='award${i}']/img`));
 
-		await driver.findElement(By.xpath("//div[@id='award" + i + "']/div/p")).getText().then(function (text) {
+		await driver.findElement(By.xpath(`//div[@id='award${i}']/div/p`)).getText().then(function (text) {
 			assert.notStrictEqual(text, '');
 		});
 	}
@@ -266,9 +266,9 @@ async function verifyCoursesSection() {
 	});
 
 	for (let i = 0; i < 15; i++) {
-		await driver.findElement(By.xpath("//div[@id='course" + i + "']/img"));
+		await driver.findElement(By.xpath(`//div[@id='course${i}']/img`));
 
-		await driver.findElement(By.xpath("//div[@id='course" + i + "']/div/p")).getText().then(function (text) {
+		await driver.findElement(By.xpath(`//div[@id='course${i}']/div/p`)).getText().then(function (text) {
 			assert.notStrictEqual(text, '');
 		});
 	}
@@ -288,7 +288,7 @@ async function verifyContactsSection() {
 
 	for (let div = 1; div <= 2; div++) {
 		for (let icon = 1; icon <= 3; icon++) {
-			await driver.findElement(By.xpath("//div[@id='iconsContainer']/div[" + div + "]/a[" + icon + "]/img"));
+			await driver.findElement(By.xpath(`//div[@id='iconsContainer']/div[${div}]/a[${icon}]/img`));
 		}
 	}
 }
