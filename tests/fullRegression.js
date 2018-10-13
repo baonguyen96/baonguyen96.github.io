@@ -1,14 +1,15 @@
-const {By, until} = require('selenium-webdriver');
+const {webdriver, By, until} = require('selenium-webdriver');
 const Env = require('./utils/environments');
 const Browser = require('./utils/browsers');
 const util = require('./utils/utilities');
 const driverFactory = require('./utils/driverFactory');
 const assert = require('assert');
+let Resolution = require('./utils/resolution');
 let Configuration = require('./utils/configuration');
 
 let environment = Env.production;
 let browser = Browser.chrome;
-
+let resolution = Resolution.iphoneXportrait;
 
 if (process.argv.length === 3) {
 	if (process.argv[2].toString().toLowerCase() === 'regression') {
@@ -18,6 +19,7 @@ if (process.argv.length === 3) {
 		environment = Env.production;
 	}
 	browser = Browser.chrome;
+	resolution = Resolution.fhd;
 }
 
 let configuration = new Configuration(environment, browser, 30 * 1000);
@@ -67,8 +69,8 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 
 async function verifyPageLoad() {
 	await driver.get(configuration.environment);
-	// await driver.manage().window().maximize();
-	await driver.sleep(1000);
+	await driver.manage().window().setRect({x:10, y:10, width: resolution.w, height: resolution.h});
+	await driver.sleep(10000);
 }
 
 async function verifyHeader() {
@@ -79,8 +81,15 @@ async function verifyHeader() {
 	});
 }
 
+async function scrollIntoView(by) {
+	let element = await driver.findElement(by);
+	await driver.executeScript("arguments[0].scrollIntoView()", element);
+	await driver.sleep(300);
+	await element.click();
+}
+
 async function verifyAboutSection() {
-	await driver.findElement(By.xpath("//section[@id='aboutSection']/h2/span")).click();
+	await scrollIntoView(By.xpath("//section[@id='aboutSection']/h2/span"));
 
 	await driver.findElement(By.xpath("//section[@id='aboutSection']/h2/span")).getText().then(function (text) {
 		assert.strictEqual(text, 'About Me');
@@ -98,9 +107,10 @@ async function verifyExperienceSection() {
 		assert.strictEqual(text, 'More');
 	});
 
-	await driver.findElement(By.xpath("//section[@id='experienceSection']/h2/span")).getText().then(function (text) {
-		assert.strictEqual(text, 'Work Experience');
-	});
+	await driver.findElement(By.xpath("//section[@id='experienceSection']/h2/span")).getText()
+				.then(function (text) {
+					assert.strictEqual(text, 'Work Experience');
+				});
 
 	await driver.findElement(By.id('experienceToggle')).click();
 
@@ -113,7 +123,10 @@ async function verifyExperienceSection() {
 			await driver.findElement(By.xpath(`//div[@id='experience${experienceIndex}']/div/div[${titleIndex}]`));
 		}
 
-		await driver.findElement(By.xpath(`//div[@id='experience${experienceIndex}']/div[2]/div/div/p`));
+		await driver.findElement(By.xpath(`//div[@id='experience${experienceIndex}']/div[2]/div/div/p`)).getText()
+					.then(function (text) {
+						assert.notStrictEqual(text, '');
+					});
 	}
 }
 
@@ -191,40 +204,46 @@ async function verifyProjectsSection() {
 		});
 
 		if (projectName !== 'Git Data') {
-			await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`)).getText().then(function (text) {
-				assert.strictEqual(text, '➤ See Demo');
-			});
+			if(webdriver.WebDriver.prototype.getWindowSize().width >= 767) {
+				await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`)).getText().then(function (text) {
+					assert.strictEqual(text, '➤ See Demo');
+				});
 
-			await driver.findElement(By.linkText('Demo')).click();
+				await driver.findElement(By.linkText('Demo')).click();
 
-			await driver.wait(until.elementLocated(By.css("p.modal-title")))
-						.then(e => driver.wait(until.elementIsVisible(e)));
+				await driver.wait(until.elementLocated(By.css("p.modal-title")))
+							.then(e => driver.wait(until.elementIsVisible(e)));
 
-			await driver.switchTo().activeElement();
+				await driver.switchTo().activeElement();
 
-			await driver.findElement(By.css("p.modal-title")).getText().then(function (text) {
-				assert.strictEqual(text, projectName);
-			});
+				await driver.findElement(By.css("p.modal-title")).getText().then(function (text) {
+					assert.strictEqual(text, projectName);
+				});
 
-			await driver.wait(until.elementLocated(By.css("img.demoImage.shadow")))
-						.then(e => driver.wait(until.elementIsVisible(e)));
+				await driver.wait(until.elementLocated(By.css("img.demoImage.shadow")))
+							.then(e => driver.wait(until.elementIsVisible(e)));
 
-			await driver.findElement(By.css("button.btn.closeModalButton")).getText().then(function (text) {
-				assert.strictEqual(text, 'Close');
-			});
+				await driver.findElement(By.css("button.btn.closeModalButton")).getText().then(function (text) {
+					assert.strictEqual(text, 'Close');
+				});
 
-			await driver.sleep(1000);
+				await driver.sleep(1000);
 
-			await driver.findElement(By.css("button.btn.closeModalButton")).click();
+				await driver.findElement(By.css("button.btn.closeModalButton")).click();
 
-			await driver.switchTo().activeElement();
+				await driver.switchTo().activeElement();
 
-			await driver.findElement(By.css("button.btn.closeModalButton"))
-						.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
+				await driver.findElement(By.css("button.btn.closeModalButton"))
+							.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
 
-			await driver.sleep(1000);
+				await driver.sleep(1000);
+			}
+			else {
+				await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`))
+							.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
+			}
 		}
-		
+
 		await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span"));
 	}
 

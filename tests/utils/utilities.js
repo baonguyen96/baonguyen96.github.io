@@ -23,7 +23,6 @@ module.exports = {
 		const {stdout, stderr} = require('shelljs').exec(command);
 
 		if (stderr) {
-			console.log('error');
 			result = false;
 		}
 		else {
