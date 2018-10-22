@@ -9,7 +9,8 @@ let workExperienceList = [
             "Design, build, and maintain multi-threaded Windows Service applications that automatically download files " +
             "on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
             "Monitor and troubleshoot SQL jobs for SSMS",
-            "Maintain multiple SSIS packages and SQL Store Procedures that integrates multiple data sources into company's standard schema"
+            "Maintain multiple SSIS packages and SQL Store Procedures that integrates multiple data sources into company's standard schema",
+			"Migrate on-premise resources to Azure environment"
         ]
     },
     {

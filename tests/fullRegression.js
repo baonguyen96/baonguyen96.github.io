@@ -7,7 +7,7 @@ const assert = require('assert');
 let Resolution = require('./utils/resolution');
 let Configuration = require('./utils/configuration');
 
-let environment = Env.production;
+let environment = Env.regression;
 let browser = Browser.chrome;
 let resolution = Resolution.iphoneXportrait;
 
@@ -39,7 +39,8 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 		verifyAwardsSection,
 		verifyCoursesSection,
 		verifyContactsSection,
-		verifyCopyrightSection
+		verifyCopyrightSection,
+		verify404Page
 	];
 
 	console.log('>> VERIFY UI');
@@ -69,8 +70,8 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 
 async function verifyPageLoad() {
 	await driver.get(configuration.environment);
-	await driver.manage().window().setRect({x:10, y:10, width: resolution.w, height: resolution.h});
-	await driver.sleep(10000);
+	// await driver.manage().window().setRect({x:10, y:10, width: resolution.w, height: resolution.h});
+	await driver.sleep(1000);
 }
 
 async function verifyHeader() {
@@ -315,5 +316,27 @@ async function verifyCopyrightSection() {
 	await driver.findElement(By.xpath("//footer/p")).click();
 	await driver.findElement(By.xpath("//footer/p")).getText().then(function (text) {
 		assert.strictEqual(text, '© 2018 by Bao Nguyen. All rights reserved.');
+	});
+}
+
+
+async function verify404Page() {
+	if(environment === Env.production) {
+		await driver.get(configuration.environment + "dskdsm");
+	}
+	else {
+		await driver.get(configuration.environment + "404.html");
+	}
+
+	await driver.sleep(1000);
+	await driver.findElement(By.xpath(`//div[@id='error-area']/img`));
+	await driver.findElement(By.xpath(`//div[@id='error-area']/p]`)).getText().then(function (text) {
+		assert.strictEqual(text, "The requested page does not exist. Click here to go back to the home page.");
+	});
+
+	await driver.findElement(By.linkText("here")).click();
+
+	await driver.getCurrentUrl().then(function (url) {
+		assert.strictEqual(url, configuration.environment);
 	});
 }
