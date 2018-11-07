@@ -9,7 +9,7 @@ let Configuration = require('./utils/configuration');
 
 let environment = Env.regression;
 let browser = Browser.chrome;
-let resolution = Resolution.iphoneXportrait;
+let resolution = Resolution.fhd;
 
 if (process.argv.length === 3) {
 	if (process.argv[2].toString().toLowerCase() === 'regression') {
@@ -70,7 +70,7 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 
 async function verifyPageLoad() {
 	await driver.get(configuration.environment);
-	// await driver.manage().window().setRect({x:10, y:10, width: resolution.w, height: resolution.h});
+	await driver.manage().window().setRect({x:10, y:10, width: resolution.w, height: resolution.h});
 	await driver.sleep(1000);
 }
 

@@ -5,12 +5,12 @@ let skills = [
     },
     {
         "name": "Platform/Framework",
-        "value": ".NET, Azure, J2EE"
+        "value": "Azure, .NET, J2EE"
     },
     {
         "name": "Web Technologies",
         "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, " +
-            "WordPress, NodeJS, AJAX, REST, Spring, RabbitMQ, RDF"
+            "WordPress, NodeJS, AJAX, REST, Spring, RabbitMQ, RDF, Google Analytics"
     },
     {
         "name": "Databases",
@@ -35,12 +35,12 @@ let skills = [
     {
         "name": "Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
-            "Microsoft SSMS, MySQL Workbench, Microsoft Office, SharePoint, " +
-            "Adobe Creative Cloud suite, RStudio"
+            "Microsoft SSMS, MySQL Workbench, Microsoft Office suite, SharePoint, " +
+            "Adobe Creative Cloud suite, RStudio, Postman"
     },
     {
         "name": "Project Management",
-        "value": "Trello, JIRA"
+        "value": "JIRA, Trello"
     },
     {
         "name": "Development Methodologies",

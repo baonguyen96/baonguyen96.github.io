@@ -1,17 +1,16 @@
 $(function () {
     let START_YEAR = 2018;
     let currentYear = (new Date()).getFullYear();
-    let copyrightText = ['&copy; {copyrightPeriod} by <i>Bao Nguyen</i>.', 'All rights reserved.'];
     let period = '';
 
     if (currentYear > START_YEAR) {
-        period = START_YEAR + ' - ' + currentYear;
+        period = `${START_YEAR} - ${currentYear}`;
     }
     else {
         period = START_YEAR;
     }
 
-    copyrightText[0] = copyrightText[0].replace('{copyrightPeriod}', period);
+	let copyrightText = [`&copy; ${period} by <i>Bao Nguyen</i>.`, 'All rights reserved.'];
     setSingleLineCopyright(copyrightText);
     setDoubleLinesCopyright(copyrightText);
 });
