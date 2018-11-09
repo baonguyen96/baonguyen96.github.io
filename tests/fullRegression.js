@@ -1,4 +1,4 @@
-const {webdriver, By, until} = require('selenium-webdriver');
+const {By, until} = require('selenium-webdriver');
 const Env = require('./utils/environments');
 const Browser = require('./utils/browsers');
 const util = require('./utils/utilities');
@@ -7,9 +7,19 @@ const assert = require('assert');
 let Resolution = require('./utils/resolution');
 let Configuration = require('./utils/configuration');
 
+
+
+///////////////// configurations start /////////////////
+
 let environment = Env.regression;
 let browser = Browser.chrome;
-let resolution = Resolution.fhd;
+let resolution = Resolution.iphoneXportrait;
+let isVerifyingUI = true;
+let isVerifyingLinks = true;
+
+/////////////////// configurations end /////////////////
+
+
 
 if (process.argv.length === 3) {
 	if (process.argv[2].toString().toLowerCase() === 'regression') {
@@ -27,40 +37,44 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 
 (async function runRegressionTest() {
 	let startDate = new Date();
-	let isUiOk = true;
+	let isUiOk = true, areLinksOk = true;
 
-	let tests = [
-		verifyPageLoad,
-		verifyHeader,
-		verifyAboutSection,
-		verifyExperienceSection,
-		verifySkillsSection,
-		verifyProjectsSection,
-		verifyAwardsSection,
-		verifyCoursesSection,
-		verifyContactsSection,
-		verifyCopyrightSection,
-		verify404Page
-	];
+	if(isVerifyingUI) {
+		let tests = [
+			verifyPageLoad,
+			verifyHeader,
+			verifyAboutSection,
+			verifyExperienceSection,
+			verifySkillsSection,
+			verifyProjectsSection,
+			verifyAwardsSection,
+			verifyCoursesSection,
+			verifyContactsSection,
+			verifyCopyrightSection,
+			verify404Page
+		];
 
-	console.log('>> VERIFY UI');
-	for (const test of tests) {
-		let testName = util.parseMethodName(test.name);
+		console.log('>> VERIFY UI');
+		for (const test of tests) {
+			let testName = util.parseMethodName(test.name);
 
-		try {
-			console.log(testName + '...');
-			await test();
+			try {
+				console.log(testName + '...');
+				await test();
+			}
+			catch (e) {
+				isUiOk = false;
+				console.log(`   - ${util.getErrorMessageFromException(e)}`);
+			}
 		}
-		catch (e) {
-			isUiOk = false;
-			console.log(`   - ${util.getErrorMessageFromException(e)}`);
-		}
+
+		await driver.quit();
 	}
 
-	await driver.quit();
-
-	console.log('\n>> VERIFY LINKS');
-	let areLinksOk = util.checkBrokenLinks(configuration.environment, ['linkedin.com']);
+	if(isVerifyingLinks) {
+		console.log('\n>> VERIFY LINKS');
+		areLinksOk = util.checkBrokenLinks(configuration.environment, ['linkedin.com']);
+	}
 
 	console.log(`\n>> Elapsed time: ${(new Date() - startDate) / 1000} seconds`);
 	console.log(`>> Result: ${(isUiOk && areLinksOk) ? 'PASS' : 'FAIL'}`);
@@ -70,8 +84,14 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 
 async function verifyPageLoad() {
 	await driver.get(configuration.environment);
-	await driver.manage().window().setRect({x:10, y:10, width: resolution.w, height: resolution.h});
+	await driver.manage().window().setRect({x:0, y:0, width: resolution.w, height: resolution.h});
 	await driver.sleep(1000);
+
+	// if(resolution.w <= 767) {
+	// 	await driver.executeScript('window.scrollTo(0,10000);');
+	// 	await driver.findElement(By.id("upArrowNavigator")).click();
+	// 	await driver.sleep(1000);
+	// }
 }
 
 async function verifyHeader() {
@@ -205,7 +225,7 @@ async function verifyProjectsSection() {
 		});
 
 		if (projectName !== 'Git Data') {
-			if(webdriver.WebDriver.prototype.getWindowSize().width >= 767) {
+			if(resolution.w >= 767) {
 				await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`)).getText().then(function (text) {
 					assert.strictEqual(text, '➤ See Demo');
 				});
@@ -259,9 +279,9 @@ async function verifyAwardsSection() {
 		assert.strictEqual(text, 'Awards');
 	});
 
-	await driver.findElement(By.xpath("//section[@id='awardsSection']/p")).getText().then(function (text) {
-		assert.notStrictEqual(text, '');
-	});
+	// await driver.findElement(By.xpath("//section[@id='awardsSection']/p")).getText().then(function (text) {
+	// 	assert.notStrictEqual(text, '');
+	// });
 
 	for (let i = 0; i < 8; i++) {
 		await driver.findElement(By.xpath(`//div[@id='award${i}']/img`));
@@ -280,9 +300,9 @@ async function verifyCoursesSection() {
 		assert.strictEqual(text, 'Major Courses');
 	});
 
-	await driver.findElement(By.xpath("//section[@id='coursesSection']/p")).getText().then(function (text) {
-		assert.notStrictEqual(text, '');
-	});
+	// await driver.findElement(By.xpath("//section[@id='coursesSection']/p")).getText().then(function (text) {
+	// 	assert.notStrictEqual(text, '');
+	// });
 
 	for (let i = 0; i < 15; i++) {
 		await driver.findElement(By.xpath(`//div[@id='course${i}']/img`));
@@ -328,9 +348,9 @@ async function verify404Page() {
 		await driver.get(configuration.environment + "404.html");
 	}
 
-	await driver.sleep(1000);
+	await driver.sleep(2000);
 	await driver.findElement(By.xpath(`//div[@id='error-area']/img`));
-	await driver.findElement(By.xpath(`//div[@id='error-area']/p]`)).getText().then(function (text) {
+	await driver.findElement(By.xpath(`//div[@id='error-area']/p`)).getText().then(function (text) {
 		assert.strictEqual(text, "The requested page does not exist. Click here to go back to the home page.");
 	});
 
