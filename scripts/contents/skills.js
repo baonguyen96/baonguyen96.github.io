@@ -1,7 +1,7 @@
 let skills = [
     {
         "name": "Programming",
-        "value": "Java, C#, C, C++, Kotlin, Python, PHP"
+        "value": "Java, C#, C, C++, Kotlin, Python, PHP, Shell scripts"
     },
     {
         "name": "Platform/Framework",

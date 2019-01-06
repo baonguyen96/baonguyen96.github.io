@@ -6,11 +6,12 @@ let workExperienceList = [
         "contributions": [
             "Build and maintain multiple Windows Form Applications which automate manual data cleaning tasks " +
             "that save hours of operation per process for other people",
-            "Design, build, and maintain multi-threaded Windows Service applications that automatically download files " +
+            "Design, build, and maintain multi-threaded various Windows Service applications that automatically retrieve and send files " +
             "on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
             "Monitor and troubleshoot SQL jobs for SSMS",
             "Maintain multiple SSIS packages and SQL Store Procedures that integrates multiple data sources into company's standard schema",
-			"Migrate on-premise resources to Azure environment"
+			"Migrate on-premise resources to Azure environment",
+			"Build shell scripts to automate file management process"
         ]
     },
     {
@@ -22,7 +23,8 @@ let workExperienceList = [
             "that reduces tons of long and error-prone manual process for QA team, thus increase efficiency",
             "Implement additional features such as self-healing and report logging for the automated Selenium tool " +
             "that give better reports with clearer error tracing",
-            "Perform various testing techniques for software releases"
+            "Perform various testing techniques for software releases",
+			"Build shell scripts to automate build/deployment process for QA tools"
         ]
     },
     {

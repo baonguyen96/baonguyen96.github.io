@@ -13,7 +13,7 @@ let Configuration = require('./utils/configuration');
 
 let environment = Env.regression;
 let browser = Browser.chrome;
-let resolution = Resolution.iphoneXportrait;
+let resolution = Resolution.fhd;
 let isVerifyingUI = true;
 let isVerifyingLinks = true;
 
