@@ -14,7 +14,7 @@ let skills = [
     },
     {
         "name": "Databases",
-        "value": "MySQL, T-SQL, SPARQL, JDBC, JPA, MongoDB"
+        "value": "MySQL, T-SQL, SPARQL, JDBC, JPA, MongoDB, PostgreSQL"
     },
     {
         "name": "Automation Testing",

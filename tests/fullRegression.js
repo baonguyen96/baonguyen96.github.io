@@ -335,7 +335,9 @@ async function verifyContactsSection() {
 async function verifyCopyrightSection() {
 	await driver.findElement(By.xpath("//footer/p")).click();
 	await driver.findElement(By.xpath("//footer/p")).getText().then(function (text) {
-		assert.strictEqual(text, '© 2018 by Bao Nguyen. All rights reserved.');
+		console.log(text);
+		assert.ok(text.startsWith("© 2018"));
+		assert.ok(text.endsWith("by Bao Nguyen. All rights reserved."));
 	});
 }
 
