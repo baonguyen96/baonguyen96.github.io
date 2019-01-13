@@ -29,6 +29,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
                 integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i"
                 crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js@1.14.6/dist/umd/popper.min.js"></script>
 
         <script src="scripts/contents/experience.js"></script>
         <script src="scripts/contents/skills.js"></script>
@@ -118,17 +119,10 @@
 
             <section class="section" id="awardsSection">
                 <h2><span>Awards</span></h2>
-                <!--<p class="greeting">-->
-                    <!--During my time as a student at The University of Texas at Dallas, I am honored to receive several awards, including-->
-                    <!--the followings:-->
-                <!--</p>-->
             </section>
 
             <section class="section" id="coursesSection">
                 <h2><span>Major Courses</span></h2>
-                <!--<p class="greeting">-->
-                    <!--Followings are some of the major or more advanced courses that I have taken so far at my university:-->
-                <!--</p>-->
             </section>
 
             <section class="section" id="followMeSection">
@@ -157,7 +151,7 @@
                         <a href="http://www.youtube.com/user/MrBaonguyen96" target="_blank">
                             <img class="contactIcon" alt="500px" src="assets/images/media-icons/youtube.png"/>
                         </a>
-                        <a href="Resume.pdf" target="_blank">
+                        <a id="resumeButton" data-toggle="tooltip" data-placement="top" title="Please request Resume via email">
                             <img class="contactIcon" alt="resume" src="assets/images/media-icons/resume.png"/>
                         </a>
                     </div>

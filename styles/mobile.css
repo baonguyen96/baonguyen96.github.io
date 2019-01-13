@@ -331,6 +331,10 @@ hr {
     transition-duration: 0.3s;
 }
 
+#resumeButton:hover {
+    cursor: pointer;
+}
+
 
 #followMeSection > div {
     text-align: center;

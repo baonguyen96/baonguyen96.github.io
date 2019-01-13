@@ -24,9 +24,11 @@ module.exports = {
 		const {stdout, stderr} = require('shelljs').exec(command);
 
 		if (stderr) {
+			console.log(stderr);
 			result = false;
 		}
 		else {
+			console.log(stdout);
 			result = stdout.toString().match('[\\S\\s]+\\D0 broken*');
 		}
 
