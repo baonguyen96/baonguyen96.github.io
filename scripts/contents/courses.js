@@ -13,7 +13,8 @@ let courses = [
     "Introduction to Machine Learning",
     "Object-Oriented Analysis and Design",
     "Web Development for Business Application",
-    "Systems Security and Malicious Code Analysis"
+    "Systems Security and Malicious Code Analysis",
+    "Information Security"
 ];
 
 $(function () {

@@ -1,7 +1,7 @@
 let skills = [
     {
         "name": "Programming",
-        "value": "Java, C#, C, C++, Kotlin, Python, PHP, Shell scripts"
+        "value": "Java, C#, C, C++, Kotlin, Python, PHP, Shell scripts (bat, ps1)"
     },
     {
         "name": "Platform/Framework",
@@ -32,8 +32,12 @@ let skills = [
         "name": "Operating Systems",
         "value": "Windows, Linux, MacOS, Android"
     },
+	{
+		"name": "Security Tools",
+		"value": "WireShark, Nmap, GNS"
+	},
     {
-        "name": "Tools",
+        "name": "Development Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
             "Microsoft SSMS, MySQL Workbench, Microsoft Office suite, SharePoint, " +
             "Adobe Creative Cloud suite, RStudio, Postman"

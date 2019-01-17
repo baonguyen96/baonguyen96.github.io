@@ -39,37 +39,37 @@ let driver = driverFactory.getDriverForBrowser(configuration);
 	let startDate = new Date();
 	let isUiOk = true, areLinksOk = true;
 
-	// if(isVerifyingUI) {
-	// 	let tests = [
-	// 		verifyPageLoad,
-	// 		verifyHeader,
-	// 		verifyAboutSection,
-	// 		verifyExperienceSection,
-	// 		verifySkillsSection,
-	// 		verifyProjectsSection,
-	// 		verifyAwardsSection,
-	// 		verifyCoursesSection,
-	// 		verifyContactsSection,
-	// 		verifyCopyrightSection,
-	// 		verify404Page
-	// 	];
-	//
-	// 	console.log('>> VERIFY UI');
-	// 	for (const test of tests) {
-	// 		let testName = util.parseMethodName(test.name);
-	//
-	// 		try {
-	// 			console.log(testName + '...');
-	// 			await test();
-	// 		}
-	// 		catch (e) {
-	// 			isUiOk = false;
-	// 			console.log(`   - ${util.getErrorMessageFromException(e)}`);
-	// 		}
-	// 	}
-	//
-	// 	await driver.quit();
-	// }
+	if(isVerifyingUI) {
+		let tests = [
+			verifyPageLoad,
+			verifyHeader,
+			verifyAboutSection,
+			verifyExperienceSection,
+			verifySkillsSection,
+			verifyProjectsSection,
+			verifyAwardsSection,
+			verifyCoursesSection,
+			verifyContactsSection,
+			verifyCopyrightSection,
+			verify404Page
+		];
+
+		console.log('>> VERIFY UI');
+		for (const test of tests) {
+			let testName = util.parseMethodName(test.name);
+
+			try {
+				console.log(testName + '...');
+				await test();
+			}
+			catch (e) {
+				isUiOk = false;
+				console.log(`   - ${util.getErrorMessageFromException(e)}`);
+			}
+		}
+
+		await driver.quit();
+	}
 
 	if(isVerifyingLinks) {
 		console.log('\n>> VERIFY LINKS');
@@ -116,7 +116,7 @@ async function verifyAboutSection() {
 		assert.strictEqual(text, 'About Me');
 	});
 
-	for (let i = 1; i <= 2; i++) {
+	for (let i = 1; i <= 3; i++) {
 		await driver.findElement(By.xpath(`//section[@id='aboutSection']/p[${i}]`));
 	}
 }
