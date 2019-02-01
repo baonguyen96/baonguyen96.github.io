@@ -12,13 +12,13 @@ module.exports = {
 	},
 
 	checkBrokenLinks: function (url, skips) {
-		let command = `blc ${url} -ro`;
+		let command = `blc ${url} -r`;
 		let result = true;
 
 		skips.forEach((skip) => {
 			command += ` --exclude ${skip}`;
 		});
-		command += ' -v';
+		// command += ' -v';
 		console.log(command);
 
 		const {stdout, stderr} = require('shelljs').exec(command);
@@ -27,7 +27,7 @@ module.exports = {
 			result = false;
 		}
 		else {
-			result = stdout.toString().match('[\\S\\s]+\\D0 broken*');
+			result = !stdout.toString().includes('├─BROKEN─');
 		}
 
 		return result;
