@@ -58,11 +58,11 @@ let skills = [
 
 $(function() {
     let skillsContainer = $("#skillsContainer");
-    let customList = $("#customListTemplate").clone().find(".customList");
+    let customList = $(customListTemplate);
     let itemTemplate = customList.find(".customListItem");
     itemTemplate.addClass("specialText");
     itemTemplate.find(".customListIcon").attr("src", "./assets/images/misc/skill.png");
-    let skillGroup = $("#skillTemplate").find(".skillGroup").clone();
+    let skillGroup = $(skillGroupTemplate).clone();
 
     for (let skillIndex = 0; skillIndex < skills.length; skillIndex++) {
         let skillData = skills[skillIndex];

@@ -1,7 +1,7 @@
 let courses = [
     "Data Structures and Algorithmic Analysis",
     "Operating System Concepts",
-    "Database Systems",
+    "Database Systems And Design",
     "Computer Architecture",
     "Computer Network Security",
     "C/C++ in UNIX Environment",
@@ -18,8 +18,7 @@ let courses = [
 ];
 
 $(function () {
-    let coursesSection = $("#coursesSection");
-    let customList = $("#customListTemplate").clone().find(".customList");
+    let customList = $(customListTemplate);
     let item = customList.find(".customListItem");
     item.find(".customListIcon").attr("src", "./assets/images/misc/course.png");
 
@@ -31,5 +30,5 @@ $(function () {
     }
 
     customList.find(item).eq(0).remove();
-    coursesSection.append(customList);
+	$("#coursesSection").append(customList);
 });

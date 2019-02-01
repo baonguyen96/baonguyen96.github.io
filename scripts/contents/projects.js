@@ -141,7 +141,7 @@ function createIntro(intro, types) {
 
 
 function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
-	let row = $("#projectTemplate").find(".row");
+	let row = $(projectTemplate);
 	let isRowContainsOnlySingleProject = false;
 
 	// loop through each row (2 projects each)
@@ -204,20 +204,17 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
 
 
 function showDemo() {
-	let myModal = $("#hiddenModal");
+	let myModal = $(modalTemplate);
 	let demoProjectId = "";
 	let demoProjectTitle = "";
 
 	$(".demoLink").click(function () {
 		demoProjectTitle = $(this).closest(".project").find(".projectTitle").text();
 		demoProjectId = $(this).closest(".project").attr("id");
+		myModal.modal();
 	});
 
 	myModal.on('show.bs.modal', function () {
-		// $(this).attr({
-		// 	'maxHeight': $(window).height() * 0.6
-		// });
-
 		$(this).find(".modal-title").text(demoProjectTitle);
 
 		let img = $(this).find(".demoImage");

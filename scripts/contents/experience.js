@@ -8,7 +8,9 @@ let workExperienceList = [
             "on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
             "Monitor, troubleshoot, and enhance SQL stored procedures and SSIS packages",
 			"Migrate on-premise resources to Azure environment",
-			"Build shell scripts to automate file management process"
+			"Build shell scripts to automate file management process",
+			"Create alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, " +
+			"preventing lots of potential defects and saving times to take actions"
         ]
     },
     {
@@ -25,12 +27,12 @@ let workExperienceList = [
         ]
     },
     {
-        "jobTitle": "Store Associate",
+        "jobTitle": "Part Time Store Associate",
         "company": "7-Eleven",
         "period": "July 2014 - December 2016",
         "contributions": [
             "Keep track of merchandise flows",
-            "Provide outstanding customer service"
+            "Provide outstanding services and assist customers"
         ]
     },
     {
@@ -39,7 +41,7 @@ let workExperienceList = [
         "period": "December 2012 - April 2013",
         "contributions": [
             "Volunteer",
-            "Organize and track books flow",
+            "Organize and keep track of books flow",
             "Organize and run public events for children"
         ]
     }
@@ -47,13 +49,12 @@ let workExperienceList = [
 
 
 $(function () {
-    let experienceToggle = $("#experienceToggle");
-    let experienceTemplate = $("#experienceTemplate").clone().find(".experience");
+    let experience = $(experienceTemplate);
 
     // loop through all work experience
     for(let experienceIndex = 0; experienceIndex < workExperienceList.length; experienceIndex++) {
         let experienceData = workExperienceList[experienceIndex];
-        let currentExperience = experienceTemplate.clone();
+        let currentExperience = experience.clone();
         currentExperience.attr("id", "experience" + experienceIndex);
 
         // only show the first experience by default
@@ -66,7 +67,7 @@ $(function () {
         currentExperience.find(".company").html(experienceData.company);
         currentExperience.find(".period").html(experienceData.period);
 
-        let customList = $("#customListTemplate").clone().find(".customList");
+        let customList = $(customListTemplate);
         let item = customList.find(".customListItem");
         let contributions = experienceData.contributions;
         item.find(".customListIcon").attr("src", "./assets/images/misc/work.png");
@@ -80,8 +81,8 @@ $(function () {
 
         customList.find(item).eq(0).remove();
         currentExperience.append(customList);
-        experienceToggle.before(currentExperience);
+		$("#experienceToggle").before(currentExperience);
     }
 
-    experienceTemplate.remove();
+    experience.remove();
 });

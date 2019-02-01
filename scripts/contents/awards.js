@@ -7,14 +7,13 @@ let awards = [
 	"2018 Selden Leavell Endowed Scholarship",
 	"2017 Wells Fargo Endowed Scholarship",
 	createLink("http://www.utdallas.edu/news/2016/3/4-31922_More-than-1200-Students-Earn-Spots-on-Deans-List-f_story-wide.html?WT.mc_id=NewsEmail", "Fall 2015 Dean's List") + " with the Excellence in Education Scholarship for this semester",
-	createLink("https://www.utdallas.edu/news/2015/3/13-31446_More-than-1100-Students-Earn-Spots-on-Deans-List-f_story-wide.html", "Fall 2014 Dean's List") + " with the Excellence in Education Scholarship for this semester",
-
+	createLink("https://www.utdallas.edu/news/2015/3/13-31446_More-than-1100-Students-Earn-Spots-on-Deans-List-f_story-wide.html", "Fall 2014 Dean's List") + " with the Excellence in Education Scholarship for this semester"
 ];
 
 
 $(function () {
     let awardsSection = $("#awardsSection");
-    let customList = $("#customListTemplate").clone().find(".customList");
+    let customList = $(customListTemplate);
     let item = customList.find(".customListItem");
     item.find(".customListIcon").attr("src", "./assets/images/misc/award.png");
 
