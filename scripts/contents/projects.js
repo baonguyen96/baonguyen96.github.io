@@ -51,7 +51,7 @@ let projectsList = [
 			["GitHub API", "C#", ".NET"]),
 		"links": [
 			// createDemoLink(),
-			createSourceLink("https://github.com/baonguyen96/MorseMastering")
+			createSourceLink("https://github.com/baonguyen96/GitData")
 		]
 	},
 	{

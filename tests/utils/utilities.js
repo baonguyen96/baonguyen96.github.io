@@ -1,8 +1,8 @@
 module.exports = {
 
 	getErrorMessageFromException: function (e) {
-		// return e.stack.toString().split('\n')[0];
-		return e.stack.toString();
+		return e.stack.toString().split('\n')[0];
+		// return e.stack.toString();
 	},
 
 	parseMethodName: function (methodName) {
@@ -24,11 +24,9 @@ module.exports = {
 		const {stdout, stderr} = require('shelljs').exec(command);
 
 		if (stderr) {
-			console.log(stderr);
 			result = false;
 		}
 		else {
-			console.log(stdout);
 			result = stdout.toString().match('[\\S\\s]+\\D0 broken*');
 		}
 
