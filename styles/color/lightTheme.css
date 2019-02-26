@@ -1,3 +1,7 @@
+body {
+    background: url("../../assets/images/backgrounds/custom-background-light.jpg") no-repeat fixed center center;
+}
+
 h2 {
     color: #f35d45;
 }
@@ -11,7 +15,7 @@ h2 span {
 }
 
 #header img {
-    border: 5px solid #ffffff;
+    border-color: #ffffff;
 }
 
 a:link {
