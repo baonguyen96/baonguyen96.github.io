@@ -10,7 +10,8 @@ let workExperienceList = [
 			"Migrate on-premise resources to Azure environment",
 			"Build shell scripts to automate file management process",
 			"Create alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, " +
-			"preventing lots of potential defects and saving times to take actions"
+			"preventing lots of potential defects and saving times to take actions",
+			"Update and refactor legacy codes to significantly improve their performance (average about 30 times faster)"
         ]
     },
     {

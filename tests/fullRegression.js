@@ -11,7 +11,7 @@ let Configuration = require('./utils/configuration');
 
 ///////////////// configurations start /////////////////
 
-let environment = Env.regression;
+let environment = Env.production;
 let browser = Browser.chrome;
 let resolution = Resolution.fhd;
 let isVerifyingUI = true;
