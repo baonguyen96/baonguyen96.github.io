@@ -30,7 +30,6 @@ h1 {
 
 h2 {
     font-size: 1.2em;
-    color: #f35d45;
     text-align: center;
     font-weight: bold;
     margin-bottom: 2em;
@@ -40,7 +39,6 @@ h2 span {
     display: inline-block;
     width: 10em;
     border-radius: 10px;
-    border: 5px solid #f35d45;
     padding: 0.5em;
 }
 
@@ -58,7 +56,6 @@ p {
 }
 
 .section {
-    background-color: #fff;
     padding: 3em 1em 2em 1em;
 }
 
@@ -73,7 +70,6 @@ p {
     width: 8em;
     height: 8em;
     margin: 1.5em auto auto;
-    border: 5px solid #ffffff;
     border-radius: 50%;
 }
 
@@ -98,18 +94,6 @@ p {
 
 a {
     text-decoration: none;
-}
-
-a:link {
-    color: #F16E80;
-}
-
-a:hover {
-    color: black !important;
-}
-
-a:visited {
-    color: #EE2364;
 }
 
 .greeting {
@@ -151,7 +135,6 @@ a:visited {
 .toggle {
     padding: 5px 20px;
     margin: 1.5em auto 0;
-    color: #f35d45;
     border: none;
     background-color: transparent;
     display: flex;
@@ -162,7 +145,6 @@ button.toggle:hover {
     cursor: pointer;
     padding: 4px 20px;
     border-radius: 10px;
-    border: 1px solid #f35d45;
 }
 
 button:focus {
@@ -186,7 +168,6 @@ button:focus {
 }
 
 .projectContent {
-    background-color: #FEE6DA;
     width: 100%;
     height: 100%;
     padding: 0.8em 1.2em;
@@ -232,7 +213,6 @@ button:focus {
 hr {
     margin: 2em auto;
     width: 50%;
-    background-color: #efefef;
 }
 
 .vertical-alignment-helper {
@@ -259,7 +239,6 @@ hr {
     margin: 0 auto;
     font-weight: bold;
     font-size: 20pt;
-    color: #f35d45;
 }
 
 .modal-body .demoImage {
@@ -275,21 +254,19 @@ hr {
 .closeModalButton {
     margin: 0 auto;
     padding: 3px 8px;
-    background-color: transparent;
-    color: #f35d45;
     font-weight: bold;
     font-size: 1em;
 }
 
 .closeModalButton:hover {
     border-radius: 7px;
-    border: 2px solid #f35d45;
+    border: 2px solid;
 }
 
 .shadow {
-    -webkit-box-shadow: 2px 2px 4px 4px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow: 2px 2px 4px 4px #ccc; /* Firefox 3.5 - 3.6 */
-    box-shadow: 2px 2px 4px 4px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    -webkit-box-shadow: 2px 2px 4px 4px; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 2px 2px 4px 4px; /* Firefox 3.5 - 3.6 */
+    box-shadow: 2px 2px 4px 4px; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 #followMeSection > div.row {
@@ -343,8 +320,6 @@ hr {
 #copyright {
     font-size: 0.95em;
     text-align: center;
-    color: gray;
-    opacity: 0;
 }
 
 #copyright > p {
@@ -376,7 +351,6 @@ hr {
 }
 
 #error-area {
-    background-color: rgba(141, 141, 141, 0.35);
     border-radius: 10px;
     width: 70%;
     margin: auto;
