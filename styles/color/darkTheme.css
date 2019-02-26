@@ -1,0 +1,71 @@
+body {
+    color: white;
+    background: url("../../assets/images/backgrounds/custom-background-dark.jpg") no-repeat fixed center center;
+}
+
+h2 {
+    color: #f35d45;
+}
+
+h2 span {
+    border: 5px solid #f35d45;
+}
+
+.section {
+    background-color: rgb(43, 43, 43);
+}
+
+a:link {
+    color: #F16E80;
+}
+
+a:hover {
+    color: #f1bab3 !important;
+}
+
+a:visited {
+    color: #EE2364;
+}
+
+.toggle {
+    color: #f35d45;
+}
+
+button.toggle:hover {
+    border: 1px solid #f35d45;
+}
+
+.projectContent {
+    background-color: #3B3E43;
+}
+
+hr {
+    background-color: #efefef;
+}
+
+.modal-title {
+    color: #f35d45;
+}
+
+.closeModalButton {
+    background-color: transparent;
+    color: #f35d45;
+}
+
+
+.closeModalButton:hover {
+    border-color: #f35d45;
+}
+
+.shadow {
+    color: #ccc;
+}
+
+#copyright {
+    color: gray;
+    opacity: 0;
+}
+
+#error-area {
+    background-color: rgba(141, 141, 141, 0.35);
+}
