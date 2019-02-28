@@ -1,6 +1,6 @@
 let workExperienceList = [
     {
-        "jobTitle": "Data Integration Analyst",
+        "jobTitle": "Data Integration Engineer",
         "company": "Loopback Analytics",
         "period": "August 2018 - Present",
         "contributions": [
