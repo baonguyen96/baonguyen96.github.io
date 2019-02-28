@@ -1,7 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/inspectionProfiles/
 .idea/workspace.xml
-TAGMESSAGE
 backup/
 /tests/node_modules/
 /tests/debug.log
