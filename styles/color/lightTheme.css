@@ -1,5 +1,6 @@
 body {
     background: url("../../assets/images/backgrounds/custom-background-light.jpg") no-repeat fixed center center;
+    background-size: cover;
 }
 
 h2 {

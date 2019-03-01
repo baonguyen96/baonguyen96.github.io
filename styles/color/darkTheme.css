@@ -1,6 +1,7 @@
 body {
     color: white;
     background: url("../../assets/images/backgrounds/custom-background-dark.jpg") no-repeat fixed center center;
+    background-size: cover;
 }
 
 h2 {
