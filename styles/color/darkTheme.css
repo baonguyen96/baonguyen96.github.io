@@ -13,7 +13,7 @@ h2 span {
 }
 
 .section {
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(49, 49, 49);
 }
 
 a:link {
@@ -37,7 +37,7 @@ button.toggle:hover {
 }
 
 .projectContent {
-    background-color: #3B3E43;
+    background-color: #383838;
 }
 
 hr {
@@ -69,4 +69,11 @@ hr {
 
 #error-area {
     background-color: rgba(141, 141, 141, 0.35);
+}
+
+.modal-content {
+    background-color: black;
+}
+
+#upArrowNavigator {
 }

@@ -34,13 +34,13 @@ let skills = [
     },
 	{
 		"name": "Security Tools",
-		"value": "WireShark, Nmap, GNS"
+		"value": "WireShark, Nmap, GNS, TCPdump"
 	},
     {
         "name": "Development Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
             "Microsoft SSMS, MySQL Workbench, Microsoft Office suite, SharePoint, " +
-            "Adobe Creative Cloud suite, RStudio, Postman"
+            "Adobe Creative Cloud suite, RStudio, Postman, PowerBI"
     },
     {
         "name": "Project Management",

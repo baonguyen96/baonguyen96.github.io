@@ -4,3 +4,4 @@
 backup/
 /tests/node_modules/
 /tests/debug.log
+/assets/images/backgrounds/custom-background.psd
