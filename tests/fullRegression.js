@@ -342,22 +342,34 @@ async function verifyCopyrightSection() {
 
 
 async function verify404Page() {
-	if(environment === Env.production) {
-		await driver.get(configuration.environment + "dskdsm");
+	for(let i = 0; i < 2; i++) {
+		if(i === 0) {
+			if(environment === Env.production) {
+				await driver.get(configuration.environment + "dskdsm");
+			}
+			else {
+				await driver.get(configuration.environment + "404.html");
+			}
+		}
+		else {
+			if(environment === Env.production) {
+				await driver.get(configuration.environment + "dskdsm/dsadas");
+			}
+			else {
+				await driver.get(configuration.environment + "404.html/kdnaksnd");
+				continue;
+			}
+		}
+
+		await driver.sleep(2000);
+		await driver.findElement(By.xpath(`//div[@id='error-area']/img`));
+		await driver.findElement(By.xpath(`//div[@id='error-area']/p`)).getText().then(function (text) {
+			assert.strictEqual(text, "The requested page does not exist. Click here to go back to the home page.");
+		});
+
+		await driver.findElement(By.linkText("here")).click();
+		await driver.getCurrentUrl().then(function (url) {
+			assert.strictEqual(url, configuration.environment);
+		});
 	}
-	else {
-		await driver.get(configuration.environment + "404.html");
-	}
-
-	await driver.sleep(2000);
-	await driver.findElement(By.xpath(`//div[@id='error-area']/img`));
-	await driver.findElement(By.xpath(`//div[@id='error-area']/p`)).getText().then(function (text) {
-		assert.strictEqual(text, "The requested page does not exist. Click here to go back to the home page.");
-	});
-
-	await driver.findElement(By.linkText("here")).click();
-
-	await driver.getCurrentUrl().then(function (url) {
-		assert.strictEqual(url, configuration.environment);
-	});
 }
