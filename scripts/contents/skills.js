@@ -22,7 +22,7 @@ let skills = [
     },
     {
         "name": "Data Integration",
-        "value": "SSIS, SSDT, Data Warehouse, ETL"
+        "value": "SSIS, SSDT, Data Warehouse, ETL, Networking and Infrastructure setup"
     },
     {
         "name": "Build/Deployment",
@@ -32,10 +32,10 @@ let skills = [
         "name": "Operating Systems",
         "value": "Windows, Linux, MacOS, Android"
     },
-	{
-		"name": "Security Tools",
-		"value": "WireShark, Nmap, GNS, TCPdump"
-	},
+	// {
+	// 	"name": "Security Tools",
+	// 	"value": "WireShark, Nmap, GNS, TCPdump"
+	// },
     {
         "name": "Development Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
