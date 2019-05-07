@@ -4,14 +4,13 @@ let workExperienceList = [
         "company": "Loopback Analytics",
         "period": "August 2018 - Present",
         "contributions": [
-            "Build and maintain multiple Windows Form/Service Applications which automate manual data cleaning tasks and retrieve/send files on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
-            "Integrate multiple client data sources into company internal system with high performance",
-            "Monitor, troubleshoot, and enhance SQL stored procedures and SSIS packages",
-            "Migrate on-premise resources to Azure environment",
-            "Build shell scripts to automate file management process",
+            "Build and maintain multiple Windows Forms and Windows Service Applications which automate manual data cleaning tasks and retrieve/send files on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
+            "Integrate multiple client data sources into company internal system with high performance and analyze large data sets to ensure high data quality",
+            "Monitor, troubleshoot, and enhance performance/resource usages for applications, SQL stored procedures, and SSIS packages",
+            "Migrate on-premise resources to Azure environment and on-going support Azure resources",
+            "Build shell scripts to automate file and database management process",
             "Create alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, " +
             "preventing lots of potential defects and saving times to take actions",
-            "Update legacy codes to significantly improve their performance (average about 30 times faster)"
         ]
     },
     {

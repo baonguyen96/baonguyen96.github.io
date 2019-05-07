@@ -5,7 +5,7 @@ let skills = [
     },
     {
         "name": "Platform/Framework",
-        "value": "Azure, .NET, J2EE"
+        "value": "Azure, AWS, .NET, J2EE"
     },
     {
         "name": "Web Technologies",
@@ -22,11 +22,11 @@ let skills = [
     },
     {
         "name": "Data Integration",
-        "value": "SSIS, SSDT"
+        "value": "SSIS, SSDT, Data Warehouse, ETL"
     },
     {
         "name": "Build/Deployment",
-        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket"
+        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket, TeamCity"
     },
     {
         "name": "Operating Systems",
