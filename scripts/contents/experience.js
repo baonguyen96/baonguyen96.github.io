@@ -4,7 +4,9 @@ let workExperienceList = [
         "company": "Loopback Analytics",
         "period": "August 2018 - Present",
         "contributions": [
-            "Build and maintain multiple Windows Forms and Windows Service Applications which automate manual data cleaning tasks and retrieve/send files on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
+            "Build and maintain multiple Windows Forms and Windows Service Applications which automate manual data cleansing tasks " +
+			"and retrieve/send files on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
+			"Architect processes that intake multiple data/file types and streamline into company's existing data structure, minimize changes to SQL schema and SSDT",
             "Integrate multiple client data sources into company internal system with high performance and analyze large data sets to ensure high data quality",
             "Monitor, troubleshoot, and enhance performance/resource usages for applications, SQL stored procedures, and SSIS packages",
             "Migrate on-premise resources to Azure environment and on-going support Azure resources",
