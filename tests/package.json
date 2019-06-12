@@ -11,7 +11,6 @@
     "license": "ISC",
     "dependencies": {
         "adm-zip": "^0.4.11",
-        "blc": "0.0.5",
         "chromedriver": "^2.42.0",
         "edgedriver": "^4.17134.0",
         "geckodriver": "^1.12.2",
@@ -19,5 +18,8 @@
         "selenium-webdriver": "^4.0.0-alpha.1",
         "semver": "^5.5.1",
         "shelljs": "^0.8.2"
+    },
+    "resolutions": {
+        "lodash": "^4.17.5"
     }
 }
