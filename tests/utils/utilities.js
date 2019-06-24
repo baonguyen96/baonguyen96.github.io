@@ -1,3 +1,5 @@
+const { exec } = require('child_process');
+
 module.exports = {
 
 	getErrorMessageFromException: function (e) {
@@ -18,17 +20,20 @@ module.exports = {
 		skips.forEach((skip) => {
 			command += ` --exclude ${skip}`;
 		});
+
 		// command += ' -v';
 		console.log(command);
 
-		const {stdout, stderr} = require('shelljs').exec(command);
-
-		if (stderr) {
-			result = false;
-		}
-		else {
-			result = !stdout.toString().includes('├─BROKEN─');
-		}
+		exec(command, (error, stdout, stderr) => {
+			if (error) {
+				console.error(`exec error: ${error}`);
+				result = false;
+			}
+			else {
+				console.log(stdout);
+				result = !stdout.toString().includes('├─BROKEN─');
+			}
+		});
 
 		return result;
 	}

@@ -1,25 +1,26 @@
 {
-    "name": "tests",
-    "version": "1.0.0",
-    "description": "regression test of baonguyen96.github.io",
-    "main": "fullRegression.js",
-    "repository": "https://github.com/baonguyen96/baonguyen96.github.io",
-    "scripts": {
-        "test": "node fullRegression.js production"
-    },
-    "author": "Bao Nguyen",
-    "license": "ISC",
-    "dependencies": {
-        "adm-zip": "^0.4.11",
-        "chromedriver": "^2.42.0",
-        "edgedriver": "^4.17134.0",
-        "geckodriver": "^1.12.2",
-        "iedriver": "^3.9.2",
-        "selenium-webdriver": "^4.0.0-alpha.1",
-        "semver": "^5.5.1",
-        "shelljs": "^0.8.2"
-    },
-    "resolutions": {
-        "lodash": "^4.17.5"
-    }
+  "name": "website_test",
+  "version": "1.0.0",
+  "description": "automation test of baonguyen96.github.io",
+  "main": "fullRegression.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baonguyen96/baonguyen96.github.io.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Bao Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baonguyen96/baonguyen96.github.io/issues"
+  },
+  "homepage": "https://github.com/baonguyen96/baonguyen96.github.io#readme",
+  "dependencies": {
+    "chromedriver": "^75.0.0",
+    "selenium-webdriver": "^4.0.0-alpha.3"
+  }
 }
