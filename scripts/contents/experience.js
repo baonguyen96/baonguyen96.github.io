@@ -1,17 +1,17 @@
 let workExperienceList = [
     {
-        "jobTitle": "Data Integration Engineer",
+        "jobTitle": "Data Integration Analyst",
         "company": "Loopback Analytics",
         "period": "August 2018 - Present",
         "contributions": [
             "Design and build multiple Windows Forms and Windows Service Applications which automate manual data cleansing tasks " +
 			"and retrieve/send files on schedule and transfer them among servers, eliminating a lot of manual works and their reminders for the company",
 			"Architect and implement processes and tools that intake multiple data/file types and streamline into company's existing data structure, minimize changes to SQL schema and SSDT",
-            "Integrate multiple client data sources into company internal system with high performance and analyze large data sets to ensure high data quality",
+            "Integrate multiple client data sources into company's internal system with high performance and analyze large data sets to ensure high data quality",
             "Monitor, troubleshoot, and enhance performance/resource usages for applications, SQL stored procedures, and SSIS packages",
             "Migrate on-premise resources to Azure environment and on-going support Azure resources",
             "Build shell scripts to automate file and database management process",
-            "Create alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, " +
+            "Create an alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, " +
             "preventing lots of potential defects and saving times to take actions",
         ]
     },
@@ -20,9 +20,9 @@ let workExperienceList = [
         "company": "Loopback Analytics",
         "period": "May 2017 - August 2017,<br/>January 2018 - August 2018",
         "contributions": [
+			"Architect and build a Selenium WebDriver tool in Java to support automated GUI testing",
             "Architect and build a system that integrates different tools to support end-to-end automation testing " +
-            "that reduces tons of long and error-prone manual process for QA team, thus increase efficiency",
-            "Implement additional features such as self-healing and report logging for the automated Selenium tool " +
+            "that reduces a lot of long and error-prone manual process for QA team, thus increase efficiency",
             "that give better reports with clearer error tracing",
             "Perform various testing techniques for software releases",
             "Build shell scripts to automate build/deployment process for QA tools"
