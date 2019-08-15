@@ -9,8 +9,7 @@ let workExperienceList = [
             "Monitor, troubleshoot, and enhance performance/resource usages for .NET applications, SQL stored procedures, SSIS packages, and Azure SQL pools",
             "Migrate on-premise resources to Azure environment and on-going support Azure resources",
             "Build shell scripts to automate file and database management process",
-            "Create an alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, " +
-            "preventing lots of potential defects and saving times to take actions"
+            "Create an alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, preventing lots of potential defects and saving times to take actions"
         ]
     },
     {
@@ -19,9 +18,7 @@ let workExperienceList = [
         "period": "May 2017 - August 2017,<br/>January 2018 - August 2018",
         "contributions": [
 			"Architect and build a Selenium WebDriver tool in Java to support automated GUI testing",
-            "Architect and build a system that integrates different tools to support end-to-end automation testing " +
-            "that reduces a lot of long and error-prone manual process for QA team, thus increase efficiency",
-            "that give better reports with clearer error tracing",
+            "Architect and build a system that integrates different tools to support end-to-end automation testing, reducing a lot of long and error-prone manual process for QA team",
             "Perform various testing techniques for software releases",
             "Build shell scripts to automate build/deployment process for QA tools"
         ]
