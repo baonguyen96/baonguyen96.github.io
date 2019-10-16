@@ -5,12 +5,12 @@ let skills = [
     },
     {
         "name": "Platform/Framework",
-        "value": "Azure, AWS, .NET, J2EE"
+        "value": "Azure, .NET, J2EE"
     },
     {
         "name": "Web Technologies",
         "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, " +
-            "WordPress, NodeJS, AJAX, REST, Spring, RabbitMQ, RDF, Google Analytics"
+            "WordPress, REST, Spring, RDF, Google Analytics"
     },
     {
         "name": "Databases",
@@ -18,7 +18,7 @@ let skills = [
     },
     {
         "name": "Automation Testing",
-        "value": "JUnit, TestNG, Selenium  WebDriver API (in several languages)"
+        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest, Selenium WebDriver API"
     },
     {
         "name": "Data Integration",
