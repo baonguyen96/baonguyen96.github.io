@@ -5,9 +5,11 @@ let workExperienceList = [
         "period": "August 2018 - Present",
         "contributions": [
             "Design and build multiple applications that automate data cleansing tasks and perform high capacity ETL process (typically handle 50+ GB/day)",
+			"Architect data flow processes to ensure high performance/reliability/availability and to reduce redundant SQL storage and usage",
             "Integrate multiple client data sources into company's internal system with high performance and analyze large data sets to ensure high data quality",
             "Monitor, troubleshoot, and enhance performance/resource usages for .NET applications, SQL stored procedures, SSIS packages, and Azure SQL pools",
             "Migrate on-premise resources to Azure environment and on-going support Azure resources",
+			"Convert SSIS packages to Windows Services to provide easier maintenance and better performance",
             "Build shell scripts to automate file and database management process",
             "Create an alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, preventing lots of potential defects and saving times to take actions"
         ]
