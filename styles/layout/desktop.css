@@ -56,15 +56,7 @@
     #followMeSection > div div {
         padding: 0;
     }
-
-    #followMeSection > div div:first-child a {
-        float: right;
-    }
-
-    #followMeSection > div div:last-child a {
-        float: left;
-    }
-
+    
     #followMeSection .contactIcon {
         width: 2.5em;
         height: 2.5em;
@@ -167,14 +159,4 @@
         right: 4%;
     }
 
-    /*#coursesSection .customList {*/
-        /*padding-left: 35%;*/
-        /*padding-right: 30%;*/
-    /*}*/
-
 }
-
-/* ultra-wide */
-/*@media screen and (min-width: 1921px) {*/
-
-/*}*/

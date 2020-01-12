@@ -268,11 +268,11 @@ hr {
     box-shadow: 2px 2px 4px 4px; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-#followMeSection > div.row {
+#iconsContainer {
     margin-top: 2em;
 }
 
-#followMeSection > div div {
+#iconsContainer > div {
     margin: 0 auto;
     padding: 0.15em;
 }
@@ -306,11 +306,6 @@ hr {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
-
-#resumeButton:hover {
-    cursor: pointer;
-}
-
 
 #followMeSection > div {
     text-align: center;
