@@ -6,3 +6,4 @@ backup/
 /tests/debug.log
 /assets/images/backgrounds/custom-background.psd
 /_site/*
+/assets/images/demos/WIP/*

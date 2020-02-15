@@ -1,18 +1,15 @@
 let courses = [
     "Data Structures and Algorithmic Analysis",
-    "Operating System Concepts",
+    "Advanced Operating Systems",
     "Database Systems And Design",
     "Computer Architecture",
     "Computer Network Security",
     "C/C++ in UNIX Environment",
-    "Requirement Engineering",
     "Software Architecture and Design Patterns",
     "Software Testing, Verification, and Quality Assurance",
     "Software Project Planning and Management",
     "Program Analysis and Its Application",
-    "Introduction to Machine Learning",
     "Object-Oriented Analysis and Design",
-    "Web Development for Business Application",
     "Systems Security and Malicious Code Analysis",
     "Information Security"
 ];
