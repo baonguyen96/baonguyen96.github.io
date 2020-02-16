@@ -1,5 +1,16 @@
-// NOTE: demos are recorded at resolutions: 1024×576 (aspect ratio:  16:9) on 27in 1920x1080 screen
+// NOTE: demos are recorded at resolutions: 1024×576 (aspect ratio: 16:9) on 27in 1920x1080 screen
 let projectsList = [
+	{
+		"title": "Distributed File System",
+		"intro": createIntro("A distributed file replica system coded in Java that consists of multiple servers that admit multiple clients, " +
+			"all of which can be on different machines and communicate via message exchange. " +
+			"Multiple clients can connect to multiple servers concurrently and request append message to multiple files on each server. " +
+			"At any given time, all servers can replicate the exact copy of all the files that all other servers have.", ["Java"]),
+		"links": [
+			createDemoLink(),
+			createSourceLink("https://github.com/baonguyen96/LamportClock")
+		]
+	},
 	{
 		"title": "Dark Chroma",
 		"intro": createIntro("A Chrome extension that reverts the color of the page " +
@@ -15,7 +26,6 @@ let projectsList = [
 	{
 		"title": "File Transfer Application",
 		"intro": createIntro("This Java project implements a unique File Transfer Protocol " +
-			"utilizing Socket, Connection Management, Reliable Communication, " +
 			"utilizing Socket, Connection Management, Reliable Communication, " +
 			"and Security (Public Key Crypto and Symmetric Key Crypto). ", ["Java"]),
 		"links": [
@@ -33,6 +43,25 @@ let projectsList = [
 			["SPARQL", "Java", "Fuseki", "SpringBoot"]),
 		"links": [
 			createDemoLink()
+		]
+	},
+	{
+		"title": "Morse Mastering",
+		"intro": createIntro("An Android application that teaches users the Morse code and translates between " +
+			"Morse and normal text. It also provides some Android services, such as Notification and " +
+			"Network Communication.", ["Android application"]),
+		"links": [
+			createDemoLink()
+		]
+	},
+	{
+		"title": "Flights Map",
+		"intro": createIntro("This C# project represents a map of flights among cities. " +
+			"It utilizes Dijkstra's algorithm to find the 3 shortest paths " +
+			"(either by flight duration or by distance) between given 2 cities.", ["C#"]),
+		"links": [
+			createDemoLink(),
+			createSourceLink("https://github.com/baonguyen96/FlightGraph")
 		]
 	},
 	{
@@ -55,16 +84,6 @@ let projectsList = [
 		]
 	},
 	{
-		"title": "Morse Mastering",
-		"intro": createIntro("An Android application that teaches users the Morse code and translates between " +
-			"Morse and normal text. It also provides some Android services, such as Notification and " +
-			"Network Communication.", ["Android application"]),
-		"links": [
-			createDemoLink(),
-			// createSourceLink("#actuaLink", "Available on", "Google Play Store")
-		]
-	},
-	{
 		"title": "Tickets Reservation System",
 		"intro": createIntro("This C++ project simulates an online ticketing systems. " +
 			"It lets user reserves seats, flies the plane when full, or puts the selected seats " +
@@ -72,16 +91,6 @@ let projectsList = [
 		"links": [
 			createDemoLink(),
 			createSourceLink("https://github.com/baonguyen96/AirplaneTicketsReservingSystem")
-		]
-	},
-	{
-		"title": "Flights Map",
-		"intro": createIntro("This C# project represents a map of flights among cities. " +
-			"It utilizes Dijkstra's algorithm to find the 3 shortest paths " +
-			"(either by flight duration or by distance) between given 2 cities.", ["C#"]),
-		"links": [
-			createDemoLink(),
-			createSourceLink("https://github.com/baonguyen96/FlightGraph")
 		]
 	},
 	{
@@ -230,8 +239,9 @@ $(function () {
 	let projectSection = $("#projectsSection");
 	let projects = projectSection.find(".projects");
 	let projectsHidden = projectSection.find(".projectsHidden");
+	let showProjectCounts = 6;
 
-	addProjectsToGroup(projects, 0, 4);
-	addProjectsToGroup(projectsHidden, 4, projectsList.length);
+	addProjectsToGroup(projects, 0, showProjectCounts);
+	addProjectsToGroup(projectsHidden, showProjectCounts, projectsList.length);
 	showDemo();
 });
