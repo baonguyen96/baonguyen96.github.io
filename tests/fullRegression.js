@@ -43,15 +43,15 @@ let waitTimeInMilliseconds = 1000;
 	if(isVerifyingUI) {
 		let tests = [
 			verifyPageLoad,
-			// verifyHeader,
-			// verifyAboutSection,
+			verifyHeader,
+			verifyAboutSection,
 			verifyExperienceSection,
-			// verifySkillsSection,
-			// verifyProjectsSection,
-			// verifyAwardsSection,
-			// verifyCoursesSection,
-			// verifyContactsSection,
-			// verifyCopyrightSection,
+			verifySkillsSection,
+			verifyProjectsSection,
+			verifyAwardsSection,
+			verifyCoursesSection,
+			verifyContactsSection,
+			verifyCopyrightSection,
 			verify404Page
 		];
 
@@ -142,6 +142,7 @@ async function verifyExperienceSection() {
 
 		for (let titleIndex = 1; titleIndex <= 3; titleIndex++) {
 			await driver.findElement(By.xpath(`//div[@id='experience${experienceIndex}']/div/div[${titleIndex}]`));
+			driver.findElement(By.xpath(`//div[@id='experience${experienceIndex}']/div/div[${titleIndex}]`)).click();
 		}
 
 		await driver.findElement(By.xpath(`//div[@id='experience${experienceIndex}']/div[2]/div/div/p`)).getText()
@@ -234,45 +235,47 @@ async function verifyProjectsSection() {
 		});
 
 		// Git Data project does not have Demo link yet
-		if (projectName !== 'Git Data') {
-			if(resolution.w >= 767) {
-				await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`)).getText().then(function (text) {
-					assert.strictEqual(text, '➤ See Demo');
-				});
+		if (projectName === 'Git Data') {
+			continue;
+		}
 
-				await driver.findElement(By.linkText('Demo')).click();
+		if(resolution.w >= 767) {
+			await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`)).getText().then(function (text) {
+				assert.strictEqual(text, '➤ See Demo');
+			});
 
-				await driver.wait(until.elementLocated(By.css("p.modal-title")))
-							.then(e => driver.wait(until.elementIsVisible(e)));
+			await driver.findElement(By.linkText('Demo')).click();
 
-				await driver.switchTo().activeElement();
+			await driver.wait(until.elementLocated(By.css("p.modal-title")))
+						.then(e => driver.wait(until.elementIsVisible(e)));
 
-				await driver.findElement(By.css("p.modal-title")).getText().then(function (text) {
-					assert.strictEqual(text, projectName);
-				});
+			await driver.switchTo().activeElement();
 
-				await driver.wait(until.elementLocated(By.css("img.demoImage.shadow")))
-							.then(e => driver.wait(until.elementIsVisible(e)));
+			await driver.findElement(By.css("p.modal-title")).getText().then(function (text) {
+				assert.strictEqual(text, projectName);
+			});
 
-				await driver.findElement(By.css("button.btn.closeModalButton")).getText().then(function (text) {
-					assert.strictEqual(text, 'Close');
-				});
+			await driver.wait(until.elementLocated(By.css("img.demoImage.shadow")))
+						.then(e => driver.wait(until.elementIsVisible(e)));
 
-				await driver.sleep(waitTimeInMilliseconds);
+			await driver.findElement(By.css("button.btn.closeModalButton")).getText().then(function (text) {
+				assert.strictEqual(text, 'Close');
+			});
 
-				await driver.findElement(By.css("button.btn.closeModalButton")).click();
+			await driver.sleep(waitTimeInMilliseconds);
 
-				await driver.switchTo().activeElement();
+			await driver.findElement(By.css("button.btn.closeModalButton")).click();
 
-				await driver.findElement(By.css("button.btn.closeModalButton"))
-							.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
+			await driver.switchTo().activeElement();
 
-				await driver.sleep(waitTimeInMilliseconds);
-			}
-			else {
-				await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`))
-							.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
-			}
+			await driver.findElement(By.css("button.btn.closeModalButton"))
+						.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
+
+			await driver.sleep(waitTimeInMilliseconds);
+		}
+		else {
+			await driver.findElement(By.xpath(`//div[@id='${id}']/div/div/p[2]`))
+						.then(e => driver.wait(until.elementIsNotVisible(e), configuration.timeout));
 		}
 
 		await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span"));

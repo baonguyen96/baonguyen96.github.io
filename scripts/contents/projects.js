@@ -2,10 +2,9 @@
 let projectsList = [
 	{
 		"title": "Distributed File System",
-		"intro": createIntro("A distributed file replica system coded in Java that consists of multiple servers that admit multiple clients, " +
-			"all of which can be on different machines and communicate via message exchange. " +
-			"Multiple clients can connect to multiple servers concurrently and request append message to multiple files on each server. " +
-			"At any given time, all servers can replicate the exact copy of all the files that all other servers have.", ["Java"]),
+		"intro": createIntro("A distributed file replication system coded in Java. Multiple clients can concurrently" +
+			"connect to multiple servers and request to append message to multiple files on each server. " +
+			"At any given time, all servers can replicate the exact copy of all the files that every other servers have.", ["Java"]),
 		"links": [
 			createDemoLink(),
 			createSourceLink("https://github.com/baonguyen96/LamportClock")
