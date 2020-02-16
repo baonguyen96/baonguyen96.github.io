@@ -3,8 +3,8 @@ const { exec } = require('child_process');
 module.exports = {
 
 	getErrorMessageFromException: function (e) {
-		return e.stack.toString().split('\n')[0];
-		// return e.stack.toString();
+		// return e.stack.toString().split('\n')[0];
+		return e.stack.toString();
 	},
 
 	parseMethodName: function (methodName) {

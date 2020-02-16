@@ -32,10 +32,6 @@ let skills = [
         "name": "Operating Systems",
         "value": "Windows, Linux, MacOS, Android"
     },
-	// {
-	// 	"name": "Security Tools",
-	// 	"value": "WireShark, Nmap, GNS, TCPdump"
-	// },
     {
         "name": "Development Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
