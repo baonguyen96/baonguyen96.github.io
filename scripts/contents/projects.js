@@ -7,7 +7,7 @@ let projectsList = [
 			"At any given time, all servers can replicate the exact copy of all the files that every other servers have.", ["Java"]),
 		"links": [
 			createDemoLink(),
-			createSourceLink("https://github.com/baonguyen96/LamportClock")
+			// createSourceLink("https://github.com/baonguyen96/LamportClock")
 		]
 	},
 	{
