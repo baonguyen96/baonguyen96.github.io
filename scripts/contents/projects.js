@@ -2,7 +2,7 @@
 let projectsList = [
 	{
 		"title": "Distributed File System",
-		"intro": createIntro("A distributed file replication system coded in Java. Multiple clients can concurrently" +
+		"intro": createIntro("A distributed file replication system coded in Java. Multiple clients can concurrently " +
 			"connect to multiple servers and request to append message to multiple files on each server. " +
 			"At any given time, all servers can replicate the exact copy of all the files that every other servers have.", ["Java"]),
 		"links": [
