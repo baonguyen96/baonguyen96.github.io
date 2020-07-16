@@ -1,8 +1,15 @@
 let workExperienceList = [
+	{
+		"jobTitle": "Software Engineer",
+		"company": "JPMorgan Chase",
+		"period": "July 2020 - Present",
+		"contributions": [
+		]
+	},
     {
         "jobTitle": "Data Integration Analyst",
         "company": "Loopback Analytics",
-        "period": "August 2018 - Present",
+        "period": "August 2018 - July 2020",
         "contributions": [
             "Design and build multiple applications that automate data cleansing tasks and perform high capacity ETL process (typically handle 50+ GB/day)",
 			"Architect data flow processes to ensure high performance/reliability/availability and to reduce redundant SQL storage and usage",
@@ -24,25 +31,6 @@ let workExperienceList = [
             "Perform various testing techniques for software releases",
             "Build shell scripts to automate build/deployment process for QA tools"
         ]
-    },
-    {
-        "jobTitle": "Part Time Store Associate",
-        "company": "7-Eleven",
-        "period": "July 2014 - December 2016",
-        "contributions": [
-            "Keep track of merchandise flows",
-            "Provide outstanding services and assist customers"
-        ]
-    },
-    {
-        "jobTitle": "Librarian Assistant",
-        "company": "Melbourne Public Library",
-        "period": "December 2012 - April 2013",
-        "contributions": [
-            "Volunteer",
-            "Organize and keep track of books flow",
-            "Organize and run public events for children"
-        ]
     }
 ];
 
@@ -56,10 +44,12 @@ $(function () {
         let currentExperience = experience.clone();
         currentExperience.attr("id", "experience" + experienceIndex);
 
-        // only show the first experience by default
         if (experienceIndex > 0) {
+			currentExperience.prepend("<hr/>");
+		}
+
+        if (experienceIndex > 1) {
             currentExperience.addClass("experienceHidden");
-            currentExperience.prepend("<hr/>");
         }
 
         currentExperience.find(".jobTitle").html(experienceData.jobTitle);

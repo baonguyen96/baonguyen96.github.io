@@ -1,6 +1,6 @@
 // reference createLink function in projects.js
 let awards = [
-	"<i>Cum Laude</i> Honor Graduation",
+	"<i>Cum Laude</i> Honor Graduation, BS. in Software Engineering",
 	createLink("https://www.utdallas.edu/news/2018/7/30-33059_More-than-1400-Students-Earn-Spots-on-Spring-Deans_story-wide.html", "Spring 2018 Dean's List"),
 	"Software Testing Contest Certificate from " + createLink("http://rs.ieee.org/", "IEEE Reliability Society"),
 	"2018 Mason Brown Family Foundation Endowed Scholarship",

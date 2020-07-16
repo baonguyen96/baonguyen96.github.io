@@ -5,7 +5,7 @@ const skillGroupTemplate = `<div class="row skillGroup">
 
 const customListTemplate = `<div class="customList">
 								<div class="customListItem">
-									<img src="" class="customListIcon">
+									<img src="" class="customListIcon" alt="bullet">
 									<div>
 										<p class="customListText"></p>
 									</div>
