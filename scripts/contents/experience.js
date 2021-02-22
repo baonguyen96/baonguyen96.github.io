@@ -4,6 +4,7 @@ let workExperienceList = [
 		"company": "JPMorgan Chase",
 		"period": "July 2020 - Present",
 		"contributions": [
+            "Big Data technologies"
 		]
 	},
     {
