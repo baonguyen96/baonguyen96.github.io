@@ -1,23 +1,23 @@
 let workExperienceList = [
-	{
-		"jobTitle": "Software Engineer",
-		"company": "JPMorgan Chase",
-		"period": "July 2020 - Present",
-		"contributions": [
+    {
+        "jobTitle": "Software Engineer",
+        "company": "JPMorgan Chase",
+        "period": "July 2020 - Present",
+        "contributions": [
             "Big Data technologies"
-		]
-	},
+        ]
+    },
     {
         "jobTitle": "Data Integration Analyst",
         "company": "Loopback Analytics",
         "period": "August 2018 - July 2020",
         "contributions": [
             "Design and build multiple applications that automate data cleansing tasks and perform high capacity ETL process (typically handle 50+ GB/day)",
-			"Architect data flow processes to ensure high performance/reliability/availability and to reduce redundant SQL storage and usage",
+            "Architect data flow processes to ensure high performance/reliability/availability and to reduce redundant SQL storage and usage",
             "Integrate multiple client data sources into company's internal system with high performance and analyze large data sets to ensure high data quality",
             "Monitor, troubleshoot, and enhance performance/resource usages for .NET applications, SQL stored procedures, SSIS packages, and Azure SQL pools",
             "Migrate on-premise resources to Azure environment and on-going support Azure resources",
-			"Convert SSIS packages to Windows Services to provide easier maintenance and better performance",
+            "Convert SSIS packages to Windows Services to provide easier maintenance and better performance",
             "Build shell scripts to automate file and database management process",
             "Create an alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, preventing lots of potential defects and saving times to take actions"
         ]
@@ -27,7 +27,7 @@ let workExperienceList = [
         "company": "Loopback Analytics",
         "period": "May 2017 - August 2017,<br/>January 2018 - August 2018",
         "contributions": [
-			"Architect and build a Selenium WebDriver tool in Java to support automated GUI testing",
+            "Architect and build a Selenium WebDriver tool in Java to support automated GUI testing",
             "Architect and build a system that integrates different tools to support end-to-end automation testing, reducing a lot of long and error-prone manual process for QA team",
             "Perform various testing techniques for software releases",
             "Build shell scripts to automate build/deployment process for QA tools"
@@ -46,8 +46,8 @@ $(function () {
         currentExperience.attr("id", "experience" + experienceIndex);
 
         if (experienceIndex > 0) {
-			currentExperience.prepend("<hr/>");
-		}
+            currentExperience.prepend("<hr/>");
+        }
 
         if (experienceIndex > 1) {
             currentExperience.addClass("experienceHidden");

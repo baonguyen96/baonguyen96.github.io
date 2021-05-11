@@ -10,7 +10,7 @@ $(function () {
         period = START_YEAR;
     }
 
-	let copyrightText = [`&copy; ${period} by <i>Bao Nguyen</i>.`, 'All rights reserved.'];
+    let copyrightText = [`&copy; ${period} by <i>Bao Nguyen</i>.`, 'All rights reserved.'];
     setSingleLineCopyright(copyrightText);
     setDoubleLinesCopyright(copyrightText);
 });

@@ -9,8 +9,7 @@ let skills = [
     },
     {
         "name": "Web Technologies",
-        "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, " +
-            "WordPress, REST, Spring, RDF, Google Analytics"
+        "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, Spring, RDF, Google Analytics"
     },
     {
         "name": "Databases",
@@ -34,9 +33,8 @@ let skills = [
     },
     {
         "name": "Development Tools",
-        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, " +
-            "Microsoft SSMS, MySQL Workbench, Microsoft Office suite, SharePoint, " +
-            "Adobe Creative Cloud suite, RStudio, Postman, PowerBI"
+        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS, MySQL Workbench, " +
+            "Microsoft Office suite, SharePoint, Adobe Creative Cloud suite, RStudio, Postman, PowerBI"
     },
     {
         "name": "Project Management",
@@ -52,7 +50,7 @@ let skills = [
     }
 ];
 
-$(function() {
+$(function () {
     let skillsContainer = $("#skillsContainer");
     let customList = $(customListTemplate);
     let itemTemplate = customList.find(".customListItem");
@@ -68,9 +66,9 @@ $(function() {
         item.find(".customListText").text(skillData.name);
         currentSkillGroup.find(".skillGroupName").html(item);
         currentSkillGroup.find(".skillGroupValue").text(skillData.value);
-		currentSkillGroup.find(".skillGroupName").attr('id', 'skillName' + skillIndex);
-		currentSkillGroup.find(".skillGroupValue").attr('id', 'skillValue' + skillIndex);
-		skillsContainer.append(currentSkillGroup);
+        currentSkillGroup.find(".skillGroupName").attr('id', 'skillName' + skillIndex);
+        currentSkillGroup.find(".skillGroupValue").attr('id', 'skillValue' + skillIndex);
+        skillsContainer.append(currentSkillGroup);
 
         if (skillIndex < skills.length - 1) {
             skillsContainer.append($('<hr/>'));

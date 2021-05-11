@@ -15,17 +15,17 @@ let courses = [
 ];
 
 $(function () {
-	let customList = $(customListTemplate);
-	let item = customList.find(".customListItem");
-	item.find(".customListIcon").attr("src", "./assets/images/misc/course.png");
+    let customList = $(customListTemplate);
+    let item = customList.find(".customListItem");
+    item.find(".customListIcon").attr("src", "./assets/images/misc/course.png");
 
-	for (let i = 0; i < courses.length; i++) {
-		let newItem = item.clone();
-		newItem.attr('id', 'course' + i);
-		newItem.find(".customListText").text(courses[i]);
-		customList.append(newItem);
-	}
+    for (let i = 0; i < courses.length; i++) {
+        let newItem = item.clone();
+        newItem.attr('id', 'course' + i);
+        newItem.find(".customListText").text(courses[i]);
+        customList.append(newItem);
+    }
 
-	customList.find(item).eq(0).remove();
-	$("#coursesSection").append(customList);
+    customList.find(item).eq(0).remove();
+    $("#coursesSection").append(customList);
 })
