@@ -8,3 +8,5 @@ backup/
 /_site/*
 /assets/images/demos/WIP/*
 /node_modules/*
+/.idea/runConfigurations.xml
+/.idea/*
