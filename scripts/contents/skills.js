@@ -1,19 +1,19 @@
 let skills = [
     {
         "name": "Programming",
-        "value": "Java, C#, C, C++, Kotlin, Python, PHP, Shell scripts (bat, ps1)"
+        "value": "Java, C#, C, C++, Kotlin, Python, PHP, Shell scripts"
     },
     {
         "name": "Platform/Framework",
-        "value": "Azure, .NET, J2EE"
+        "value": "Azure, AWS, .NET, J2EE"
     },
     {
         "name": "Web Technologies",
-        "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, Spring, RDF, Google Analytics"
+        "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, SOAP, Spring, RDF, Google Analytics"
     },
     {
         "name": "Databases",
-        "value": "MySQL, T-SQL, SPARQL, JDBC, JPA, MongoDB, PostgreSQL"
+        "value": "MySQL, T-SQL, SPARQL, JDBC, JPA, MongoDB, PostgreSQL, Hive"
     },
     {
         "name": "Automation Testing",
@@ -25,7 +25,7 @@ let skills = [
     },
     {
         "name": "Build/Deployment",
-        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket, TeamCity"
+        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket, TeamCity, Jenkins"
     },
     {
         "name": "Operating Systems",

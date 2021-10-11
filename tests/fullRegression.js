@@ -11,7 +11,7 @@ let Configuration = require('./utils/configuration');
 ///////////////// configurations start /////////////////
 
 let environment = Env.regression;
-let browser = Browser.edge;
+let browser = Browser.chrome;
 let resolution = Resolution.fhd;
 let isVerifyingUI = true;
 let isVerifyingLinks = false;
@@ -135,7 +135,7 @@ async function verifyExperienceSection() {
         assert.strictEqual(text, 'Less');
     });
 
-    for (let experienceIndex = 0; experienceIndex <= 3; experienceIndex++) {
+    for (let experienceIndex = 0; experienceIndex <= 2; experienceIndex++) {
         console.log(`Experience ${experienceIndex}`);
 
         for (let titleIndex = 1; titleIndex <= 3; titleIndex++) {
@@ -182,7 +182,7 @@ async function verifyProjectsSection() {
     await driver.sleep(waitTimeInMilliseconds);
 
     await driver.findElement(By.xpath("//section[@id='projectsSection']/h2/span")).getText().then(function (text) {
-        assert.strictEqual(text, 'Some Cool Stuff');
+        assert.strictEqual(text, 'Projects');
     });
 
     await driver.findElement(By.xpath("//section[@id='projectsSection']/p")).getText().then(function (text) {
@@ -365,8 +365,8 @@ async function verify404Page() {
         }
 
         await driver.sleep(waitTimeInMilliseconds * 5);
-
-        console.log(driver.getCurrentUrl());
+        let current_url = await driver.getCurrentUrl();
+        console.log(`Current URL = ${current_url}`);
 
         await driver.findElement(By.xpath(`//div[@id='error-icon']`));
         await driver.findElement(By.xpath(`//div[@id='error-area']/p`)).getText().then(function (text) {
