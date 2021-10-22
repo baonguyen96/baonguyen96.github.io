@@ -4,8 +4,9 @@ let workExperienceList = [
         "company": "JPMorgan Chase",
         "period": "July 2020 - Present",
         "contributions": [
-            "Big Data technologies",
-            "Cloud technologies"
+            "Big Data technologies, Apache stacks (Spark, Hadoop, etc.), Airflow orchestration",
+            "Cloud technologies: work on AWS services (Lambda, EMR, SQS, etc.) for BigData processing. Also handle Infrastructure as Code (IaC) services such as Terraform and Sceptre",
+            "ServiceNow API integration to manage operation workflow"
         ]
     },
     {
