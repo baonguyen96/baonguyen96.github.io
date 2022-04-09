@@ -4,6 +4,7 @@ let workExperienceList = [
         "company": "JPMorgan Chase",
         "period": "July 2020 - Present",
         "contributions": [
+            "Work as part of modernization team to migrate applications to Cloud-centric solutions",
             "Big Data technologies, Apache stacks (Spark, Hadoop, etc.), Airflow orchestration",
             "Cloud technologies: work on AWS services (Lambda, EMR, SQS, etc.) for BigData processing. Also handle Infrastructure as Code (IaC) services such as Terraform and Sceptre",
             "ServiceNow API integration to manage operation workflow"
