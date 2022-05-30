@@ -17,7 +17,7 @@ let skills = [
     },
     {
         "name": "Automation Testing",
-        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest, Selenium WebDriver API"
+        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest, Mocking, Selenium WebDriver API"
     },
     {
         "name": "Data Integration",

@@ -1,5 +1,6 @@
 // reference createLink function in projects.js
 let awards = [
+    createLink("https://www.credly.com/badges/b5f94e9d-3e75-4a16-b3c3-13bb5226c97a/public_url", "HashiCorp Certified: Terraform Associate"),
     createLink("https://www.youracclaim.com/badges/2f55c1da-05b9-477e-9148-fad5cc5c4308", "AWS Certified Developer - Associate"),
     "<i>Cum Laude</i> Honor Graduation, BS. in Software Engineering",
     createLink("https://www.utdallas.edu/news/2018/7/30-33059_More-than-1400-Students-Earn-Spots-on-Spring-Deans_story-wide.html", "Spring 2018 Dean's List"),
