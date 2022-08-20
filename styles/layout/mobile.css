@@ -26,6 +26,18 @@ h1 {
     font-family: 'Permanent Marker', cursive;
 }
 
+h1+p {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
 h2 {
     font-size: 1.2em;
     text-align: center;
@@ -49,11 +61,8 @@ p {
 .section {
     border-radius: 10px;
     margin: 0 auto 1.25em;
-    padding: 1em;
+    /*padding: 1em;*/
     opacity: 0;
-}
-
-.section {
     padding: 3em 1em 2em 1em;
 }
 

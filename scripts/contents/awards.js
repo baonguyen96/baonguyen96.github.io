@@ -15,7 +15,7 @@ let awards = [
 
 $(function () {
     let awardsSection = $("#awardsSection");
-    let customList = $(customListTemplate);
+    let customList = $(CUSTOM_LIST_TEMPLATE);
     let item = customList.find(".customListItem");
     item.find(".customListIcon").attr("src", "./assets/images/misc/award.png");
 

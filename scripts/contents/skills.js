@@ -24,8 +24,8 @@ let skills = [
         "value": "SSIS, SSDT, Data Warehouse, ETL, Networking and Infrastructure setup"
     },
     {
-        "name": "Build/Deployment",
-        "value": "Maven, Gradle, Ant, Git, GitHub, BitBucket, TeamCity, Jenkins"
+        "name": "CI/CD",
+        "value": "Jenkins, TeamCity, Maven, Gradle, Ant, Git, GitHub, BitBucket"
     },
     {
         "name": "Operating Systems",
@@ -34,7 +34,7 @@ let skills = [
     {
         "name": "Development Tools",
         "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS, MySQL Workbench, " +
-            "Microsoft Office suite, SharePoint, Adobe Creative Cloud suite, RStudio, Postman, PowerBI"
+            "Microsoft Office suite, SharePoint, Adobe Creative Cloud suite, RStudio, Postman, SwaggerUI, PowerBI"
     },
     {
         "name": "Project Management",
@@ -52,11 +52,11 @@ let skills = [
 
 $(function () {
     let skillsContainer = $("#skillsContainer");
-    let customList = $(customListTemplate);
+    let customList = $(CUSTOM_LIST_TEMPLATE);
     let itemTemplate = customList.find(".customListItem");
     itemTemplate.addClass("specialText");
     itemTemplate.find(".customListIcon").attr("src", "./assets/images/misc/skill.png");
-    let skillGroup = $(skillGroupTemplate).clone();
+    let skillGroup = $(SKILL_GROUP_TEMPLATE).clone();
 
     for (let skillIndex = 0; skillIndex < skills.length; skillIndex++) {
         let skillData = skills[skillIndex];

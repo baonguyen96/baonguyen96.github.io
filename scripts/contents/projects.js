@@ -149,7 +149,7 @@ function createIntro(intro, types) {
 
 
 function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
-    let row = $(projectTemplate);
+    let row = $(PROJECT_TEMPLATE);
     let isRowContainsOnlySingleProject = false;
 
     // loop through each row (2 projects each)
@@ -212,7 +212,7 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
 
 
 function showDemo() {
-    let myModal = $(modalTemplate);
+    let myModal = $(MODAL_TEMPLATE);
     let demoProjectId = "";
     let demoProjectTitle = "";
 

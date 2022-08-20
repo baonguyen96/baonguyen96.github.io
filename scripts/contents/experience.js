@@ -40,7 +40,7 @@ let workExperienceList = [
 
 
 $(function () {
-    let experience = $(experienceTemplate);
+    let experience = $(EXPERIENCE_TEMPLATE);
 
     // loop through all work experience
     for (let experienceIndex = 0; experienceIndex < workExperienceList.length; experienceIndex++) {
@@ -60,7 +60,7 @@ $(function () {
         currentExperience.find(".company").html(experienceData.company);
         currentExperience.find(".period").html(experienceData.period);
 
-        let customList = $(customListTemplate);
+        let customList = $(CUSTOM_LIST_TEMPLATE);
         let item = customList.find(".customListItem");
         let contributions = experienceData.contributions;
         item.find(".customListIcon").attr("src", "./assets/images/misc/work.png");
