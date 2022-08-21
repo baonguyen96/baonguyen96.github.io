@@ -3,28 +3,27 @@ $(function () {
         let state = $(this).text();
         let id = $(this).attr("id");
 
-        if(state === "More") {
+        if(state === "See More") {
             if(id === "projectsToggle") {
                 $(".projectsHidden").slideDown();
             }
             else {
                 $(".experienceHidden").slideDown();
             }
-            state = "Less";
+            state = "See Less";
         }
-        else if(state === "Less") {
+        else if(state === "See Less") {
             if(id === "projectsToggle") {
                 $(".projectsHidden").slideUp();
             }
             else {
                 $(".experienceHidden").slideUp();
             }
-            state = "More";
+            state = "See More";
         }
 
         $(this).html(state);
     });
-
 
     $(".projectContent").hover(
         function () {
@@ -36,5 +35,4 @@ $(function () {
             $(this).find(".projectTitle").show();
         }
     );
-
 });
