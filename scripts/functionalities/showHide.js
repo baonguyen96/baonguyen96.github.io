@@ -22,7 +22,7 @@ $(function () {
             state = "See More";
         }
 
-        $(this).html(state);
+        $(this).text(state);
     });
 
     $(".projectContent").hover(
