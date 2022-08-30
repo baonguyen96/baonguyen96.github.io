@@ -17,7 +17,7 @@ let projectsList = [
             "eye-strains from long working period.", ["Chrome extension"]),
         "links": [
             createDemoLink(),
-            createSourceLink("https://github.com/baonguyen96/DarkChroma"),
+            // createSourceLink("https://github.com/baonguyen96/DarkChroma"),
             createSourceLink("https://chrome.google.com/webstore/detail/dark-chroma/jjknnbjoocbcgemnnjoaiifopndlcnbe",
                 "Available on", "Chrome Web Store")
         ]
