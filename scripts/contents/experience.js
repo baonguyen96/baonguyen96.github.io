@@ -6,8 +6,10 @@ let workExperienceList = [
         "contributions": [
             "Work as part of modernization team to migrate applications to Cloud-centric solutions",
             "Big Data technologies, Apache stacks (Spark, Hadoop, etc.), Airflow orchestration",
-            "Cloud technologies: work on AWS services (Lambda, EMR, SQS, etc.) for BigData processing. Also handle Infrastructure as Code (IaC) services such as Terraform and Sceptre",
-            "ServiceNow API integration to manage operation workflow"
+            "Cloud technologies: work on AWS services (Lambda, EMR, SQS, S3, etc.) for BigData processing",
+            "Develop and maintain Infrastructure as Code (IaC) services such as Terraform and Sceptre",
+            "ServiceNow API integration to manage operation workflow",
+            "Optimize Cloud workloads to reduce operational cost by more than 70%"
         ]
     },
     {
