@@ -17,9 +17,9 @@ const CUSTOM_LIST_TEMPLATE =
 const EXPERIENCE_TEMPLATE =
     `<div class="experience">
         <div class="row experienceTitle specialText">
-            <div class="col-md-4 jobTitle"></div>
-            <div class="col-md-4 company"></div>
-            <div class="col-md-4 period"></div>
+            <div class="col-lg-4 jobTitle"></div>
+            <div class="col-lg-4 company"></div>
+            <div class="col-lg-4 period"></div>
         </div>
     </div>`;
 
