@@ -45,14 +45,6 @@
         display: block;
     }
 
-    div.jobTitle {
-        text-align: left;
-    }
-
-    div.period {
-        text-align: right;
-    }
-
     #followMeSection > div div {
         padding: 0;
     }
@@ -128,6 +120,14 @@
 }
 
 @media screen and (min-width: 1025px) {
+
+    div.jobTitle {
+        text-align: left;
+    }
+
+    div.period {
+        text-align: right;
+    }
 
     .section {
         padding: 3em 10%;
