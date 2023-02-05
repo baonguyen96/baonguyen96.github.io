@@ -13,8 +13,8 @@ let Configuration = require('./utils/configuration');
 let environment = Env.regression;
 let browser = Browser.chrome;
 let resolution = Resolution.fhd;
-let isVerifyingUI = true;
-let isVerifyingLinks = false;
+let isVerifyingUI = false;
+let isVerifyingLinks = true;
 
 /////////////////// configurations end /////////////////
 
@@ -47,7 +47,7 @@ let waitTimeInMilliseconds = 1000;
             verifySkillsSection,
             verifyProjectsSection,
             verifyAwardsSection,
-            verifyCoursesSection,
+            // verifyCoursesSection,
             verifyContactsSection,
             verifyCopyrightSection,
             verify404Page
@@ -288,7 +288,7 @@ async function verifyAwardsSection() {
     await driver.sleep(waitTimeInMilliseconds);
 
     await driver.findElement(By.xpath("//section[@id='awardsSection']/h2/span")).getText().then(function (text) {
-        assert.strictEqual(text, 'Awards');
+        assert.strictEqual(text, 'Certificates');
     });
 
     for (let i = 0; i < 8; i++) {
@@ -324,7 +324,7 @@ async function verifyContactsSection() {
     await driver.sleep(waitTimeInMilliseconds);
 
     await driver.findElement(By.xpath("//section[@id='followMeSection']/h2/span")).getText().then(function (text) {
-        assert.strictEqual(text, 'Contact Me');
+        assert.strictEqual(text, 'Contact');
     });
 
     await driver.findElement(By.xpath("//section[@id='followMeSection']/p")).getText().then(function (text) {

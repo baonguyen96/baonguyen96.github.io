@@ -7,11 +7,11 @@ $(function () {
 
 
 function setSingleLineCopyright(copyrightText) {
-    $("#copyright").find('p').html(copyrightText[0] + ' ' + copyrightText[1]);
+    $("#copyright").find('p').html(copyrightText.join(' '));
 }
 
 function setDoubleLinesCopyright(copyrightText) {
     let $container = $("#copyright").find('.row');
     $container.find('div:first-child').html(copyrightText[0]);
-    $container.find('div:last-child').html(copyrightText[1]);
+    $container.find('div:last-child').text(copyrightText[1]);
 }

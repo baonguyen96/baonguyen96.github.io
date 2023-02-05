@@ -61,19 +61,21 @@
 <body id="body">
 <div class="container-fluid">
     <header id="header" class="section">
-        <img alt="Profile picture" src="assets/images/misc/avatar.jpg">
+        <img alt="Profile picture" src="assets/images/misc/avatar.jpg" class="shadow">
         <h1>BAO NGUYEN</h1>
-        <p>Software Engineer | AWS Certified Developer - Associate | HashiCorp Certified: Terraform Associate</p>
+        <p id="currentTitle"><!-- defined in experience.js --></p>
+        <p>AWS Certified Developer - Associate</p>
+        <p>HashiCorp Certified: Terraform Associate</p>
     </header>
 
     <section class="section" id="aboutSection">
         <h2><span>About Me</span></h2>
         <p>
-            I am a Software Engineer who is specializing in big data processing pipelines.
-            My expertise involves architecting/implementing applications to perform intensive ETL workloads
-            (using tools such as SSIS, Spark, EMR, custom applications, etc.),
+            I am an aspiring Software Engineer who is specializing in big data processing pipelines.
+            My expertise involves architecting/implementing big data lake/data warehouse
+            (using tools such as SSIS, Spark, EMR, Glue, custom applications, etc.),
             modernizing/migrating on-prem applications to Cloud-centric solutions (Azure/AWS),
-            as well as building CI/CD pipelines (Jenkins/TeamCity).
+            as well as building CI/CD pipelines.
         </p>
         <p>
             I graduated from the <a href="https://www.utdallas.edu/" target="_blank">University of Texas at
@@ -85,7 +87,7 @@
         </p>
         <p>
             I love modernizing applications, automating as many things as possible, and learning new technologies.
-            I also like reading books, swimming, travelling, and doing animation/photography.
+            I also enjoy reading books, swimming, travelling, and doing photography/videography.
         </p>
     </section>
 
@@ -97,7 +99,7 @@
     <section class="section" id="skillsSection">
         <h2><span>Skills</span></h2>
         <p class="greeting">
-            I have a broad technical skill set, including general purpose/scripting/web-based languages,
+            I have a broad technical skill set, including (but not limited to) general purpose/scripting/web-based languages,
             and various testing frameworks. I am also very proficient with various OOP design patterns and principles.
             I constantly develop side projects not only to master my current skill set,
             but also to learn and explore new technologies as well.
@@ -105,13 +107,14 @@
         <div id="skillsContainer"></div>
     </section>
 
+    <section class="section" id="awardsSection">
+        <h2><span>Certificates</span></h2>
+    </section>
+
     <section class="section" id="projectsSection">
         <h2><span>Projects</span></h2>
         <p class="greeting">
-            Followings are some of the projects that I have done.
-            They are both school-related projects and extracurricular ones
-            that I do on my own to practice the skills that I learned on my spare times.
-            Check out some other projects on my
+            Followings are some of the projects that I have done. Check out some other projects on my
             <a href="https://github.com/baonguyen96" target="_blank">GitHub</a>.
         </p>
         <div class="projects"></div>
@@ -119,31 +122,27 @@
         <button type="button" class="toggle" id="projectsToggle">See More</button>
     </section>
 
-    <section class="section" id="awardsSection">
-        <h2><span>Awards</span></h2>
-    </section>
-
-    <section class="section" id="coursesSection">
+    <section class="section" id="coursesSection" hidden>
         <h2><span>Major Courses</span></h2>
     </section>
 
     <section class="section" id="followMeSection">
-        <h2><span>Contact Me</span></h2>
+        <h2><span>Contact</span></h2>
         <p class="greeting">
-            Are you looking for a passionate developer with high ethical standards and a broad skill set?
-            Or maybe you just want to get in touch? If so, please do not hesitate to email me
-            (for business inquires) or connect with me via Social Media.
+            Are you looking for a passionate engineer with high ethical standards and a broad skill set?
+            Or maybe you just want to get in touch? Please do not hesitate to email me
+            (for business inquires) or connect with me via the followings.
         </p>
         <div class="row" id="iconsContainer">
             <div class="col-sm-12">
-                <a href="https://github.com/baonguyen96" target="_blank">
-                    <img class="contactIcon" alt="GitHub" src="assets/images/media-icons/github.png"/>
-                </a>
-                <a href="https://www.linkedin.com/in/bao-nguyen96/" target="_blank">
+                <a href="https://www.linkedin.com/in/bao-c-nguyen/" target="_blank">
                     <img class="contactIcon" alt="500px" src="assets/images/media-icons/linkedin.png"/>
                 </a>
                 <a href="mailto:baonguyen0396@gmail.com" id="emailIcon">
                     <img class="contactIcon" alt="email" src="assets/images/media-icons/gmail.png"/>
+                </a>
+                <a href="https://github.com/baonguyen96" target="_blank">
+                    <img class="contactIcon" alt="GitHub" src="assets/images/media-icons/github.png"/>
                 </a>
                 <a href="https://500px.com/baonguyen9" target="_blank">
                     <img class="contactIcon" alt="500px" src="assets/images/media-icons/500px.png"/>

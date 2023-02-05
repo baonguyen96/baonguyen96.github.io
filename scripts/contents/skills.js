@@ -1,27 +1,27 @@
 let skills = [
     {
         "name": "Programming",
-        "value": "Java, C#, C, C++, Kotlin, Python, PHP, Shell scripts, Spark"
+        "value": "Java, C#, C, C++, Kotlin, Python, PHP, Shell scripts, Apache Spark"
     },
     {
         "name": "Platform",
-        "value": "Azure, AWS, .NET, J2EE"
+        "value": "Azure, AWS, .NET, J2EE, Docker/Kubernetes"
     },
     {
         "name": "Web Technologies",
-        "value": "HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, SOAP, Spring, RDF, Google Analytics"
+        "value": "SpringBoot, HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, SOAP, RDF, Google Analytics"
     },
     {
         "name": "Databases",
-        "value": "MySQL, T-SQL, SPARQL, JDBC, JPA, MongoDB, PostgreSQL, Hive"
+        "value": "MySQL, T-SQL, PostgreSQL, SPARQL, JDBC, JPA, MongoDB, Hive, Impala"
     },
     {
         "name": "Automation Testing",
         "value": "JUnit, TestNG, MSUnitTest, Python UnitTest, Mocking, Selenium WebDriver API"
     },
     {
-        "name": "Data Integration",
-        "value": "SSIS, SSDT, Data Warehouse, ETL, Networking and Infrastructure setup"
+        "name": "Data Engineering",
+        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Spark, EMR, Glue"
     },
     {
         "name": "CI/CD",
@@ -46,7 +46,7 @@ let skills = [
     },
     {
         "name": "Miscellaneous",
-        "value": "Photography, Design, Animation, Analytics"
+        "value": "Analytics, Photography/Videography, Design, Animation"
     }
 ];
 
@@ -66,8 +66,8 @@ $(function () {
         item.find(".customListText").text(skillData.name);
         currentSkillGroup.find(".skillGroupName").html(item);
         currentSkillGroup.find(".skillGroupValue").text(skillData.value);
-        currentSkillGroup.find(".skillGroupName").attr('id', 'skillName' + skillIndex);
-        currentSkillGroup.find(".skillGroupValue").attr('id', 'skillValue' + skillIndex);
+        currentSkillGroup.find(".skillGroupName").attr('id', `skillName${skillIndex}`);
+        currentSkillGroup.find(".skillGroupValue").attr('id', `skillValue${skillIndex}`);
         skillsContainer.append(currentSkillGroup);
 
         if (skillIndex < skills.length - 1) {
