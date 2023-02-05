@@ -21,7 +21,7 @@ $(function () {
 
     for (let i = 0; i < courses.length; i++) {
         let newItem = item.clone();
-        newItem.attr('id', 'course' + i);
+        newItem.attr('id', `course${i}`);
         newItem.find(".customListText").text(courses[i]);
         customList.append(newItem);
     }

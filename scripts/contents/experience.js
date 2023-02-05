@@ -1,15 +1,32 @@
 let workExperienceList = [
     {
-        "jobTitle": "Software Engineer",
-        "company": "JPMorgan Chase",
-        "period": "July 2020 - Present",
+        "jobTitle": "Senior Associate Software Engineer III",
+        "company": "JPMorgan Chase & Co.",
+        "period": "February 2023 - Present",
         "contributions": [
-            "Work as part of modernization team to migrate applications to Cloud-centric solutions",
-            "Big Data technologies, Apache stacks (Spark, Hadoop, etc.), Airflow orchestration",
-            "Cloud technologies: work on AWS services (Lambda, EMR, SQS, S3, etc.) for BigData processing",
-            "Develop and maintain Infrastructure as Code (IaC) services such as Terraform and Sceptre",
-            "ServiceNow API integration to manage operation workflow",
-            "Optimize Cloud workloads to reduce operational cost by more than 70%"
+            "Design and maintain high-performance Cloud-native applications to process more than 200TB of data",
+            "Implement secured Data-Mesh solution for flexible and scalable data management",
+        ]
+    },
+    {
+        "jobTitle": "Associate Software Engineer",
+        "company": "JPMorgan Chase & Co.",
+        "period": "February 2022 - February 2023",
+        "contributions": [
+            "Work as part of modernization team to migrate on-prem data warehouse to AWS, utilizing native services (Lambda, EMR, LakeFormation, SQS, S3, etc.) and Apache stacks (Spark, Hadoop, etc.) along with Airflow orchestration",
+            "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
+            "Integrate with ServiceNow API to manage operation workflow",
+            "Optimize Cloud workloads to reduce operational cost by more than 70%",
+        ]
+    },
+    {
+        "jobTitle": "Software Engineer",
+        "company": "JPMorgan Chase & Co.",
+        "period": "July 2020 - February 2022",
+        "contributions": [
+            "Work on multiple applications to perform ETL for high-performance Data Warehouse using Big Data technologies such as Hadoop, Impala, Apache Spark",
+            "Improve developers' efficiency by creating various automation tools to remove time-consuming/redundant manual works in the existing processes",
+            "Work on modernization initiative to migrate applications to Cloud-centric solutions",
         ]
     },
     {
@@ -17,14 +34,12 @@ let workExperienceList = [
         "company": "Loopback Analytics",
         "period": "August 2018 - July 2020",
         "contributions": [
-            "Design and build multiple applications that automate data cleansing tasks and perform high capacity ETL process (typically handle 50+ GB/day)",
-            "Architect data flow processes to ensure high performance/reliability/availability and to reduce redundant SQL storage and usage",
-            "Integrate multiple client data sources into company's internal system with high performance and analyze large data sets to ensure high data quality",
-            "Monitor, troubleshoot, and enhance performance/resource usages for .NET applications, SQL stored procedures, SSIS packages, and Azure SQL pools",
+            "Design and build multiple applications that automate data cleansing tasks and perform high performance ETL processes (typically handle 50+ GB/day)",
             "Migrate on-premise resources to Azure environment and on-going support Azure resources",
-            "Convert SSIS packages to Windows Services to provide easier maintenance and better performance",
-            "Build shell scripts to automate file and database management process",
-            "Create an alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, preventing lots of potential defects and saving times to take actions"
+            "Architect data flow processes to ensure high performance/reliability/availability and to reduce redundant SQL storage and usage",
+            "Convert SSIS packages to Windows Services to provide more flexibility and easier maintainability",
+            "Create an alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, preventing lots of potential defects and saving times to take actions",
+            "Monitor, troubleshoot, and enhance resource usages for .NET applications, SQL stored procedures, SSIS packages, and Azure SQL pools",
         ]
     },
     {
@@ -35,31 +50,33 @@ let workExperienceList = [
             "Architect and build a Selenium WebDriver tool in Java to support automated GUI testing",
             "Architect and build a system that integrates different tools to support end-to-end automation testing, reducing a lot of long and error-prone manual process for QA team",
             "Perform various testing techniques for software releases",
-            "Build shell scripts to automate build/deployment process for QA tools"
+            "Setup CI/CD process for QA tools"
         ]
     }
 ];
 
 
 $(function () {
+    $("#currentTitle").text(workExperienceList[0].jobTitle);
+
+    const START_HIDING_FROM_INDEX = 3;
     let experience = $(EXPERIENCE_TEMPLATE);
 
-    // loop through all work experience
-    for (let experienceIndex = 0; experienceIndex < workExperienceList.length; experienceIndex++) {
-        let experienceData = workExperienceList[experienceIndex];
+    for (let i = 0; i < workExperienceList.length; i++) {
+        let experienceData = workExperienceList[i];
         let currentExperience = experience.clone();
-        currentExperience.attr("id", "experience" + experienceIndex);
+        currentExperience.attr("id", `experience${i}`);
 
-        if (experienceIndex > 0) {
+        if (i > 0) {
             currentExperience.prepend("<hr/>");
         }
 
-        if (experienceIndex > 1) {
+        if (i >= START_HIDING_FROM_INDEX) {
             currentExperience.addClass("experienceHidden");
         }
 
-        currentExperience.find(".jobTitle").html(experienceData.jobTitle);
-        currentExperience.find(".company").html(experienceData.company);
+        currentExperience.find(".jobTitle").text(experienceData.jobTitle);
+        currentExperience.find(".company").text(experienceData.company);
         currentExperience.find(".period").html(experienceData.period);
 
         let customList = $(CUSTOM_LIST_TEMPLATE);
@@ -67,7 +84,6 @@ $(function () {
         let contributions = experienceData.contributions;
         item.find(".customListIcon").attr("src", "./assets/images/misc/work.png");
 
-        // add all contributions of current work experience
         for (let contribution = 0; contribution < contributions.length; contribution++) {
             let newItem = item.clone();
             newItem.find(".customListText").text(contributions[contribution]);

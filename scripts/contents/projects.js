@@ -7,7 +7,6 @@ let projectsList = [
             "At any given time, all servers can replicate the exact copy of all the files that every other servers have.", ["Java"]),
         "links": [
             createDemoLink(),
-            // createSourceLink("https://github.com/baonguyen96/LamportClock")
         ]
     },
     {
@@ -17,9 +16,7 @@ let projectsList = [
             "eye-strains from long working period.", ["Chrome extension"]),
         "links": [
             createDemoLink(),
-            // createSourceLink("https://github.com/baonguyen96/DarkChroma"),
-            createSourceLink("https://chrome.google.com/webstore/detail/dark-chroma/jjknnbjoocbcgemnnjoaiifopndlcnbe",
-                "Available on", "Chrome Web Store")
+            createSourceLink("https://github.com/baonguyen96/DarkChroma"),
         ]
     },
     {
@@ -35,7 +32,7 @@ let projectsList = [
     {
         "title": "Self Service Agent For Test Data",
         "intro": "<p id='seniorDesignTitle'><i>(Senior Design Project for " +
-            createLink("http://argodata.com/", "ARGO Data") + ")</i></p>" +
+            createLink("https://argodata.com/", "ARGO Data") + ")</i></p>" +
             createIntro("An application that automatically generates desired test data for QA testers to use. " +
                 "It uses SPARQL and Java to retrieve and store RDF graphs from/to Fuseki server. " +
                 "Can be used as CLI application or Web application (SpringBoot).",
@@ -173,13 +170,11 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
             currentProject.find(".projectDescription").hide();
             currentProject.find(".projectIntro").html(projectData.intro);
 
-            // for each project, add all links
             let links = projectData.links;
             for (let linkIndex = 0; linkIndex < links.length; linkIndex++) {
                 let link = projectData.links[linkIndex];
                 let projectLink = currentProject.find(".projectLink").eq(0);
 
-                // update text if only 1 link, or append new links
                 if (linkIndex === 0) {
                     projectLink.html(link);
 
@@ -238,9 +233,9 @@ $(function () {
     let projectSection = $("#projectsSection");
     let projects = projectSection.find(".projects");
     let projectsHidden = projectSection.find(".projectsHidden");
-    let showProjectCounts = 6;
+    const SHOW_PROJECT_COUNT = 6;
 
-    addProjectsToGroup(projects, 0, showProjectCounts);
-    addProjectsToGroup(projectsHidden, showProjectCounts, projectsList.length);
+    addProjectsToGroup(projects, 0, SHOW_PROJECT_COUNT);
+    addProjectsToGroup(projectsHidden, SHOW_PROJECT_COUNT, projectsList.length);
     showDemo();
 });

@@ -3,20 +3,17 @@ $(function () {
         let state = $(this).text();
         let id = $(this).attr("id");
 
-        if(state === "See More") {
-            if(id === "projectsToggle") {
+        if (state === "See More") {
+            if (id === "projectsToggle") {
                 $(".projectsHidden").slideDown();
-            }
-            else {
+            } else {
                 $(".experienceHidden").slideDown();
             }
             state = "See Less";
-        }
-        else if(state === "See Less") {
-            if(id === "projectsToggle") {
+        } else if (state === "See Less") {
+            if (id === "projectsToggle") {
                 $(".projectsHidden").slideUp();
-            }
-            else {
+            } else {
                 $(".experienceHidden").slideUp();
             }
             state = "See More";
