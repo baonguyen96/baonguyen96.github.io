@@ -1,6 +1,6 @@
 let workExperienceList = [
     {
-        "jobTitle": "Senior Associate Software Engineer III",
+        "jobTitle": "Senior Associate Data Engineer III",
         "company": "JPMorgan Chase & Co.",
         "period": "February 2023 - Present",
         "contributions": [
