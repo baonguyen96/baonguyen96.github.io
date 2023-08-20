@@ -9,11 +9,11 @@ let skills = [
     },
     {
         "name": "Infrastructure",
-        "value": "CloudFormation, Terraform, Sceptre"
+        "value": "Terraform, CloudFormation, Sceptre"
     },
     {
         "name": "Data Engineering",
-        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Spark, EMR, Glue, Redshift, LakeFormation"
+        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Suite (Spark, Hive, Impala, etc.), EMR, Glue, Redshift, LakeFormation"
     },
     {
         "name": "Web",
@@ -25,7 +25,7 @@ let skills = [
     },
     {
         "name": "Automation Testing",
-        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest, Mocking, Selenium WebDriver API"
+        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest/PyTest, Mocking, Selenium WebDriver API"
     },
     {
         "name": "CI/CD",
