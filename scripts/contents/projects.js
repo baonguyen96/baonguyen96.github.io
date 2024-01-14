@@ -1,5 +1,5 @@
 // NOTE: demos are recorded at resolutions: 1024×576 (aspect ratio: 16:9) on 27in 1920x1080 screen
-let projectsList = [
+let projects = [
     {
         "title": "Distributed File System",
         "intro": createIntro("A distributed file replication system coded in Java. Multiple clients can concurrently " +
@@ -156,12 +156,12 @@ function addProjectsToGroup(groupElement, fromProjectIndex, toProjectIndex) {
 
         // on each row, add 2 projects
         for (let projectIndex = 0; projectIndex < 2; projectIndex++) {
-            if (projectsList[rowIndex + projectIndex] === undefined) {
+            if (projects[rowIndex + projectIndex] === undefined) {
                 isRowContainsOnlySingleProject = true;
                 break;
             }
 
-            let projectData = projectsList[rowIndex + projectIndex];
+            let projectData = projects[rowIndex + projectIndex];
             let currentProject = row.find(".project").clone();
             let id = projectData.title.replace(/\s/g, "");
 
@@ -236,6 +236,6 @@ $(function () {
     const SHOW_PROJECT_COUNT = 6;
 
     addProjectsToGroup(projects, 0, SHOW_PROJECT_COUNT);
-    addProjectsToGroup(projectsHidden, SHOW_PROJECT_COUNT, projectsList.length);
+    addProjectsToGroup(projectsHidden, SHOW_PROJECT_COUNT, projects.length);
     showDemo();
 });

@@ -1,11 +1,13 @@
-let workExperienceList = [
+let workExperiences = [
     {
         "jobTitle": "Senior Associate Data Engineer III",
         "company": "JPMorgan Chase & Co.",
         "period": "February 2023 - Present",
         "contributions": [
-            "Design and maintain high-performance Cloud-native applications to process more than 200TB of data",
-            "Implement secured Data-Mesh solution for flexible and scalable data management",
+            "Design and maintain high-performance Cloud-native applications to process 400+ TB of data",
+            "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
+            "Maintain overall IaC and ensure systems and components are up-to-date",
+            "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts"
         ]
     },
     {
@@ -16,7 +18,7 @@ let workExperienceList = [
             "Work as part of modernization team to migrate on-prem data warehouse to AWS, utilizing native services (Lambda, EMR, LakeFormation, SQS, S3, etc.) and Apache stacks (Spark, Hadoop, etc.) along with Airflow orchestration",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
             "Integrate with ServiceNow API to manage operation workflow",
-            "Optimize Cloud workloads to reduce operational cost by more than 70%",
+            "Optimize Cloud workloads to reduce overall operational cost by more than 70%",
         ]
     },
     {
@@ -57,13 +59,13 @@ let workExperienceList = [
 
 
 $(function () {
-    $("#currentTitle").text(workExperienceList[0].jobTitle);
+    $("#currentTitle").text(workExperiences[0].jobTitle);
 
     const START_HIDING_FROM_INDEX = 3;
     let experience = $(EXPERIENCE_TEMPLATE);
 
-    for (let i = 0; i < workExperienceList.length; i++) {
-        let experienceData = workExperienceList[i];
+    for (let i = 0; i < workExperiences.length; i++) {
+        let experienceData = workExperiences[i];
         let currentExperience = experience.clone();
         currentExperience.attr("id", `experience${i}`);
 

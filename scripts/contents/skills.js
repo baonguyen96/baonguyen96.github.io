@@ -8,7 +8,15 @@ let skills = [
         "value": "Azure, AWS, .NET, J2EE, Docker/Kubernetes"
     },
     {
-        "name": "Web Technologies",
+        "name": "Infrastructure",
+        "value": "Terraform, CloudFormation, Sceptre"
+    },
+    {
+        "name": "Data Engineering",
+        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Suite (Spark, Hive, Impala, etc.), EMR, Glue, Redshift, LakeFormation"
+    },
+    {
+        "name": "Web",
         "value": "SpringBoot, HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, SOAP, RDF, Google Analytics"
     },
     {
@@ -17,24 +25,15 @@ let skills = [
     },
     {
         "name": "Automation Testing",
-        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest, Mocking, Selenium WebDriver API"
-    },
-    {
-        "name": "Data Engineering",
-        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Spark, EMR, Glue"
+        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest/PyTest, Mocking, Selenium WebDriver API"
     },
     {
         "name": "CI/CD",
-        "value": "Jenkins, TeamCity, Maven, Gradle, Ant, Git, GitHub, BitBucket"
+        "value": "Jenkins, TeamCity, Maven, Gradle, Ant, Conda, Git, GitHub, BitBucket"
     },
     {
         "name": "Operating Systems",
         "value": "Windows, Linux, MacOS, Android"
-    },
-    {
-        "name": "Development Tools",
-        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS, MySQL Workbench, " +
-            "Microsoft Office suite, SharePoint, Adobe Creative Cloud suite, RStudio, Postman, SwaggerUI, PowerBI"
     },
     {
         "name": "Project Management",
@@ -43,6 +42,11 @@ let skills = [
     {
         "name": "Development Methodologies",
         "value": "Agile/SCRUM, Test Driven Development, Mobile-First Development"
+    },
+    {
+        "name": "Development Tools",
+        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS, MySQL Workbench, " +
+            "Microsoft Office suite, SharePoint, Adobe Creative Cloud suite, RStudio, Postman, SwaggerUI, PowerBI"
     },
     {
         "name": "Miscellaneous",
