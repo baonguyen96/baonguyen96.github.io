@@ -5,8 +5,9 @@ let workExperiences = [
         "period": "February 2023 - Present",
         "contributions": [
             "Design and maintain high-performance Cloud-native applications to process 400+ TB of data",
-            "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management",
+            "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
             "Maintain overall IaC and ensure systems and components are up-to-date",
+            "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts"
         ]
     },
     {
