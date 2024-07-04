@@ -231,11 +231,11 @@ function showDemo() {
 
 $(function () {
     let projectSection = $("#projectsSection");
-    let projects = projectSection.find(".projects");
-    let projectsHidden = projectSection.find(".projectsHidden");
+    let projectsGroup = projectSection.find(".projects");
+    let projectsHiddenGroup = projectSection.find(".projectsHidden");
     const SHOW_PROJECT_COUNT = 6;
 
-    addProjectsToGroup(projects, 0, SHOW_PROJECT_COUNT);
-    addProjectsToGroup(projectsHidden, SHOW_PROJECT_COUNT, projects.length);
+    addProjectsToGroup(projectsGroup, 0, SHOW_PROJECT_COUNT);
+    addProjectsToGroup(projectsHiddenGroup, SHOW_PROJECT_COUNT, projects.length);
     showDemo();
 });

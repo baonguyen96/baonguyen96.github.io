@@ -6,6 +6,7 @@ let workExperiences = [
         "contributions": [
             "Design and maintain high-performance Cloud-native applications to process 400+ TB of data",
             "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
+//            "Lead multi-countries team to migrate 13 data catalogs and their permissions from legacy central data lake to their own federated lake successfully with limited time and resources, thus provide impact isolation and more flexible decision for each data domain",
             "Maintain overall IaC and ensure systems and components are up-to-date",
             "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts"
         ]
@@ -40,7 +41,7 @@ let workExperiences = [
             "Migrate on-premise resources to Azure environment and on-going support Azure resources",
             "Architect data flow processes to ensure high performance/reliability/availability and to reduce redundant SQL storage and usage",
             "Convert SSIS packages to Windows Services to provide more flexibility and easier maintainability",
-            "Create an alert system that oversees data pipeline anomalies and notify appropriate personnel in timely manner, preventing lots of potential defects and saving times to take actions",
+            "Create an alert system that oversees data pipeline anomalies and notifies appropriate personnel in timely manner, preventing many potential defects, and saving operation efforts",
             "Monitor, troubleshoot, and enhance resource usages for .NET applications, SQL stored procedures, SSIS packages, and Azure SQL pools",
         ]
     },
@@ -59,6 +60,8 @@ let workExperiences = [
 
 
 $(function () {
+    $("#yearsOfExperience").text((new Date()).getFullYear() - 2018 - 1);
+
     $("#currentTitle").text(workExperiences[0].jobTitle);
 
     const START_HIDING_FROM_INDEX = 3;
