@@ -1,19 +1,19 @@
 let skills = [
     {
         "name": "Programming",
-        "value": "Java, C#, C, C++, Kotlin, Python, PHP, Shell scripts, Apache Spark"
+        "value": "Java, Python, C#, C, C++, Kotlin, Scala, PHP, Shell, Apache Spark"
     },
     {
         "name": "Platform",
         "value": "Azure, AWS, .NET, J2EE, Docker/Kubernetes"
     },
     {
-        "name": "Infrastructure",
+        "name": "Infrastructure as Code",
         "value": "Terraform, CloudFormation, Sceptre"
     },
     {
         "name": "Data Engineering",
-        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Suite (Spark, Hive, Impala, etc.), EMR, Glue, Redshift, LakeFormation"
+        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Suite (Spark, Hive, Impala, etc.), EMR, Glue, Athena, Redshift, LakeFormation"
     },
     {
         "name": "Web",
@@ -21,7 +21,7 @@ let skills = [
     },
     {
         "name": "Databases",
-        "value": "MySQL, T-SQL, PostgreSQL, SPARQL, JDBC, JPA, MongoDB, Hive, Impala"
+        "value": "MySQL, T-SQL, PostgreSQL, SPARQL, JDBC, JPA, MongoDB, Hive, Impala, Teradata"
     },
     {
         "name": "Automation Testing",
@@ -36,7 +36,7 @@ let skills = [
         "value": "Windows, Linux, MacOS, Android"
     },
     {
-        "name": "Project Management",
+        "name": "Project Management Tools",
         "value": "Microsoft Project, JIRA, Trello"
     },
     {
@@ -45,12 +45,12 @@ let skills = [
     },
     {
         "name": "Development Tools",
-        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS, MySQL Workbench, " +
-            "Microsoft Office suite, SharePoint, Adobe Creative Cloud suite, RStudio, Postman, SwaggerUI, PowerBI"
+        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS/SSDT, MySQL Workbench, " +
+            "Microsoft Office suite, SharePoint, RStudio, Postman, SwaggerUI, SoapUI, PowerBI"
     },
     {
         "name": "Miscellaneous",
-        "value": "Analytics, Photography/Videography, Design, Animation"
+        "value": "Analytics, Photography, Videography, Design, Animation"
     }
 ];
 

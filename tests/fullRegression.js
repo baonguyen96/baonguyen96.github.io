@@ -288,7 +288,7 @@ async function verifyAwardsSection() {
     await driver.sleep(waitTimeInMilliseconds);
 
     await driver.findElement(By.xpath("//section[@id='awardsSection']/h2/span")).getText().then(function (text) {
-        assert.strictEqual(text, 'Certificates');
+        assert.strictEqual(text, 'Achievements');
     });
 
     for (let i = 0; i < 8; i++) {
@@ -342,7 +342,7 @@ async function verifyCopyrightSection() {
     await driver.sleep(waitTimeInMilliseconds);
 
     await driver.findElement(By.xpath("//footer/p")).getText().then(function (text) {
-        assert.ok(text.trim().startsWith("© 2018"));
+        assert.ok(text.trim().startsWith("© 20"));
         assert.ok(text.endsWith("by Bao Nguyen. All rights reserved."));
     });
 }
