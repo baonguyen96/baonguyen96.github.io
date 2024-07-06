@@ -4,8 +4,8 @@ let awards = [
     createLink("https://www.credly.com/badges/b5f94e9d-3e75-4a16-b3c3-13bb5226c97a/public_url", "HashiCorp Certified: Terraform Associate"),
     createLink("https://www.youracclaim.com/badges/2f55c1da-05b9-477e-9148-fad5cc5c4308", "AWS Certified Developer - Associate"),
     "Graduate Certificate in Information Assurance",
-    "MS. in Computer Science",
-    "<i>Cum Laude</i> Honor Graduation, BS. in Software Engineering"
+    "M.S. in Computer Science",
+    "<i>Cum Laude</i> Honor Graduation, B.S. in Software Engineering"
 ];
 
 

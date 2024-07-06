@@ -164,3 +164,20 @@
     }
 
 }
+
+@media (min-aspect-ratio: 21/9) {
+
+    .modal-content {
+        width: auto;
+        height: 90vh !important;
+        margin: 0 auto;
+    }
+
+    .modal-body .demoImage {
+        display: block;
+        margin-top: 1.5em;
+        width: auto;
+        height: auto;
+    }
+
+}
