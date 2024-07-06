@@ -5,6 +5,10 @@
         display: none;
     }
 
+    .greeting {
+        text-align: center;
+    }
+
 }
 
 @media screen and (min-width: 768px) {

@@ -6,6 +6,7 @@ let workExperiences = [
         "contributions": [
             "Design and implement high-performance Cloud-native applications that store and process total of more than 400 TB of data",
             "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
+            "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 5000 tables daily within SLAs",
 //            "Lead international team to migrate 13 data catalogs and their permissions from legacy central data lake to their own federated lake successfully with limited time and resources, thus provide impact isolation and more flexible decision for each data domain",
             "Maintain overall IaC and ensure systems and components are up-to-date and secured",
             "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts"
@@ -17,6 +18,7 @@ let workExperiences = [
         "period": ["February 2022 - February 2023"],
         "contributions": [
             "Work as part of modernization team to migrate on-prem data warehouse to AWS, utilizing native services (Lambda, EMR, LakeFormation, SQS, S3, etc.) and Apache stacks (Spark, Hadoop, etc.) along with Airflow orchestration",
+            "Design and implement Airflow DAG Generator that consumes dynamic configuration and automatically build and deploy DAGs to Airflow server, reduce developers' time and effort to build workflows by 90%",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
             "Integrate with ServiceNow API to manage operation workflow",
             "Optimize Cloud workloads to reduce overall operational cost by more than 70%",
@@ -82,7 +84,7 @@ $(function () {
 
         currentExperience.find(".jobTitle").text(experienceData.jobTitle);
         currentExperience.find(".company").text(experienceData.company);
-        currentExperience.find(".period").html(experienceData.period.join(",<br/>"));
+        currentExperience.find(".period").html(experienceData.period.join("<br/>"));
 
         let customList = $(CUSTOM_LIST_TEMPLATE);
         let item = customList.find(".customListItem");
