@@ -5,7 +5,7 @@ let skills = [
     },
     {
         "name": "Platform",
-        "value": "Azure, AWS, .NET, J2EE, Docker/Kubernetes"
+        "value": "Azure, AWS, .NET, J2EE, Docker, Kubernetes"
     },
     {
         "name": "Infrastructure as Code",
@@ -13,7 +13,7 @@ let skills = [
     },
     {
         "name": "Data Engineering",
-        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Suite (Spark, Hive, Impala, etc.), EMR, Glue, Athena, Redshift, LakeFormation"
+        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Suite (Airflow, Spark, Hive, Impala, etc.), EMR, Glue, Athena, Redshift, LakeFormation"
     },
     {
         "name": "Web",
