@@ -9,7 +9,7 @@ let skills = [
     },
     {
         "name": "Infrastructure as Code",
-        "value": "Terraform, CloudFormation, Sceptre"
+        "value": "Terraform, CloudFormation"
     },
     {
         "name": "Data Engineering",
@@ -20,33 +20,33 @@ let skills = [
         "value": "SpringBoot, HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, SOAP, RDF, Google Analytics"
     },
     {
-        "name": "Databases",
+        "name": "Database",
         "value": "MySQL, T-SQL, PostgreSQL, SPARQL, JDBC, JPA, MongoDB, Hive, Impala, Teradata"
     },
     {
         "name": "Automation Testing",
-        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest/PyTest, Mocking, Selenium WebDriver API"
+        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest/PyTest, Mock, Selenium WebDriver API"
     },
     {
         "name": "CI/CD",
-        "value": "Jenkins, TeamCity, Maven, Gradle, Ant, Conda, Git, GitHub, BitBucket"
+        "value": "Jenkins, Spinnaker, TeamCity, Maven, Gradle, Ant, Conda, Git, GitHub, BitBucket"
     },
     {
-        "name": "Operating Systems",
+        "name": "Operating System",
         "value": "Windows, Linux, MacOS, Android"
     },
     {
-        "name": "Project Management Tools",
+        "name": "Project Management",
         "value": "Microsoft Project, JIRA, Trello"
     },
     {
-        "name": "Development Methodologies",
+        "name": "Development Methodology",
         "value": "Agile/SCRUM, Test Driven Development, Mobile-First Development"
     },
     {
-        "name": "Development Tools",
-        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS/SSDT, MySQL Workbench, " +
-            "Microsoft Office suite, SharePoint, RStudio, Postman, SwaggerUI, SoapUI, PowerBI"
+        "name": "Toolset",
+        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS/SSDT, Microsoft Office suite, " +
+            "SharePoint, RStudio, Postman, SwaggerUI, SoapUI, PowerBI, MySQL Workbench"
     },
     {
         "name": "Miscellaneous",
