@@ -6,6 +6,7 @@ let workExperiences = [
         "contributions": [
             "Design and implement high-performance Cloud-native applications that store and process total of more than 400 TB of data",
             "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
+            "Lead international team to migrate 14 data products and their permissions from legacy central data lake to federated data lake successfully with limited time and resources, thus provide impact isolation as well as more flexibility and control for each data product",
             "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 5000 tables daily within SLAs",
             "Maintain overall IaC and ensure systems and components are up-to-date and secured",
             "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts"
