@@ -7,9 +7,9 @@ let workExperiences = [
             "Design and implement high-performance Cloud-native applications that store and process total of more than 400 TB of data",
             "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
             "Lead international team to migrate 14 data products and their permissions from legacy central data lake to federated data lake successfully with limited time and resources, thus provide impact isolation as well as more flexibility and control for each data product",
-            "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 5000 tables daily within SLAs",
+            "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts",
+            "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 8000 tables daily within SLAs",
             "Maintain overall IaC and ensure systems and components are up-to-date and secured",
-            "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts"
         ]
     },
     {
@@ -20,8 +20,8 @@ let workExperiences = [
             "Work as part of modernization team to migrate on-prem data warehouse to AWS, utilizing native services (Lambda, EMR, LakeFormation, SQS, S3, etc.) and Apache stacks (Spark, Hadoop, etc.) along with Airflow orchestration",
             "Design and implement Airflow DAG Generator that consumes dynamic configuration and automatically build and deploy DAGs to Airflow server, reduce developers' time and effort to build workflows by 90%",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
-            "Integrate with ServiceNow API to manage operation workflow",
             "Optimize Cloud workloads (refactor SparkSQL queries, fine-tune EMR/EKS resource usages, setup lifecycle policies for S3 buckets, etc.) to reduce overall operational cost by more than 70%",
+            "Integrate with ServiceNow API to manage operation workflow",
         ]
     },
     {
