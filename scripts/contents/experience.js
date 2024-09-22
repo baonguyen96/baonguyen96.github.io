@@ -6,8 +6,8 @@ let workExperiences = [
         "contributions": [
             "Design and implement high-performance Cloud-native applications that store and process total of more than 400 TB of data",
             "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
+            "Lead international team to migrate 14 data products and their permissions from legacy central data lake to federated data lake successfully with limited time and resources, thus provide impact isolation as well as more flexibility and control for each data product",
             "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 5000 tables daily within SLAs",
-//            "Lead international team to migrate 13 data catalogs and their permissions from legacy central data lake to their own federated lake successfully with limited time and resources, thus provide impact isolation and more flexible decision for each data domain",
             "Maintain overall IaC and ensure systems and components are up-to-date and secured",
             "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts"
         ]
@@ -21,7 +21,7 @@ let workExperiences = [
             "Design and implement Airflow DAG Generator that consumes dynamic configuration and automatically build and deploy DAGs to Airflow server, reduce developers' time and effort to build workflows by 90%",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
             "Integrate with ServiceNow API to manage operation workflow",
-            "Optimize Cloud workloads to reduce overall operational cost by more than 70%",
+            "Optimize Cloud workloads (refactor SparkSQL queries, fine-tune EMR/EKS resource usages, setup lifecycle policies for S3 buckets, etc.) to reduce overall operational cost by more than 70%",
         ]
     },
     {
@@ -39,7 +39,7 @@ let workExperiences = [
         "company": "Loopback Analytics",
         "period": ["August 2018 - July 2020"],
         "contributions": [
-            "Design and build multiple applications that automate data cleansing tasks and perform high performance ETL processes (typically handle 50+ GB/day)",
+            "Design and build multiple applications that automate data cleansing tasks and provide high performance ETL processes (typically handle 50+ GB every day)",
             "Migrate on-premise resources to Azure environment and on-going support Azure resources",
             "Architect data flow processes to ensure high performance/reliability/availability and to reduce redundant SQL storage and usage",
             "Convert SSIS packages to Windows Services to provide more flexibility and easier maintainability",
@@ -50,7 +50,7 @@ let workExperiences = [
     {
         "jobTitle": "Quality Assurance Intern",
         "company": "Loopback Analytics",
-        "period": ["May 2017 - August 2017", "January 2018 - August 2018"],
+        "period": ["January 2018 - August 2018", "May 2017 - August 2017"],
         "contributions": [
             "Design and build a Selenium WebDriver tool in Java to support automated GUI testing",
             "Design and build a system that integrates different tools to support end-to-end automation testing, reducing a lot of long and error-prone manual process for QA team",
