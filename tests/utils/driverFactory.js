@@ -29,14 +29,6 @@ module.exports = {
             driver = new webDriver.Builder()
                 .withCapabilities(webDriver.Capabilities.edge())
                 .build();
-        } else if (configuration.browser === Browser.ie) {
-            let ie = require('selenium-webdriver/ie');
-            let path = require('iedriver').path;
-            // let service = new ie.ServiceBuilder(path).build();
-            // ie.setDefaultService(service);
-            driver = new webDriver.Builder()
-                .withCapabilities(webDriver.Capabilities.ie())
-                .build();
         }
 
         return driver;

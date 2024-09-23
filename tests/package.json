@@ -22,9 +22,8 @@
   "dependencies": {
     "blc": "^0.0.5",
     "chromedriver": "^119.0.1",
-    "edgedriver": "^4.17134.1",
+    "edgedriver": "^5.6.1",
     "geckodriver": "^4.3.3",
-    "iedriver": "^4.0.0",
     "selenium-webdriver": "^4.0.0-rc-1"
   }
 }
