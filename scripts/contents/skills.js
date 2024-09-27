@@ -1,7 +1,7 @@
 let skills = [
     {
         "name": "Programming",
-        "value": "Java, Python, C#, C, C++, Kotlin, Scala, PHP, Shell, Apache Spark"
+        "value": "Python, Java, Kotlin, Scala, C#, C, C++, Shell, Apache Spark (multiple languages), PHP"
     },
     {
         "name": "Platform",
@@ -13,15 +13,16 @@ let skills = [
     },
     {
         "name": "Data Engineering",
-        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Apache Suite (Airflow, Spark, Hive, Impala, etc.), EMR, Glue, Athena, Redshift, LakeFormation"
+        "value": "Data Lake, Data Warehouse, SSIS/SSDT, Azure SQL, Apache Suite (Airflow, Spark, Hive, Impala, etc.), " +
+            "AWS (Lambda, EKS, EMR, Glue, Athena, Redshift, LakeFormation, etc.)"
     },
     {
         "name": "Web",
-        "value": "SpringBoot, HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, SOAP, RDF, Google Analytics"
+        "value": "SpringBoot, HTML, CSS, JavaScript/jQuery, Bootstrap, XML, WordPress, REST, SOAP, Web Socket, RDF, Google Analytics"
     },
     {
         "name": "Database",
-        "value": "MySQL, T-SQL, PostgreSQL, SPARQL, JDBC, JPA, MongoDB, Hive, Impala, Teradata"
+        "value": "MySQL, T-SQL, PostgreSQL, SPARQL, JDBC/ODBC/JPA, MongoDB, Hive, Impala, Teradata, Athena, Redshift"
     },
     {
         "name": "Automation Testing",
