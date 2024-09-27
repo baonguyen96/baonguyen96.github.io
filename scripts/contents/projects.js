@@ -51,6 +51,25 @@ let projects = [
         ]
     },
     {
+        "title": "Color Manipulation",
+        "intro": createIntro("A simple Python program that enhances images by performing " +
+             createLink("https://en.wikipedia.org/wiki/Linear_scale", "Linear Scaling") + " and " +
+             createLink("https://en.wikipedia.org/wiki/Histogram_equalization", "Histogram Equalization") +
+             " on them. It samples a given window of the original image, and applies the change on the entire image.", ["Python"]),
+        "links": [
+             createDemoLink(),
+             createSourceLink("https://github.com/baonguyen96/ImageColor")
+        ]
+    },
+    {
+        "title": "Game Theory",
+        "intro": createIntro("A simulation of how decision-making among group of players (Prisoner-Dilemma) influence outcome of the game (and life). " +
+            "Written in Java.", ["Java"]),
+        "links": [
+            createSourceLink("https://github.com/baonguyen96/GameTheory"),
+        ]
+    },
+    {
         "title": "Flights Map",
         "intro": createIntro("This C# project represents a map of flights among cities. " +
             "It utilizes Dijkstra's algorithm to find the 3 shortest paths " +
@@ -67,6 +86,15 @@ let projects = [
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/MipsConverter")
+        ]
+    },
+    {
+        "title": "Schedulers",
+        "intro": createIntro("This Java project simulates different types of modern OS job schedulers, such as: " +
+            "FCFS, RR, SPN, SRT, HRRN, and Feedback.", ["Java"]),
+        "links": [
+            createDemoLink(),
+            createSourceLink("https://github.com/baonguyen96/Schedulers")
         ]
     },
     {
@@ -89,26 +117,6 @@ let projects = [
             createSourceLink("https://github.com/baonguyen96/AirplaneTicketsReservingSystem")
         ]
     },
-    {
-        "title": "Schedulers",
-        "intro": createIntro("This Java project simulates different types of modern OS job schedulers, such as: " +
-            "FCFS, RR, SPN, SRT, HRRN, and Feedback.", ["Java"]),
-        "links": [
-            createDemoLink(),
-            createSourceLink("https://github.com/baonguyen96/Schedulers")
-        ]
-    },
-    {
-        "title": "Color Manipulation",
-        "intro": createIntro("A simple Python program that enhances images by performing " +
-            createLink("https://en.wikipedia.org/wiki/Linear_scale", "Linear Scaling") + " and " +
-            createLink("https://en.wikipedia.org/wiki/Histogram_equalization", "Histogram Equalization") +
-            " on them. It samples a given window of the original image, and applies the change on the entire image.", ["Python"]),
-        "links": [
-            createDemoLink(),
-            createSourceLink("https://github.com/baonguyen96/ImageColor")
-        ]
-    }
 ];
 
 
@@ -233,7 +241,7 @@ $(function () {
     let projectSection = $("#projectsSection");
     let projectsGroup = projectSection.find(".projects");
     let projectsHiddenGroup = projectSection.find(".projectsHidden");
-    const SHOW_PROJECT_COUNT = 6;
+    const SHOW_PROJECT_COUNT = 8;
 
     addProjectsToGroup(projectsGroup, 0, SHOW_PROJECT_COUNT);
     addProjectsToGroup(projectsHiddenGroup, SHOW_PROJECT_COUNT, projects.length);

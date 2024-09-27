@@ -4,9 +4,9 @@ let workExperiences = [
         "company": "JPMorgan Chase & Co.",
         "period": ["February 2023 - Present"],
         "contributions": [
-            "Design and implement high-performance Cloud-native applications that store and process total of more than 400 TB of data",
-            "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
+            "Design and implement high-performance Cloud-native applications that process and store total of more than 400 TB of data",
             "Lead international team to migrate 14 data products and their permissions from legacy central data lake to federated data lake successfully with limited time and resources, thus provide impact isolation as well as more flexibility and control for each data product",
+            "Implement secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among many (20+) data products and teams",
             "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts",
             "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 8000 tables daily within SLAs",
             "Maintain overall IaC and ensure systems and components are up-to-date and secured",
@@ -18,7 +18,7 @@ let workExperiences = [
         "period": ["February 2022 - February 2023"],
         "contributions": [
             "Work as part of modernization team to migrate on-prem data warehouse to AWS, utilizing native services (Lambda, EMR, LakeFormation, SQS, S3, etc.) and Apache stacks (Spark, Hadoop, etc.) along with Airflow orchestration",
-            "Design and implement Airflow DAG Generator that consumes dynamic configuration and automatically build and deploy DAGs to Airflow server, reduce developers' time and effort to build workflows by 90%",
+            "Design and implement Airflow DAG Generator that consumes dynamic configuration and automatically build and deploy DAGs to Airflow server, reducing developers' effort and time to build workflows by 90%",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
             "Optimize Cloud workloads (refactor SparkSQL queries, fine-tune EMR/EKS resource usages, setup lifecycle policies for S3 buckets, etc.) to reduce overall operational cost by more than 70%",
             "Integrate with ServiceNow API to manage operation workflow",
@@ -62,9 +62,11 @@ let workExperiences = [
 
 
 $(function () {
-    $("#yearsOfExperience").text((new Date()).getFullYear() - 2018 - 1);
+    let firstYear = workExperiences[workExperiences.length - 2].period[0].split(" - ")[0].split(" ")[1];
+    let currentWork = workExperiences[0];
 
-    $("#currentTitle").text(workExperiences[0].jobTitle);
+    $("#yearsOfExperience").text((new Date()).getFullYear() - firstYear - 1);
+    $("#currentTitle").text(`${currentWork.jobTitle.split(",")[0]} @ ${currentWork.company}`);
 
     const START_HIDING_FROM_INDEX = 3;
     let experience = $(EXPERIENCE_TEMPLATE);
