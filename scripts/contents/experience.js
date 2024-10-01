@@ -20,7 +20,7 @@ let workExperiences = [
             "Migrate on-prem data warehouse to AWS, utilizing native services (Lambda, EMR, LakeFormation, SQS/SNS, EKS, S3, etc.) and Apache stacks (Spark, Hadoop, Kafka, etc.) along with Airflow orchestration",
             "Design and implement Airflow DAG Generator that consumes dynamic configuration and automatically build and deploy DAGs to Airflow server, reducing developers' effort and time to build workflows by 90%",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
-            "Implement distributed even-driven system using native AWS services utilizing SNS/SQS/Cloudwatch EventBridge",
+            "Implement distributed event-driven system using native AWS services utilizing SNS/SQS/Cloudwatch EventBridge",
             "Develop Spark-based application that reads raw files in multiple formats (CSV/Fixed width/JSON/Avro/XML/ByteArray/Excel) in a configurable fashion and converts into Parquet format for better downstream consumption",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
             "Optimize Cloud workloads (refactor SparkSQL queries, fine-tune EMR/EKS resource usages, setup lifecycle policies for S3 buckets, etc.) to reduce overall operational cost by more than 70%",
