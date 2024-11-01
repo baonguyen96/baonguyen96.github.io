@@ -1,6 +1,15 @@
 // NOTE: demos are recorded at resolutions: 1024×576 (aspect ratio: 16:9) on 27in 1920x1080 screen
 let projects = [
     {
+        "title": "Image Catalog",
+        "intro": createIntro("A suite of applications that scan through file system to collect metadata of images and provide useful insights. " +
+            "It consists of C# application for image crawler, Microsoft SQL Server for data storage and ETL, and PowerBI dashboard for insights consumption and presentation.",
+            ["C#", "SQL", "PowerBI"]),
+        "links": [
+            createDemoLink(),
+        ]
+    },
+    {
         "title": "Distributed File System",
         "intro": createIntro("A distributed file replication system coded in Java. Multiple clients can concurrently " +
             "connect to multiple servers and request to append message to multiple files on each server. " +
@@ -103,7 +112,6 @@ let projects = [
             "Utilizing GitHub API, C#, and .NET Framework. Currently still under development process.",
             ["GitHub API", "C#", ".NET"]),
         "links": [
-            // createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/GitData")
         ]
     },
