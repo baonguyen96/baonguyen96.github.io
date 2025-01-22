@@ -22,7 +22,6 @@ let workExperiences = [
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
             "Implement distributed event-driven system using native AWS services utilizing SNS/SQS/Cloudwatch EventBridge",
             "Develop Spark-based application that reads raw files in multiple formats (CSV / Fixed width / JSON / Avro / XML / ByteArray / Excel) in a configurable fashion and converts to Parquet format with optionally additional transformations for better downstream consumption",
-            "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
             "Optimize Cloud workloads (refactor SparkSQL queries, fine-tune EMR/EKS resource usages, setup lifecycle policies for S3 buckets, etc.) to reduce overall operational cost by more than 70%",
             "Integrate with ServiceNow API to manage operation workflow",
         ]
