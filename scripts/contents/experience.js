@@ -1,11 +1,11 @@
 let workExperiences = [
     {
-        "jobTitle": "Vice President | Lead Software Engineer",
+        "jobTitle": "Vice President, Lead Software Engineer",
         "company": "JPMorgan Chase & Co.",
         "period": ["February 2025 - Present"],
         "contributions": [
-            "Modernize Chase Pay over Time application and integrate with additional partners to rollout more eligible installment plans to customers",
-            "Build APIs to facilitate purchase installments",
+            "Modernize Chase Pay over Time application and integrate with additional partners to rollout installment plans to eligible customers",
+            "Implement event-driven and highly scalable installment workflows",
         ]
     },
     {
@@ -13,10 +13,10 @@ let workExperiences = [
         "company": "JPMorgan Chase & Co.",
         "period": ["February 2023 - February 2025"],
         "contributions": [
-            "Design and implement high-performance Cloud-native applications that process and store total of more than 400 TB of data",
-            "Lead international team to migrate 14 data catalogs and their permissions from legacy central data lake to their own federated lake successfully on schedule of 3 months and resource-constraints, providing impact isolation and more flexible decision for each data domain",
+            "Design and implement high-performance Cloud-native applications that process and persist total of more than 400 TB of data",
+            "Successfully lead international team to migrate 14 data catalogs from legacy central data lake to their own federated lake on schedule of 3 months and resource-constraints, providing impact isolation and more flexible development/deployment for each data domain",
             "Implement highly performant and secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among 20+ data products",
-            "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 8000 tables daily within SLAs, improving job performance by about 50%",
+            "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 8000 tables daily within SLAs, improving job performance by 50%",
             "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts",
             "Maintain overall IaC and ensure systems and components are up-to-date and secured",
         ]
@@ -30,9 +30,9 @@ let workExperiences = [
             "Design and implement Airflow DAG Generator that consumes dynamic configuration and automatically builds and deploys DAGs to Airflow server, reducing developers' effort and time to build workflows by 90%",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
             "Implement distributed event-driven system using native AWS services utilizing SNS/SQS/Cloudwatch EventBridge",
-            "Develop Spark-based application that reads raw files in multiple formats (CSV / Fixed Width / JSON / Avro / XML / Byte Array / Excel) in a configurable fashion and converts to Parquet format with optionally additional transformations for better downstream consumption",
+            "Develop highly configurable Spark application that consumes raw files in multiple formats (CSV / Fixed Width / JSON / Avro / XML / Byte Array / Excel) and converts to standardized Parquet format with optional transformations for seamless downstream consumption, improving maintainability and reducing time for each new data source integration by approximately 15%",
             "Optimize Cloud workloads (refactor SparkSQL queries, fine-tune EMR/EKS resource usages, setup lifecycle policies for S3 buckets, etc.) to reduce overall operational cost by more than 70%",
-            "Integrate with ServiceNow API to manage operation workflow",
+            "Integrate with ServiceNow API to manage operation workflow, providing timely alerts for operation team to take action",
         ]
     },
     {
@@ -93,11 +93,7 @@ function monthNameToNumber(name) {
 
 
 function getYearsOfExperience(fromYear, fromMonth, toYear, toMonth) {
-    var months = (toYear - fromYear) * 12;
-    months -= fromMonth;
-    months += toMonth;
-    months = Math.max(0, months);
-
+    let months = Math.max(0, (toYear - fromYear) * 12 - fromMonth + toMonth);
     return Math.floor(months / 12);
 }
 
@@ -110,7 +106,7 @@ $(function() {
     let today = new Date();
 
     $("#yearsOfExperience").text(getYearsOfExperience(firstYear, firstMonth, today.getFullYear(), today.getMonth()));
-    $("#currentTitle").text(`${currentWork.jobTitle.split("|")[1]} @ ${currentWork.company}`);
+    $("#currentTitle").text(`${currentWork.jobTitle.replace(",", "|").split("|")[1].trim()} @ ${currentWork.company}`);
 
     const START_HIDING_FROM_INDEX = 3;
     let experience = $(EXPERIENCE_TEMPLATE);
