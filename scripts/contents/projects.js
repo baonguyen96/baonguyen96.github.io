@@ -2,7 +2,7 @@
 let projects = [
     {
         "title": "Image Catalog",
-        "intro": createIntro("A suite of applications that scan through file system to collect metadata of images and provide useful insights. " +
+        "intro": createIntro("A suite of applications that scans through the file system to collect metadata of images and provides useful insights. " +
             "It consists of C# application for image crawler, Microsoft SQL Server for data storage and ETL, and PowerBI dashboard for insights consumption and presentation.",
             ["C#", "SQL", "PowerBI"]),
         "links": [
@@ -21,8 +21,8 @@ let projects = [
     {
         "title": "Dark Chroma",
         "intro": createIntro("A Chrome extension that reverts the color of the page " +
-            "(bright text on dark background) to reduce " +
-            "eye-strains from long working period.", ["Chrome extension"]),
+            "(bright text on dark background) to reduce eye-strains from long working period.",
+            ["Chrome extension"]),
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/DarkChroma"),
@@ -30,9 +30,9 @@ let projects = [
     },
     {
         "title": "File Transfer Application",
-        "intro": createIntro("This Java project implements a unique File Transfer Protocol " +
-            "utilizing Socket, Connection Management, Reliable Communication, " +
-            "and Security (Public Key Crypto and Symmetric Key Crypto). ", ["Java"]),
+        "intro": createIntro("This Java project implements a unique File Transfer Protocol utilizing Socket, " +
+            "Connection Management, Reliable Communication, and Security (Public Key Crypto and Symmetric Key Crypto).",
+            ["Java"]),
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/FileTransferApplication")
@@ -118,8 +118,9 @@ let projects = [
     {
         "title": "Tickets Reservation System",
         "intro": createIntro("This C++ project simulates an online ticketing systems. " +
-            "It lets user reserves seats, flies the plane when full, or puts the selected seats " +
-            "onto the wait-list. The price depends on different configurations of user's data.", ["C++"]),
+            "It lets user reserves seats, flies the plane when full, or puts the selected seats onto the wait-list. " +
+            "The price depends on different configurations of user's data.",
+            ["C++"]),
         "links": [
             createDemoLink(),
             createSourceLink("https://github.com/baonguyen96/AirplaneTicketsReservingSystem")
@@ -245,7 +246,7 @@ function showDemo() {
 }
 
 
-$(function () {
+$(function() {
     let projectSection = $("#projectsSection");
     let projectsGroup = projectSection.find(".projects");
     let projectsHiddenGroup = projectSection.find(".projectsHidden");
