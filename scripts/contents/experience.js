@@ -2,16 +2,16 @@ let workExperiences = [
     {
         "jobTitle": "Vice President, Lead Software Engineer",
         "company": "JPMorgan Chase & Co.",
-        "period": ["February 2025 - Present"],
+        "period": ["January 2025 - Present"],
         "contributions": [
-            "Modernize Chase Pay over Time application and integrate with additional partners to rollout installment plans to eligible customers",
-            "Implement event-driven and highly scalable installment workflows",
+            "Modernize and expand Chase Pay over Time application, integrating with additional partners to rollout installment plans to eligible customers",
+            // "Implement event-driven and highly scalable installment workflows",
         ]
     },
     {
         "jobTitle": "Senior Associate Data Engineer III",
         "company": "JPMorgan Chase & Co.",
-        "period": ["February 2023 - February 2025"],
+        "period": ["February 2023 - January 2025"],
         "contributions": [
             "Design and implement high-performance Cloud-native applications that process and persist total of more than 400 TB of data",
             "Successfully lead international team to migrate 14 data catalogs from legacy central data lake to their own federated lake on schedule of 3 months and resource-constraints, providing impact isolation and more flexible development/deployment for each data domain",
