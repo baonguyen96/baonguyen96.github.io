@@ -4,8 +4,8 @@ let workExperiences = [
         "company": "JPMorgan Chase & Co.",
         "period": ["January 2025 - Present"],
         "contributions": [
-            "Modernize and expand Chase Pay over Time application, integrating with additional partners to rollout installment plans to eligible customers",
-            // "Implement event-driven and highly scalable installment workflows",
+            "Modernize and expand Chase Pay over Time ecosystem, integrating with additional partners to rollout installment plans to eligible customers",
+            "Mentor junior engineers and forster their growths"
         ]
     },
     {
