@@ -5,6 +5,7 @@ let workExperiences = [
         "period": ["January 2025 - Present"],
         "contributions": [
             "Modernize and expand Chase Pay over Time ecosystem, integrating with additional partners to rollout installment plans to eligible customers",
+            "Design and implement highly performant and scalable microservices along with effective blue-green deployment strategy to achieve near-zero downtime and more than 99% of response time within 200ms",
             "Mentor junior engineers and forster their growths"
         ]
     },
@@ -18,7 +19,7 @@ let workExperiences = [
             "Implement highly performant and secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among 20+ data products",
             "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 8000 tables daily within SLAs, improving job performance by 50%",
             "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts",
-            "Maintain overall IaC and ensure systems and components are up-to-date and secured",
+            "Maintain overall IaC and ensure systems and components are up-to-date and secured, providing traceability to system-wide changes as well as reducing error-prone manual infrastructure provisioning",
         ]
     },
     {
@@ -41,7 +42,7 @@ let workExperiences = [
         "period": ["July 2020 - February 2022"],
         "contributions": [
             "Work on multiple applications to perform ETL for high-performance Data Warehouse using Big Data technologies such as Hadoop, Impala, Apache Spark",
-            "Improve developers' efficiency by creating various automation tools to remove time-consuming/redundant manual works in the existing processes",
+            "Improve developers' efficiency by creating various automation tools to remove time-consuming/redundant manual works in the existing processes, directly reducing up-to 50 developer-hour per week",
             "Work on modernization initiative to migrate applications to Cloud-centric solutions",
         ]
     },
