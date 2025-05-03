@@ -26,7 +26,7 @@ let skills = [
     },
     {
         "name": "Automation Testing",
-        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest/PyTest, Mock, Selenium WebDriver API"
+        "value": "JUnit, TestNG, MSUnitTest, Python UnitTest/PyTest, Mock, Selenium WebDriver API, Pactflow, Cucumber"
     },
     {
         "name": "CI/CD",

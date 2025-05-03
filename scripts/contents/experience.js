@@ -15,7 +15,7 @@ let workExperiences = [
         "period": ["February 2023 - January 2025"],
         "contributions": [
             "Design and implement high-performance Cloud-native applications that process and persist total of more than 400 TB of data",
-            "Successfully lead international team to migrate 14 data catalogs from legacy central data lake to their own federated lake on schedule of 3 months and resource-constraints, providing impact isolation and more flexible development/deployment for each data domain",
+            "Successfully lead international team to migrate 14 data catalogs from legacy central data lake to their own federated data lake on schedule of 3 months and resource-constraints, providing impact isolation and more flexible development/deployment for each data domain",
             "Implement highly performant and secured Data-Mesh solutions for flexible, scalable, and easy to operate data management among 20+ data products",
             "Optimize Airflow on EKS resources and configurations to efficiently orchestrate more than 450 interdependent DAGs to process data for more than 8000 tables daily within SLAs, improving job performance by 50%",
             "Manage features roadmap and coordination among teams to ensure necessary functionalities are prioritized and delivered on time and avoid duplication efforts",
