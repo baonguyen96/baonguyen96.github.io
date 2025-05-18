@@ -30,7 +30,7 @@ let skills = [
     },
     {
         "name": "CI/CD",
-        "value": "Jenkins, Spinnaker, TeamCity, Maven, Gradle, Ant, Conda, Git, GitHub, BitBucket"
+        "value": "Jenkins, Spinnaker, TeamCity, Github Action, Maven, Gradle, Ant, Conda, Git, GitHub, BitBucket"
     },
     {
         "name": "Operating System",
@@ -46,8 +46,8 @@ let skills = [
     },
     {
         "name": "Toolset",
-        "value": "JetBrains IDEs, Eclipse, Visual Studio, Android Studio, Microsoft SSMS/SSDT, Microsoft Office suite, " +
-            "SharePoint, RStudio, Postman, SwaggerUI, SoapUI, PowerBI, MySQL Workbench"
+        "value": "JetBrains IDEs, Windsurf (Codeium), Github Co-pilot, Eclipse, Visual Studio, Android Studio, Microsoft SSMS/SSDT, " +
+            "Microsoft Office suite, SharePoint, RStudio, Postman, SwaggerUI, SoapUI, PowerBI, MySQL Workbench"
     },
     {
         "name": "Miscellaneous",

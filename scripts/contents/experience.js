@@ -4,9 +4,10 @@ let workExperiences = [
         "company": "JPMorgan Chase & Co.",
         "period": ["January 2025 - Present"],
         "contributions": [
-            "Modernize and expand Chase Pay over Time ecosystem, integrating with additional partners to rollout installment plans to eligible customers",
-            "Design and implement highly performant and scalable microservices along with effective blue-green deployment strategy to achieve near-zero downtime and more than 99% of response time within 200ms",
-            "Mentor junior engineers and forster their growths"
+            "Modernize and expand Chase Pay over Time ecosystem and use cases, integrating with additional partners to rollout installment plans to eligible customers",
+            "Design and implement scalable microservices along with effective deployment strategy (blue-green with automatic rollback) to achieve near-zero downtime platform and allow all API calls to respond in sub-200 milliseconds",
+            "Manage features roadmap and ensure necessary functionalities are prioritized and delivered on time, avoiding duplication efforts and dependency conflicts",
+            "Provide technical guidance for more junior engineers"
         ]
     },
     {
