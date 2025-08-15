@@ -96,7 +96,7 @@ function monthNameToNumber(name) {
 
 
 function getYearsOfExperience(fromYear, fromMonth, toYear, toMonth) {
-    let months = Math.max(0, (toYear - fromYear) * 12 - fromMonth + toMonth);
+    let months = Math.max(0, (toYear - fromYear) * 12 - fromMonth + toMonth + 1);
     return Math.floor(months / 12);
 }
 
