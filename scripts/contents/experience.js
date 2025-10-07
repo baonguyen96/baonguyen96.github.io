@@ -4,10 +4,11 @@ let workExperiences = [
         "company": "JPMorgan Chase & Co.",
         "period": ["January 2025 - Present"],
         "contributions": [
-            "Modernize and expand Chase Pay over Time ecosystem and use cases, integrating with additional partners to roll out installment plans to eligible customers",
+            "Modernize and expand Chase Pay over Time ecosystem and use cases, integrating with additional partners to roll out installment plans to eligible customers, allowing more flexible scaling and reducing the typical end-to-end development cycle by 20%",
             "Provision and manage AWS infrastructure (API Gateway, Route53, ALB, NLB, ECS, ECR, SQS, Lambda, etc.) for Chase Pay over Time microservices",
             "Design and implement scalable microservices along with an effective CI/CD strategy (robust test stages and blue-green deployment with automatic rollback) to achieve near zero downtime platform and allow all API calls to respond in sub-200 milliseconds",
-            "Manage feature roadmap and ensure necessary functionalities are prioritized and delivered on time, avoiding duplication efforts and dependency conflicts",
+            "Implement resiliency plan against all product components to ensure they can automatically failover in disaster events, ensuring to meet the RPO and RTO",
+            "Manage product roadmap, prioritize necessary functionalities, and avoid duplication efforts and dependency conflicts",
             "Provide guidance (technical and non-technical alike) for more junior engineers"
         ]
     },
@@ -29,10 +30,9 @@ let workExperiences = [
         "company": "JPMorgan Chase & Co.",
         "period": ["February 2022 - February 2023"],
         "contributions": [
-            "Migrate on-prem data warehouse to AWS, utilizing native services (Lambda, EMR, LakeFormation, SQS/SNS, EKS, S3, etc.) and Apache stacks (Spark, Hadoop, Kafka, etc.) along with Airflow orchestration",
+            "Migrate on-prem data warehouse to AWS, utilizing native services (Lambda, EMR, LakeFormation, SQS/SNS, CloudWatch, EventBridge, EKS, S3, etc.) and Apache stacks (Spark, Hadoop, Kafka, etc.) along with Airflow orchestration",
             "Design and implement Airflow DAG Generator that consumes dynamic configuration and automatically builds and deploys DAGs to Airflow server, reducing developers' effort and time to build workflows by 90%",
             "Develop and maintain Infrastructure as Code setup using Terraform/Sceptre/Cloud Formation",
-            "Implement distributed event-driven system using native AWS services utilizing SNS/SQS/Cloudwatch EventBridge",
             "Develop highly configurable Spark application that consumes raw files in multiple formats (CSV / Fixed Width / JSON / Avro / XML / Byte Array / Excel) and converts to standardized Parquet format with optional transformations for seamless downstream consumption, improving maintainability and reducing time for each new data source integration by approximately 15%",
             "Optimize Cloud workloads (refactor SparkSQL queries, fine-tune EMR/EKS resource usages, setup lifecycle policies for S3 buckets, etc.) to reduce overall operational cost by more than 70%",
             "Integrate with ServiceNow API to manage operation workflow, providing timely alerts for operation team to take action",
