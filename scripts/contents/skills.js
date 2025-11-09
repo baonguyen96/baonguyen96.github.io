@@ -14,7 +14,7 @@ let skills = [
     {
         "name": "Data Engineering",
         "value": "Data Lake, Data Warehouse, SSIS/SSDT, Azure SQL, Apache Suite (Airflow, Spark, Hive, Impala, etc.), " +
-            "AWS (Lambda, EKS, EMR, Glue, Athena, Redshift, LakeFormation, etc.)"
+            "AWS (Lambda, ECS, EKS, EC2, EMR, Glue, Athena, Redshift, LakeFormation, S3, etc.)"
     },
     {
         "name": "Web",
@@ -23,6 +23,10 @@ let skills = [
     {
         "name": "Database",
         "value": "MySQL, T-SQL, PostgreSQL, SPARQL, JDBC/ODBC/JPA, MongoDB, Hive, Impala, Teradata, Athena, Redshift"
+    },
+    {
+        "name": "Observability",
+        "value": "CloudWatch, Splunk, DynaTrace, DataDog, ServiceNow"
     },
     {
         "name": "Automation Testing",
