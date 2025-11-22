@@ -5,11 +5,11 @@ let workExperiences = [
         "period": ["January 2025 - Present"],
         "contributions": [
             "Modernize and expand Chase Pay over Time ecosystem and use cases, integrating with additional partners to roll out installment plans to eligible customers, allowing more flexible scaling and reducing the typical end-to-end development cycle by 20%",
-            "Provision and manage AWS infrastructure (API Gateway, Route53, ALB, NLB, ECS, ECR, SQS, Lambda, etc.) for Chase Pay over Time microservices",
+            "Provision and manage AWS infrastructure (API Gateway, Route53, ALB, NLB, ECS, EKS, SQS, Lambda, etc.) for Chase Pay over Time microservices",
             "Design and implement scalable microservices along with an effective CI/CD strategy (robust test stages and blue-green deployment with automatic rollback) to achieve near zero downtime platform and allow all API calls to respond in sub-200 milliseconds",
             "Implement resiliency plan against all product components to ensure they can automatically failover in disaster events, ensuring to meet the RPO and RTO",
             "Manage product roadmap, prioritize necessary functionalities, and avoid duplication efforts and dependency conflicts",
-            "Provide guidance (technical and non-technical alike) for more junior engineers"
+            "Lead scrum team and mentor junior engineers"
         ]
     },
     {
