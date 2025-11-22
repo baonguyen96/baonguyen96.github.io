@@ -9,7 +9,7 @@ let workExperiences = [
             "Design and implement scalable microservices along with an effective CI/CD strategy (robust test stages and blue-green deployment with automatic rollback) to achieve near zero downtime platform and allow all API calls to respond in sub-200 milliseconds",
             "Implement resiliency plan against all product components to ensure they can automatically failover in disaster events, ensuring to meet the RPO and RTO",
             "Manage product roadmap, prioritize necessary functionalities, and avoid duplication efforts and dependency conflicts",
-            "Lead and mentor junior engineers"
+            "Lead scrum team and mentor junior engineers"
         ]
     },
     {
