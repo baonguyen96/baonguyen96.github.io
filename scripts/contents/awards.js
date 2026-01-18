@@ -16,12 +16,11 @@ $(function () {
     let item = customList.find(".customListItem");
     item.find(".customListIcon").attr("src", "./assets/images/misc/award.png");
 
-    for (let i = 0; i < awards.length; i++) {
+    awards.forEach(award => {
         let newItem = item.clone();
-        newItem.find(".customListText").html(awards[i]);
-        newItem.attr('id', `award${i}`);
+        newItem.find(".customListText").html(award);
         customList.append(newItem);
-    }
+    })
 
     customList.find(item).eq(0).remove();
     awardsSection.append(customList);
