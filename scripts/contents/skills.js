@@ -67,20 +67,17 @@ $(function () {
     itemTemplate.find(".customListIcon").attr("src", "./assets/images/misc/skill.png");
     let skillGroup = $(SKILL_GROUP_TEMPLATE).clone();
 
-    for (let skillIndex = 0; skillIndex < skills.length; skillIndex++) {
-        let skillData = skills[skillIndex];
+    skills.forEach((skill, index) => {
         let currentSkillGroup = skillGroup.clone();
         let item = itemTemplate.clone();
 
-        item.find(".customListText").text(skillData.name);
+        item.find(".customListText").text(skill.name);
         currentSkillGroup.find(".skillGroupName").html(item);
-        currentSkillGroup.find(".skillGroupValue").text(skillData.value);
-        currentSkillGroup.find(".skillGroupName").attr('id', `skillName${skillIndex}`);
-        currentSkillGroup.find(".skillGroupValue").attr('id', `skillValue${skillIndex}`);
+        currentSkillGroup.find(".skillGroupValue").text(skill.value);
         skillsContainer.append(currentSkillGroup);
 
-        if (skillIndex < skills.length - 1) {
+        if (index < skills.length - 1) {
             skillsContainer.append($('<hr/>'));
         }
-    }
+    })
 });

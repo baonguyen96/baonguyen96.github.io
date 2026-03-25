@@ -1,6 +1,6 @@
 // reference createLink function in projects.js
 let awards = [
-    "USPTO Patent Pending: <b>Method and System For Managing Cross-Account Data Distribution</b> (Application No.: 18/239,502)",
+    createLink("https://assignmentcenter.uspto.gov/search/patent/abstract%3FpatentNumber%3D12346344", "USPTO Patent: <b>Method and System For Managing Cross-Account Data Distribution</b>"),
     "Graduate Certificate in Information Assurance",
     "M.S. in Computer Science",
     "<i>Cum Laude</i> Honor Graduation, B.S. in Software Engineering",
@@ -16,12 +16,11 @@ $(function () {
     let item = customList.find(".customListItem");
     item.find(".customListIcon").attr("src", "./assets/images/misc/award.png");
 
-    for (let i = 0; i < awards.length; i++) {
+    awards.forEach(award => {
         let newItem = item.clone();
-        newItem.find(".customListText").html(awards[i]);
-        newItem.attr('id', `award${i}`);
+        newItem.find(".customListText").html(award);
         customList.append(newItem);
-    }
+    })
 
     customList.find(item).eq(0).remove();
     awardsSection.append(customList);

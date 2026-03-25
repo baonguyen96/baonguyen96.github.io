@@ -7,6 +7,7 @@ let workExperiences = [
             "Modernize and expand Chase Pay over Time ecosystem and use cases, integrating with additional partners to roll out installment plans to eligible customers, allowing more flexible scaling and reducing the typical end-to-end development cycle by 20%",
             "Provision and manage AWS infrastructure (API Gateway, Route53, ALB, NLB, ECS, EKS, SQS, Lambda, etc.) for Chase Pay over Time microservices",
             "Design and implement scalable microservices along with an effective CI/CD strategy (robust test stages and blue-green deployment with automatic rollback) to achieve near zero downtime platform and allow all API calls to respond in sub-200 milliseconds",
+            "Design and implement automatic reconciliation process to identify and backfill missed plans proactively, enhancing user experience and reducing resolution time from more than 5 days down to less than 2 days",
             "Implement resiliency plan against all product components to ensure they can automatically failover in disaster events, ensuring to meet the RPO and RTO",
             "Manage product roadmap, prioritize necessary functionalities, and avoid duplication efforts and dependency conflicts",
             "Lead scrum team and mentor junior engineers"
@@ -114,8 +115,7 @@ $(function() {
     const START_HIDING_FROM_INDEX = 3;
     let experience = $(EXPERIENCE_TEMPLATE);
 
-    for (let i = 0; i < workExperiences.length; i++) {
-        let experienceData = workExperiences[i];
+    workExperiences.forEach((experienceData, i) => {
         let currentExperience = experience.clone();
         currentExperience.attr("id", `experience${i}`);
 
@@ -136,16 +136,16 @@ $(function() {
         let contributions = experienceData.contributions;
         item.find(".customListIcon").attr("src", "./assets/images/misc/work.png");
 
-        for (let contribution = 0; contribution < contributions.length; contribution++) {
+        contributions.forEach(contribution => {
             let newItem = item.clone();
-            newItem.find(".customListText").text(contributions[contribution]);
+            newItem.find(".customListText").text(contribution);
             customList.append(newItem);
-        }
+        });
 
         customList.find(item).eq(0).remove();
         currentExperience.append(customList);
         $("#experienceToggle").before(currentExperience);
-    }
+    });
 
     experience.remove();
 });

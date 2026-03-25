@@ -19,12 +19,11 @@ $(function () {
     let item = customList.find(".customListItem");
     item.find(".customListIcon").attr("src", "./assets/images/misc/course.png");
 
-    for (let i = 0; i < courses.length; i++) {
+    courses.forEach(course => {
         let newItem = item.clone();
-        newItem.attr('id', `course${i}`);
-        newItem.find(".customListText").text(courses[i]);
+        newItem.find(".customListText").text(course);
         customList.append(newItem);
-    }
+    })
 
     customList.find(item).eq(0).remove();
     $("#coursesSection").append(customList);
